@@ -7,11 +7,13 @@
 }
 
 :root{
-    --color-primary: #191d2b;
-    --color-secondary: #2778ae;
+    --color-light: #88AB76;
+    --color-saturated: #005c07;
+    --color-dark: #253c22;
+    --color-accent: #f3cb04;
     --color-white: #FFFFFF;
-    --color-black: #000;
-    --color-grey0: #f8f8f8;
+    --color-black: #000000;
+    --color-grey-0: #f8f8f8;
     --color-grey-1: #dbe1e8;
     --color-grey-2: #b2becd;
     --color-grey-3: #6c7983;
@@ -28,15 +30,96 @@ p{
 
 }
 
+body{
+    width: 100%;
+    height: 100%;
+    font-family: Asap, sans-serif;
+    overflow-x: hidden;
+    font-size: 1.5rem;
+    align-content: center;
+}
 
 
-.menuContainer{
-    background-color: var(--color-secondary);
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: -100px;
-    right: -100px;
+.main-content{
+    width: 40%;
+    align-content: center;
+    padding: 50px;
 
 }
+.menuContainer{
+    background-color: var(--color-light);
+    border-radius: 50%;
+    position: fixed;
+    width: 220px;
+    height: 220px;
+    top: -100px;
+    right: -100px;
+    transition: var(--default-transition);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    
+    // &:hover{
+    //     width:250px;
+    //     height: 250px;
+    //     transition: var(--default-transition);
+    // }
+    
+
+    
+    .hamburgerContainer{
+        position: fixed;
+        width: 80px;
+        height: 80px;
+        top: 0px;
+        right: 0px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover .hamburgerLine{
+            margin-top: 6px;
+            transition: all .3s ease-in-out;
+        }
+
+
+        .hamburgerLine{
+            width: 40px;
+            height: 2px;
+            background-color: var(--color-white);
+            margin-top: 8px;
+            transition: all .1s ease-in;
+            
+            
+        }
+    
+        
+    }
+   
+   
+    
+}
+
+.menuOpen{
+    width: 150%;
+    height: 150%;
+    border-radius: 0;
+    // &:hover{
+    //     width: 150%;
+    //     height: 150%;
+
+    // }
+}
+
+
+
+
+
+
+
