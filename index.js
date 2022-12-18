@@ -22,9 +22,11 @@ function scrollBarAnimation() {
 //Hamburger menu
 const hamburgerLines = document.getElementsByClassName("hamburgerLine");
 const hamburgerContainer = document.getElementById("hamburgerContainer");
+const menuItems = document.getElementById("menu-items");
 
 hamburgerContainer.addEventListener("click", () => {
     menuContainer.classList.toggle("menuOpen");
+    menuItems.classList.toggle("menu-items");
     let i = 0;
     for (let line of hamburgerLines){
         if (i === 0){
