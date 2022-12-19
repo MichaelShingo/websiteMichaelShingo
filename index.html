@@ -21,7 +21,7 @@
 
 
 
-                <div class="navigation">
+                <nav class="navigation">
                     <ul class="off-screen" id="menu-items">
                         <li class="menu-item"><a href="">Home</a></li>
                         <li class="menu-item"><a href="">Bio</a></li>
@@ -43,7 +43,7 @@
                             <div class="hamburgerLine" id="line5"></div> 
                         </div>
                     </div>
-                </div> 
+                </nav> 
 
 
                 <header class="header">
@@ -66,17 +66,19 @@
                         </div>
                     </div>
 
-                    <h6>Michael<br>Shingo<br>Crawford</h6>
+                    <h6 id="logo-name">
+                        Michael<br>Shingo<br>Crawford
+                    </h6>
 
 
                 </header>
                 <div class="heading-image">
-                    <img src="img/sheetMusic1cropped.jpg" alt="blank violin sheet music">
+                    <img src="./img/sheetMusic1cropped.jpg" alt="blank violin sheet music">
                 </div>
                 <main class="main-content">
                     <h1>Biography</h1>
-                    <p>Michael Shingo Crawford is a Philadelphia-based violinist and arranger who uses his music to tell stories and paint images that arrange conventional ideas in unconventional ways. His quirky subject matter with a tinge of the supernatural turns daily life on its head. These ideas translate into evocative, unexpected, and sometimes humorous musical landscapes. As an avid performer of new music and his own compositions, Michael possesses a keen awareness of his musicians’ needs and always aims to create works that are well-written for the instrument and that performers and listeners alike can’t help but engage in with excitement.
-                    </p>
+                    <!-- <p>Michael Shingo Crawford is a Philadelphia-based violinist and arranger who uses his music to tell stories and paint images that arrange conventional ideas in unconventional ways. His quirky subject matter with a tinge of the supernatural turns daily life on its head. These ideas translate into evocative, unexpected, and sometimes humorous musical landscapes. As an avid performer of new music and his own compositions, Michael possesses a keen awareness of his musicians’ needs and always aims to create works that are well-written for the instrument and that performers and listeners alike can’t help but engage in with excitement.
+                    </p> -->
 
                         <p>Michael’s compositions have been presented by performers including the Network for New Music, PRISM Quartet, Sound Energy Trio, Philadelphia Orchestra Musicians, and the Vega String Quartet. His affinity for collaboration has led him to work with librettists, choreographers, and filmmakers as part of projects that fostered creative dialogue between disciplines and served as breeding grounds for new ideas. He has been commissioned by the Network for New Music, Sharon Nakama, David S. Traub, and OWLchestra. Michael holds a Master’s in Music Composition from Temple University, where he studied with Jan Krzywicki, Emiliano Pardo-Tristan, and Adam Vidiksis.
                         </p>
@@ -96,25 +98,10 @@
 
             <footer id="footer">
 
-                <div class="footer-logo">
-                    <div id="logo">
-                        <div id="logo-box">
-                            <div class="logo-bracket" id="left-bracket">{</div>
-                            <div id="logo-strings">
-                                <div class="logo-string" id="string-1"></div>
-                                <div class="logo-string" id="string-2"></div>
-                                <div class="logo-string" id="string-3"></div>
-                                <div class="logo-string" id="string-"></div>
-                            </div>
-                            <div class="logo-bracket" id="right-bracket">}</div>
-                            
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div class="copyright">
-                    <p>Copyright © 2022</p>
-                    <p>Web design by Michael Shingo Crawford.</p>
+                    <p id="copyright"></p>
                 </div>
 
                 <div class="social-icons">
@@ -132,8 +119,9 @@
 
 
         
-        <script src="index.js"></script>
+        
     </body>
+    <script src="index.js" defer></script>
 
 
 

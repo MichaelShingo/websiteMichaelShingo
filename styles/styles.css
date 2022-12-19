@@ -19,6 +19,7 @@
   --color-dark: #253c22;
   --color-accent: #f3cb04;
   --color-white: #FFFFFF;
+  --color-trans-white: rgba(255,255,255,0);
   --color-black: #000000;
   --color-grey-0: #f8f8f8;
   --color-grey-1: #dbe1e8;
@@ -30,7 +31,7 @@
   --color-youtube: #1b74e4;
   --color-github: #238636;
   --color-linkedin: #0a66c2;
-  --color-facebook:
+  --color-facebook: #0a66c2;
   --br-sm-2: 14px;
   --default-transition: all .4s ease-in-out;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,0.3);
@@ -52,6 +53,7 @@
   z-index: 1;
   width: 100%;
   height: 120px;
+  background-color: rgba(255, 255, 255, 0.7);
   background-image: url(img/sheetMusic1cropped.jpg);
 }
 .header .header-logo {
@@ -59,12 +61,18 @@
   position: absolute;
   top: -40px;
 }
-.header h6 {
+.header #logo-name {
   font-size: 1.75rem;
   font-weight: bold;
   position: absolute;
   left: 165px;
   top: 11px;
+  transition: var(--default-transition);
+}
+.header .hide-logo-name {
+  left: 500px;
+  color: var(--color-trans-white);
+  transition: var(--default-transition);
 }
 
 .progress-container {
@@ -241,15 +249,44 @@ body {
 }
 
 #logo {
+  display: relative;
   width: 200px;
   height: 200px;
+  z-index: 5;
+  transition: var(--default-transition);
+}
+#logo #logo-strings {
+  transform: scaleX(100%);
+  transition: var(--default-transition);
+}
+#logo #left-bracket {
+  left: 0px;
+  transition: var(--default-transition);
+}
+#logo #right-bracket {
+  right: 0px;
+  transition: var(--default-transition);
+}
+#logo:hover #left-bracket {
+  left: -7px;
+  transition: var(--default-transition);
+}
+#logo:hover #right-bracket {
+  right: -7px;
+  transition: var(--default-transition);
+}
+#logo:hover #logo-strings {
+  transform: scaleX(110%) !important;
+  transition: var(--default-transition);
 }
 #logo #logo-box {
+  border-radius: 0%;
   border: 15px solid var(--color-black);
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  transition: all 0.2s;
 }
 #logo #logo-box .logo-bracket {
   display: flex;
@@ -285,6 +322,12 @@ body {
   background-color: var(--color-black);
 }
 
+.change-logo-box {
+  border-radius: 10% !important;
+  border: 18px solid var(--color-black) !important;
+  transition: all 0.2s;
+}
+
 #footer {
   position: absolute;
   bottom: 0px;
@@ -292,19 +335,25 @@ body {
   width: 100%;
   height: 175px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  justify-content: right;
+  overflow: hidden;
 }
 #footer p {
-  color: var(--color-grey-2);
+  color: var(--color-grey-3);
   font-size: 1rem;
+  padding: 2rem;
+  line-height: 1.7;
+  font-weight: bold;
 }
 #footer .social-icons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-content: center;
-  position: static;
-  width: 50%;
+  position: absolute;
+  right: 250px;
+  width: 100px;
   height: 100%;
   z-index: 1;
   align-self: end;
@@ -330,9 +379,4 @@ body {
 #footer .social-icons .fa-brands:hover {
   background-color: var(--color-white);
   transition: var(--default-transition);
-}
-
-.footer-logo {
-  transform: scale(50%);
-  position: absolute;
 }/*# sourceMappingURL=styles.css.map */

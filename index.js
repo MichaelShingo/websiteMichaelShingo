@@ -2,8 +2,6 @@
 
 
 //Scroll progress bar
-
-
 const menuContainer = document.getElementById("menuContainer");
 const scrollProgress = document.getElementById("scrollProgress");
 window.onscroll = function() {scrollBarAnimation()};
@@ -13,9 +11,19 @@ function scrollBarAnimation() {
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrolled = (winScroll / height) * 100;
     document.getElementById("myBar").style.width = scrolled + "%";
-    document.getElementById('output').innerHTML = scrolled + "%";
-
 }
+
+
+
+//Logo and menu scroll animation
+const logoName = document.getElementById("logo-name");
+const logoBox = document.getElementById("logo-box");
+function changeHeader(){
+    this.scrollY > 150 ? logoName.classList.add("hide-logo-name") : logoName.classList.remove("hide-logo-name");
+    this.scrollY > 150 && this.scrollY < 350 ? logoBox.classList.add("change-logo-box") : logoBox.classList.remove("change-logo-box");
+}
+
+window.addEventListener("scroll", changeHeader, false);
 
 
 
@@ -43,6 +51,13 @@ hamburgerContainer.addEventListener("click", () => {
     }
     
 });
+
+
+//footer date
+const copyrightText = document.getElementById("copyright");
+let currentYear = new Date().getFullYear();
+copyrightText.innerHTML = `Copyright © ${currentYear}<br>Web design by Michael Shingo Crawford.`;
+
 
 
 
