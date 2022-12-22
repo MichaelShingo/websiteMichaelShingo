@@ -31,6 +31,39 @@ window.addEventListener("scroll", changeHeader, false);
 const hamburgerLines = document.getElementsByClassName("hamburgerLine");
 const hamburgerContainer = document.getElementById("hamburgerContainer");
 const menuItems = document.getElementById("menu-items");
+const navTemplate = document.createElement('nav-template');
+navTemplate.content = `<template id="nav-template">
+<nav class="navigation">
+    <ul class="off-screen" id="menu-items">
+        <li class="menu-item"><a href="">Home</a></li>
+        <li class="menu-item"><a href="">Bio</a></li>
+        <li class="menu-item"><a href="">Portfolio</a></li>
+        <li class="menu-item"><a href="">Violinist</a></li>
+        <li class="menu-item"><a href="">Lessons</a></li>
+        <li class="menu-item"><a href="">Blog</a></li>
+        <li class="menu-item"><a href="">Contact</a></li>
+
+    </ul>
+
+    <div class="menuContainer" id="menuContainer">
+
+        <div class="hamburgerContainer" id="hamburgerContainer">
+            <div class="hamburgerLine" id="line1"></div>
+            <div class="hamburgerLine" id="line2"></div>
+            <div class="hamburgerLine" id="line3"></div>
+            <div class="hamburgerLine" id="line4"></div>  
+            <div class="hamburgerLine" id="line5"></div> 
+        </div>
+    </div>
+</nav> 
+</template>
+`;
+console.log(navTemplate.content);
+console.log(typeof document.body);
+console.log(document.body);
+
+document.body.appendChild(navTemplate.content);
+
 
 hamburgerContainer.addEventListener("click", () => {
     menuContainer.classList.toggle("menuOpen");
