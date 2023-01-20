@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style: none;
 }
 * ::-moz-selection {
   background: var(--color-highlight);
@@ -32,9 +31,13 @@
   --color-github: #238636;
   --color-linkedin: #0a66c2;
   --color-facebook: #0a66c2;
+  --color-red: #c20a0a;
   --br-sm-2: 14px;
   --default-transition: all .4s ease-in-out;
+  --fast-transition: all .2s ease-in-out;
+  --slow-transition: all 1s ease-in-out;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,0.3);
+  --font: Asap, sans-serif;
 }
 
 #page-container {
@@ -131,6 +134,7 @@ body {
 .menu-items .menu-item {
   margin-top: 10%;
   text-align: center;
+  list-style: none;
 }
 .menu-items .menu-item a {
   color: rgb(255, 255, 255);
@@ -160,7 +164,7 @@ body {
 }
 
 .menuContainer {
-  background-color: var(--color-light-trans);
+  background-color: var(--color-light);
   border-radius: 50%;
   position: fixed;
   width: 220px;
@@ -242,10 +246,45 @@ body {
 .main-content h1 {
   margin: 2rem auto;
   width: 700px;
+  text-align: center;
+  font-size: 5rem;
+}
+.main-content h2 {
+  margin: 2rem auto;
+  width: 700px;
+  font-size: 2rem;
 }
 .main-content p {
   margin: 2rem auto;
   width: 700px;
+}
+.main-content ul {
+  margin: 2rem auto;
+  width: 700px;
+  list-style-type: circle !important;
+  line-height: 2.5rem;
+  padding-left: 3rem;
+}
+.main-content button {
+  transition: var(--default-transition);
+  color: var(--color-white);
+  font-family: var(--font);
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  height: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  padding: 10px 50px;
+  border: none;
+  background-color: var(--color-light);
+}
+.main-content button:hover {
+  transition: var(--default-transition);
+  background-color: var(--color-dark);
+  color: var(--color-white);
 }
 
 #logo {
@@ -379,4 +418,54 @@ body {
 #footer .social-icons .fa-brands:hover {
   background-color: var(--color-white);
   transition: var(--default-transition);
+}
+
+.asterisk {
+  color: var(--color-red);
+  font-size: 2rem;
+  font-weight: 500px;
+}
+
+#general-contact {
+  margin: 2rem auto;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#general-contact input {
+  font-size: 1.2rem;
+  transition: var(--fast-transition);
+  max-width: 75%;
+  height: 40px;
+  background-color: var(--color-grey-1);
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: var(--color-black);
+}
+#general-contact input:focus {
+  transition: var(--fast-transition) !important;
+  background-color: var(--color-light) !important;
+  outline: none !important;
+}
+#general-contact label {
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+#general-contact textarea {
+  font-size: 1.2rem;
+  font-family: Asap, sans-serif;
+  max-width: 75%;
+  background-color: var(--color-grey-1);
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: var(--color-black);
+  resize: none;
+}
+#general-contact textarea:focus {
+  transition: var(--fast-transition) !important;
+  background-color: var(--color-light) !important;
+  outline: none !important;
 }/*# sourceMappingURL=styles.css.map */

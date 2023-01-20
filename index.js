@@ -3,13 +3,13 @@ class MyHeader extends HTMLElement {
         this.innerHTML = `
         <nav class="navigation">
             <ul class="off-screen" id="menu-items">
-                <li class="menu-item"><a href="">Home</a></li>
-                <li class="menu-item"><a href="">Bio</a></li>
-                <li class="menu-item"><a href="">Portfolio</a></li>
-                <li class="menu-item"><a href="">Violinist</a></li>
-                <li class="menu-item"><a href="">Lessons</a></li>
-                <li class="menu-item"><a href="">Blog</a></li>
-                <li class="menu-item"><a href="">Contact</a></li>
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="biography.html">Bio</a></li>
+                <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
+                <li class="menu-item"><a href="violinist.html">Violinist</a></li>
+                <li class="menu-item"><a href="lessons.html">Lessons</a></li>
+                <li class="menu-item"><a href="blog.html">Blog</a></li>
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
 
             </ul>
 
@@ -84,7 +84,6 @@ class MyStyles extends HTMLElement {
         <link rel="stylesheet" href="styles/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
         `
     }
 }
