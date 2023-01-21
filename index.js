@@ -1,3 +1,9 @@
+class MyGigReviews extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `Add your top 10 reviews here`
+    }
+}
+customElements.define('my-gig-reviews', MyGigReviews);
 class MyHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `

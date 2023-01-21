@@ -294,7 +294,37 @@ body{
         width: 700px;
         font-size: 2rem;
     }
+    my-gig-reviews {
+        margin: 2rem auto;
+        width: 700px;
+    }
+    a {
+        color: var(--color-light);
+        &:visited{
+            color: var(--color-light);
+        }
+        &:hover {
+            color: var(--color-accent);
+        }
+    }
+    iframe {
+        display: block;
+        margin: 2rem auto;
+        width: 700px;
+        height: 394px;
+
+
+    }
+    img{
+        margin: 2rem auto;
+        display: block;
+        width: 700px;
+    }
     p{
+        margin: 2rem auto;
+        width: 700px;
+    }
+    blockquote {
         margin: 2rem auto;
         width: 700px;
     }
