@@ -306,6 +306,9 @@ body{
         padding-left: 3rem;
     }
     button {
+        .submit {
+            margin: 0;
+        }
         transition: var(--default-transition);
         color: var(--color-white);
         font-family: var(--font);
@@ -495,6 +498,19 @@ body{
     font-size: 2rem;
     font-weight: 500px;
 }
+
+.form-message {
+    color: var(--color-light);
+    margin: 0 auto !important;
+    position: relative;
+    top: -35px;
+
+
+}
+
+.error {
+    color: var(--color-red) !important;
+}
 #general-contact {
     margin: 2rem auto;
     width: 700px;
@@ -513,7 +529,7 @@ body{
         color: var(--color-black);
         &:focus {
             transition: var(--fast-transition) !important;
-            background-color: var(--color-light) !important;
+            background-color: var(--color-light-trans) !important;
             outline: none !important;
         }
    
@@ -535,7 +551,7 @@ body{
         
         &:focus {
             transition: var(--fast-transition) !important;
-            background-color: var(--color-light) !important;
+            background-color: var(--color-light-trans) !important;
             outline: none !important;
         }
     }

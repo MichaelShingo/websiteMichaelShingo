@@ -154,5 +154,36 @@ let currentYear = new Date().getFullYear();
 copyrightText.innerHTML = `Copyright © ${currentYear}<br>Web design by Michael Shingo Crawford.`;
 
 
+//CONTACT----------------------------------
+
+function sendEmail(){
+    //reply address?
+    //encryption? https://www.youtube.com/watch?v=sGQSz22U8VM, you need domain first https://smtpjs.com
+    let formElement = document.getElementById("general-contact");
+    let formMessage = document.getElementsByClassName("form-message")[0];
+    let bodyString = `<b>Name:</b> ${document.getElementById("name").value}\n\n<br><br>
+    <b>Email:</b> ${document.getElementById("email").value}\n\n<br><br>
+    <b>Subject:</b> ${document.getElementById("subject").value}\n\n<br><br>
+    <b>Message:</b><br> <span style="width: 50%;">${document.getElementById("message").value}</span>`;
+
+    Email.send({
+        Host : "smtp.elasticemail.com", //port 2525
+        Username : "shingoalert@gmail.com",
+        Password : "07418A32D8DFA36AA7EB7C0C2685A659A6E9",
+        To : 'mcrawford5376@gmail.com',
+        From : 'mcrawford5376@gmail.com',
+        Subject : "General Contact Form Submission",
+        Body : bodyString
+    }).then(message => {
+        if (message == 'OK'){
+            formMessage.innerText = "Message sent successfully.";
+        } else {
+            formMessage.innerText = "Message not sent."
+            formMessage.classList.add('error');
+        }
+    });
+}
+
+
 
 

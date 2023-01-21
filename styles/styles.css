@@ -281,6 +281,9 @@ body {
   border: none;
   background-color: var(--color-light);
 }
+.main-content button .submit {
+  margin: 0;
+}
 .main-content button:hover {
   transition: var(--default-transition);
   background-color: var(--color-dark);
@@ -426,6 +429,17 @@ body {
   font-weight: 500px;
 }
 
+.form-message {
+  color: var(--color-light);
+  margin: 0 auto !important;
+  position: relative;
+  top: -35px;
+}
+
+.error {
+  color: var(--color-red) !important;
+}
+
 #general-contact {
   margin: 2rem auto;
   width: 700px;
@@ -446,7 +460,7 @@ body {
 }
 #general-contact input:focus {
   transition: var(--fast-transition) !important;
-  background-color: var(--color-light) !important;
+  background-color: var(--color-light-trans) !important;
   outline: none !important;
 }
 #general-contact label {
@@ -466,6 +480,6 @@ body {
 }
 #general-contact textarea:focus {
   transition: var(--fast-transition) !important;
-  background-color: var(--color-light) !important;
+  background-color: var(--color-light-trans) !important;
   outline: none !important;
 }/*# sourceMappingURL=styles.css.map */
