@@ -191,5 +191,17 @@ function sendEmail(){
 }
 
 
-
+//COLLAPSIBLE SECTIONS------------------------------------------------------------------------------------
+let plusIcons = document.getElementsByClassName('fa-plus-square');
+let collapsibleContent = document.getElementsByClassName('collapsible-content');
+for (let i = 0; i < plusIcons.length; i++) {
+    let plusIcon = plusIcons[i];
+    let currentContent = collapsibleContent[i];
+    plusIcon.addEventListener('click', e => {
+       
+        plusIcon.classList.toggle('fa-plus-square');
+        plusIcon.classList.toggle('fa-minus-square');
+        currentContent.classList.toggle('hide');
+    })
+}
 

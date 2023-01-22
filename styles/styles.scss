@@ -283,6 +283,7 @@ body{
 
 .main-content{
     margin: 5rem;
+    
     h1{
         margin: 2rem auto;
         width: 700px;
@@ -293,6 +294,11 @@ body{
         margin: 2rem auto;
         width: 700px;
         font-size: 2rem;
+    }
+    h3 {
+        margin: 2rem auto;
+        width: 700px;
+        font-size: 1.5rem;
     }
     my-gig-reviews {
         margin: 2rem auto;
@@ -319,10 +325,25 @@ body{
         margin: 2rem auto;
         display: block;
         width: 700px;
+        transition: var(--default-transition);
+        
     }
+
+    .brightness-hover {
+        filter:brightness(100%);
+        &:hover {
+            transition: var(--default-transition);
+            filter:brightness(120%);
+        }
+    }
+
+  
     p{
         margin: 2rem auto;
         width: 700px;
+    }
+    .small-p {
+        font-size: 1.35rem;
     }
     blockquote {
         margin: 2rem auto;
@@ -335,10 +356,8 @@ body{
         line-height: 2.5rem;
         padding-left: 3rem;
     }
-    button {
-        .submit {
-            margin: 0;
-        }
+    .submit {
+        margin: 0;
         transition: var(--default-transition);
         color: var(--color-white);
         font-family: var(--font);
@@ -541,13 +560,44 @@ body{
 .error {
     color: var(--color-red) !important;
 }
-#general-contact {
+form {
     margin: 2rem auto;
     width: 700px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    input {
+    .small-p {
+        margin: 0.2em;
+    }
+    .radio-row {
+        margin: 0;
+        font-size: 1.3rem;
+        display: grid;
+        grid-template-columns: 1em auto;
+        gap: 0.5em;
+        .radio-button { // input[type="radio"]
+            -webkit-appearance: none;
+            appearance: none;
+            background-color: #fff;
+            margin: 0;
+            font: inherit;
+            color: currentColor;
+            width: 1.15em;
+            height: 1.15em;
+            border: 0.15em solid var(--color-grey-2);
+            border-radius: 30%;
+            transform: translateY(0.4em);
+            &:checked {
+                background-color: var(--color-light);
+                border: 0.2em solid var(--color-grey-2);
+                transition: var(--fast-transition);
+            }
+    }
+   
+       
+
+    }
+    .text-input {
         font-size: 1.2rem;
         transition: var(--fast-transition);
         max-width: 75%;
@@ -562,11 +612,12 @@ body{
             background-color: var(--color-light-trans) !important;
             outline: none !important;
         }
+    
    
     }
     label {
         line-height: 2rem;
-        margin: 1rem 0;
+        margin: 1.2rem 0 0.3rem 0;
     }
     textarea {
         font-size: 1.2rem;
@@ -589,6 +640,65 @@ body{
 
 
 
+//COLLAPSIBLE SECTIONS------------------------------------------------------------------------------------
+
+.collapsible-items {
+    width: 700px;
+    margin: 2rem auto;
+    padding: 30px;
+    width: 700px;
+    border: 3px solid var(--color-grey-1);
+    transition: var(--default-transition);
+    .collapsible-content {
+        width: 100%;
+        transition: var(--default-transition);
+
+    }
+    p {
+        max-width: 100%;
+        margin: 10px auto;
+        border-top: 1px solid var(--color-grey-2);
+        padding-top: 20px;
+
+    }
+    img {
+        max-width: 100%;
+    }
+    iframe {
+        max-width: 100%;
+        max-height: 357px;
+
+        
+        background-color: var(--color-white);
+    }
+    .collapsible-title {
+        display: flex;
+        flex-direction: row;
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .plus-icon, .minus-icon  {
+                color: var(--color-light);
+                background-color: none;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                background-color: none;
+                transition: var(--default-transition);
+                &:hover {
+                    transform: rotate(90deg);
+                    transition: var(--default-transition);
+                }    
+            }    
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
 
 
 

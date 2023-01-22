@@ -25,14 +25,14 @@
                         <li>Requesting score and parts.</li>
                         <li>Any other questions or comments you may have.</li>
                     </ul>
-                    <p>Fields marked with <span class="asterisk">*</span> are required.</p>
+                    <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
                     <form onsubmit="sendEmail(); reset(); return false;" id="general-contact">
                         <label for="name">Name:<span class="asterisk">*</span></label>
-                        <input type="text" id="name" >
+                        <input class="text-input" type="text" id="name" >
                         <label for="email">Email:<span class="asterisk">*</span></label>
-                        <input type="email" id="email" >
+                        <input class="text-input" type="email" id="email" >
                         <label for="subject">Subject:<span class="asterisk">*</span></label>
-                        <input type="text" id="subject" >
+                        <input class="text-input" type="text" id="subject" >
                         <label for="message">Message:<span class="asterisk">*</span></label>
                         <textarea id="message" name="message" rows="10" cols="40"></textarea>
                         <button class="submit" type="submit">Submit</button>

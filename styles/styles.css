@@ -254,6 +254,11 @@ body {
   width: 700px;
   font-size: 2rem;
 }
+.main-content h3 {
+  margin: 2rem auto;
+  width: 700px;
+  font-size: 1.5rem;
+}
 .main-content my-gig-reviews {
   margin: 2rem auto;
   width: 700px;
@@ -277,10 +282,21 @@ body {
   margin: 2rem auto;
   display: block;
   width: 700px;
+  transition: var(--default-transition);
+}
+.main-content .brightness-hover {
+  filter: brightness(100%);
+}
+.main-content .brightness-hover:hover {
+  transition: var(--default-transition);
+  filter: brightness(120%);
 }
 .main-content p {
   margin: 2rem auto;
   width: 700px;
+}
+.main-content .small-p {
+  font-size: 1.35rem;
 }
 .main-content blockquote {
   margin: 2rem auto;
@@ -293,7 +309,8 @@ body {
   line-height: 2.5rem;
   padding-left: 3rem;
 }
-.main-content button {
+.main-content .submit {
+  margin: 0;
   transition: var(--default-transition);
   color: var(--color-white);
   font-family: var(--font);
@@ -309,10 +326,7 @@ body {
   border: none;
   background-color: var(--color-light);
 }
-.main-content button .submit {
-  margin: 0;
-}
-.main-content button:hover {
+.main-content .submit:hover {
   transition: var(--default-transition);
   background-color: var(--color-dark);
   color: var(--color-white);
@@ -468,14 +482,43 @@ body {
   color: var(--color-red) !important;
 }
 
-#general-contact {
+form {
   margin: 2rem auto;
   width: 700px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#general-contact input {
+form .small-p {
+  margin: 0.2em;
+}
+form .radio-row {
+  margin: 0;
+  font-size: 1.3rem;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+form .radio-row .radio-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid var(--color-grey-2);
+  border-radius: 30%;
+  transform: translateY(0.4em);
+}
+form .radio-row .radio-button:checked {
+  background-color: var(--color-light);
+  border: 0.2em solid var(--color-grey-2);
+  transition: var(--fast-transition);
+}
+form .text-input {
   font-size: 1.2rem;
   transition: var(--fast-transition);
   max-width: 75%;
@@ -486,16 +529,16 @@ body {
   padding: 10px;
   color: var(--color-black);
 }
-#general-contact input:focus {
+form .text-input:focus {
   transition: var(--fast-transition) !important;
   background-color: var(--color-light-trans) !important;
   outline: none !important;
 }
-#general-contact label {
+form label {
   line-height: 2rem;
-  margin: 1rem 0;
+  margin: 1.2rem 0 0.3rem 0;
 }
-#general-contact textarea {
+form textarea {
   font-size: 1.2rem;
   font-family: Asap, sans-serif;
   max-width: 75%;
@@ -506,8 +549,62 @@ body {
   color: var(--color-black);
   resize: none;
 }
-#general-contact textarea:focus {
+form textarea:focus {
   transition: var(--fast-transition) !important;
   background-color: var(--color-light-trans) !important;
   outline: none !important;
+}
+
+.collapsible-items {
+  width: 700px;
+  margin: 2rem auto;
+  padding: 30px;
+  width: 700px;
+  border: 3px solid var(--color-grey-1);
+  transition: var(--default-transition);
+}
+.collapsible-items .collapsible-content {
+  width: 100%;
+  transition: var(--default-transition);
+}
+.collapsible-items p {
+  max-width: 100%;
+  margin: 10px auto;
+  border-top: 1px solid var(--color-grey-2);
+  padding-top: 20px;
+}
+.collapsible-items img {
+  max-width: 100%;
+}
+.collapsible-items iframe {
+  max-width: 100%;
+  max-height: 357px;
+  background-color: var(--color-white);
+}
+.collapsible-items .collapsible-title {
+  display: flex;
+  flex-direction: row;
+}
+.collapsible-items .collapsible-title .icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.collapsible-items .collapsible-title .icon-container .plus-icon, .collapsible-items .collapsible-title .icon-container .minus-icon {
+  color: var(--color-light);
+  background-color: none;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: none;
+  transition: var(--default-transition);
+}
+.collapsible-items .collapsible-title .icon-container .plus-icon:hover, .collapsible-items .collapsible-title .icon-container .minus-icon:hover {
+  transform: rotate(90deg);
+  transition: var(--default-transition);
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

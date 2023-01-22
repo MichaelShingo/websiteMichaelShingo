@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA_Compatible" content="IE=edge">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         <title>Hire a Violinist in the Netherlands</title>
+        <!--<link rel="stylesheet" href="styles/questions.css">-->
         <my-styles></my-styles>
     </head>
     <body>
@@ -20,7 +21,7 @@
                         The engagement was a winner and in no uncertain terms did Michael add to the essence and wonder of the evening! 
                         Would book again in a second. Thanks Michael!!! - Evan S.
                     </blockquote>
-                    <img src="img/alexTranProposal1Smaller.jpg" alt="Netherlands violinist performing at a wedding proposal.">
+                    <img class="brightness-hover" src="img/alexTranProposal1SmallCropped.jpg" alt="Netherlands violinist performing at a wedding proposal event.">
                     <p>I am a Philadelphia-based violinist who performs classical, popular, and anime music in Pennsylvania, New Jersey, and Delaware. 
                         If you would like to hire a violinist to perform in a wide variety of settings, including weddings, corporate events, holiday celebrations, 
                         private salon concerts, recitals, look no further! I constantly expand my repertoire to include new selections by continuously composing, 
@@ -38,8 +39,143 @@
                     <iframe src="https://www.youtube.com/embed/LZ6Dei0H1TU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <h2>Read some reviews from satisfied clients who have hired a violinist in Philadelphia, Pennsylvania, New Jersey, or Delaware.</h2>
                     <my-gig-reviews></my-gig-reviews>
+                    <h2>Need more information before hiring a violinist in Amsterdam and the surrounding area?</h2>
+                    <p>Send me details about your event and I’ll get back to you with a quote or use the <a href="contact.html">contact form</a> if you have a more general question!</p>
+                    <p>If you would like to hire a violinist for a wedding in Amsterdam, Netherlands, 
+                        or other locations, please visit the <a href="wedding-violinist-for-hire-in-netherlands">dedicated page here.</a></p>
+                    <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
+                    <form onsubmit="sendEmailViolinist(); reset(); return false;" id="general-contact">
+                        <label for="name">Name:<span class="asterisk">*</span></label>
+                        <input class="text-input" type="text" id="name" >
                         
+                        <label for="email">Email:<span class="asterisk">*</span></label>
+                        <input class="text-input" type="email" id="email" >
 
+                        <label for="location">Event Location:<span class="asterisk">*</span></label>
+                        <input class="text-input" type="text" id="location">
+
+                        <label for="outdoors">Setting:<span class="asterisk">*</span></label>
+                        <div class=radio-row>
+                            <input class="radio-button" name="setting-radio" type="radio" id="outdoors" value="Outdoors">
+                            <label class="small-p" for="outdoors">Outdoors</label>
+                        </div>
+                    
+                        <div class="radio-row">
+                            <input class="radio-button" name="setting-radio" type="radio" id="indoors" value="Indoors">
+                            <label class="small-p"  for="indoors">Indoors</label>
+                        </div>
+                        
+                        <div class="radio-row">
+                            
+                        </div>
+                        <label for="date">Date of Event:<span class="asterisk">*</span></label>
+                        <input class="text-input" type="date" id="date">
+
+                        <label for="number-musicians">Number of Musicians:<span class="asterisk">*</span></label>
+                        <input class="text-input" type="number" id="number-musicians">
+
+                        <label for="playing-length">How long would you like me to play? (in minutes):<span class="asterisk">*</span></label>
+                        <input class="text-input" type="number" id="playing-length">
+
+
+                        <label for="google">Where did you find me:<span class="asterisk">*</span></label>
+
+                    
+                        <div class="radio-row">
+                            <input class="radio-button" name="find-radio" type="radio" id="google" value="Google (or other search engine)">
+                            <label class="small-p" for="google">Google (or other search engine)</label>        
+                        </div>
+
+                    
+                        <div class="radio-row">
+                            <input class="radio-button" name="find-radio" type="radio" id="gigsalad" value="Gigsalad">
+                            <label class="small-p" for="gigsalad">Gigsalad</label> 
+                        </div>
+
+
+                        <div class="radio-row">
+                            <input class="radio-button" name="find-radio" type="radio" id="thumbtack" value="Thumbtack">
+                            <label class="small-p" for="thumbtack">Thumbtack</label>     
+                        </div>
+
+
+                        <div class="radio-row">
+                            <input class="radio-button" name="find-radio" type="radio" id="word-of-mouth" value="Word of Mouth">
+                            <label class="small-p" for="word-of-mouth">Word of Mouth</label>
+                        </div>
+
+
+                        
+                        <div class="radio-row">
+                            <input class="radio-button" name="find-radio" type="radio" id="zola" value="Zola">
+                            <label class="small-p" for="zola">Zola</label>
+                        </div>
+
+
+                        <div class="radio-row">
+                            <input class="radio-button" name="find-radio" type="radio" id="other" value="Other">
+                            <label class="small-p" for="zola">Other (please specify):</label>
+                        </div>
+                        
+                        <input class="text-input" type="text" id="other-source">
+
+                        <label for="additional-comments">Message:<span class="asterisk"></span></label>
+                        <textarea id="message" name="message" rows="10" cols="40"></textarea>
+
+                        <button class="submit" type="submit">Submit</button>
+                        
+                    </form>
+                    <p class="form-message"></p>
+
+                    <iframe src="https://www.youtube.com/embed/dmoNcAsY17U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h2>Song Lists</h2>
+                    <p>
+                        Browse my song list <a href="songlist.html">here</a>.
+                    </p>
+
+                    <section class="questions">
+                        <div class="title">
+                            <h2>Ensemble Options</h2>
+                        </div>
+                        <div class="section-center">
+                            <article class="question">
+                                <div class="question-title">
+                                    <p>Solo Violin</p>
+                                    <button type="button" class="question-btn">
+                                        <span class="plus-icon">
+                                            <i class="far fa-plus-square"></i>
+                                        </span>
+                                        <span class="minus-icon">
+                                            <i class="far fa-minus-square"></i>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="question-text">
+                                    <p>Solo violin is a beautiful option for everything from the most intimate gatherings to larger weddings with over 100 people.
+                                       
+                                    </p>
+                                    <h3>Solo Violin</h3>
+                                    <img src="img/churchWeddingSmall.jpg" alt="Violinist performs romantic songs at a wedding cocktail hour and reception in Amsterdam, Netherlands">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OfoqvqPQCaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+
+                            </article>
+                        </div>
+                    </section>
+                    
+                    
+                    
+                    
+                    <h3>Violin and Cello Duo</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/l3sQeKjCjCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <h3>Violin and Harp Duo</h3>
+                    <img src="img/harp3Small.jpg" alt="harpist and violinist perform at a wedding in Amsterdam, Netherlands">
+                    <iframe src="https://www.youtube.com/embed/dmoNcAsY17U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    <h3>Violin and Piano Duo</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/smSvZD7BCpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    
 
 
                    
