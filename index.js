@@ -84,6 +84,89 @@ class MyFooter extends HTMLElement {
 }
 customElements.define('my-footer', MyFooter);
 
+class EnsembleOptions extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML =`
+    <!--<div class="filler"></div>-->
+    <section class="collapsible-items">
+                        <div class="collapsible-title">
+                            <h3>Solo Violin</h3>
+                            <div class="icon-container">
+                                <span class="plus-icon">
+                                    <i class="far fa-plus-square fa-2x"></i> <!-- change to fa-minus-square on click-->
+                                </span>
+                            </div>
+                        </div>
+        
+                        <div class="collapsible-content hide">
+                            <p>Solo violin is a beautiful option for everything from the most intimate gatherings to larger weddings with over 100 people.
+                                A versatile instrument that can play soaring melodies as well as harmonies at the same time.
+                            </p>
+                            <img src="img/churchWeddingSmall.jpg" alt="Violinist performs romantic songs at a wedding cocktail hour and reception in Amsterdam, Netherlands">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OfoqvqPQCaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </section>
+
+                    <section class="collapsible-items">
+                        <div class="collapsible-title">
+                            <h3>Violin and Cello Duo</h3>
+                            <div class="icon-container">
+                                <span class="plus-icon">
+                                    <i class="far fa-plus-square fa-2x"></i>
+                                </span>
+                            </div>
+                        </div>
+        
+                        <div class="collapsible-content hide">
+                            <p>As members of the bowed string instrument family, the violin and cello complement each other perfectly in sound. With the violin taking
+                                 the melody and the cello playing the bass line, this expressive and dynamic duo can perform just about any song.
+                            </p>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/l3sQeKjCjCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </section>
+        
+                    <section class="collapsible-items">
+                        <div class="collapsible-title">
+                            <h3>Violin and Harp Duo</h3>
+                            <div class="icon-container">
+                                <span class="plus-icon">
+                                    <i class="far fa-plus-square fa-2x"></i> <!-- change to fa-minus-square on click-->
+                                </span>
+                            </div>
+                        </div>
+        
+                        <div class="collapsible-content hide">
+                            <p>The harp brings a magical and mesmerizing quality to the music with its sweeping glissadi and sweet timbre. 
+                                When combined with the expressive melodic qualities of the violin, the resulting ensemble is irresistible.
+                            </p>
+                            <img src="img/harp3Small.jpg" alt="harpist and violinist perform at a wedding in Amsterdam, Netherlands">
+                            <iframe src="https://www.youtube.com/embed/dmoNcAsY17U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+                        </div>
+                    </section>
+
+                    <section class="collapsible-items">
+                        <div class="collapsible-title">
+                            <h3>Violin and Piano Duo</h3>
+                            <div class="icon-container">
+                                <span class="plus-icon">
+                                    <i class="far fa-plus-square fa-2x"></i> <!-- change to fa-minus-square on click-->
+                                </span>
+                            </div>
+                        </div>
+        
+                        <div class="collapsible-content hide">
+                            <p>A classic combination with a long history and expansive repertoire, the violin and piano duo often produces the most faithful
+                                renditions of the original music, whether it be rock, pop, or classical. Thanks to the piano's orchestral-scale range and
+                                ability to play multiple parts at the same time, this duo often captures all of the parts of the original song in spectacular fashion.
+                            </p>
+                            <img src="img/lanceWisemanRecitalSmall.jpg" alt="Violin and piano duo performing classical and romantic music at a recital and concert with reception.">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/smSvZD7BCpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </section>`
+    }
+}
+customElements.define('my-ensemble-options', EnsembleOptions);
+
 class MyStyles extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -185,23 +268,38 @@ function sendEmail(){
             formMessage.innerText = "Message sent successfully.";
         } else {
             formMessage.innerText = "Message not sent."
-            formMessage.classList.add('error');
+            formMessage.classList.add('error')
         }
     });
 }
 
 
 //COLLAPSIBLE SECTIONS------------------------------------------------------------------------------------
-let plusIcons = document.getElementsByClassName('fa-plus-square');
+let plusIcons = document.getElementsByClassName('far');
 let collapsibleContent = document.getElementsByClassName('collapsible-content');
 for (let i = 0; i < plusIcons.length; i++) {
     let plusIcon = plusIcons[i];
     let currentContent = collapsibleContent[i];
     plusIcon.addEventListener('click', e => {
-       
+        //hide what's currently open
+
+        minusIcons = document.getElementsByClassName('fa-minus-square');
+        for (let j = 0; j < plusIcons.length; j++) {
+            if (collapsibleContent[j] !== currentContent && !collapsibleContent[j].classList.contains('hide')) {
+                collapsibleContent[j].classList.add('hide')
+                plusIcons[j].classList.toggle('fa-minus-square')
+                plusIcons[j].classList.toggle('fa-plus-square')
+            }
+        }
+
+        //open the clicked one and change icon
         plusIcon.classList.toggle('fa-plus-square');
         plusIcon.classList.toggle('fa-minus-square');
         currentContent.classList.toggle('hide');
+        plusIcon.parentElement.parentElement.parentElement.parentElement.previousElementSibling.scrollIntoView({behavior: "smooth"});
+
+        
+        
     })
 }
 

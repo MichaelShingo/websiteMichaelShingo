@@ -557,14 +557,14 @@ form textarea:focus {
 
 .collapsible-items {
   width: 700px;
-  margin: 2rem auto;
-  padding: 30px;
+  margin: 1.5rem auto;
+  padding: 0 30px;
   width: 700px;
   border: 3px solid var(--color-grey-1);
   transition: var(--default-transition);
 }
 .collapsible-items .collapsible-content {
-  width: 100%;
+  transform: scaleY(100%);
   transition: var(--default-transition);
 }
 .collapsible-items p {
@@ -603,8 +603,11 @@ form textarea:focus {
 .collapsible-items .collapsible-title .icon-container .plus-icon:hover, .collapsible-items .collapsible-title .icon-container .minus-icon:hover {
   transform: rotate(90deg);
   transition: var(--default-transition);
+  cursor: pointer;
 }
 
 .hide {
   display: none;
+  transform: scaleY(0%);
+  transition: var(--default-transition);
 }/*# sourceMappingURL=styles.css.map */
