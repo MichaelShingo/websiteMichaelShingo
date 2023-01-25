@@ -31,6 +31,7 @@
   --color-github: #238636;
   --color-linkedin: #0a66c2;
   --color-facebook: #0a66c2;
+  --color-review-star: yellow;
   --color-red: #c20a0a;
   --br-sm-2: 14px;
   --default-transition: all .4s ease-in-out;
@@ -258,6 +259,11 @@ body {
   margin: 2rem auto;
   width: 700px;
   font-size: 1.5rem;
+}
+.main-content h4 {
+  margin: 2rem auto;
+  width: 700px;
+  font-size: 1.25rem;
 }
 .main-content my-gig-reviews {
   margin: 2rem auto;
@@ -610,4 +616,57 @@ form textarea:focus {
   display: none;
   transform: scaleY(0%);
   transition: var(--default-transition);
+}
+
+.reviews-container {
+  margin: 2rem auto;
+  width: 700px;
+}
+.reviews-container .name-container {
+  display: flex;
+  flex-direction: row;
+}
+.reviews-container .name-container .review-profile {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+.reviews-container .name-container .review-profile .review-text-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.reviews-container .name-container .review-profile .review-text-container .profile-text {
+  color: var(--color-white);
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+.reviews-container .name-container .review-name {
+  margin: 1rem !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.reviews-container .review-star {
+  color: var(--color-accent);
+}
+.reviews-container .review-date {
+  margin: 1rem auto !important;
+}
+.reviews-container .review-header {
+  margin: 1rem auto !important;
+}
+.reviews-container .arrow-container {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+.reviews-container .arrow-container .review-arrow {
+  margin: 0.5rem;
+  color: var(--color-grey-4);
+}
+.reviews-container .arrow-container .review-arrow:hover {
+  color: var(--color-light);
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

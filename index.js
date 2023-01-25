@@ -1,3 +1,4 @@
+
 class MyGigReviews extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `Add your top 10 reviews here`
@@ -178,8 +179,6 @@ class MyStyles extends HTMLElement {
 }
 customElements.define('my-styles', MyStyles);
 
-
-
 //Scroll progress bar
 const menuContainer = document.getElementById("menuContainer");
 const scrollProgress = document.getElementById("scrollProgress");
@@ -258,7 +257,7 @@ function sendEmail(){
     Email.send({
         Host : "smtp.elasticemail.com", //port 2525
         Username : "shingoalert@gmail.com",
-        Password : "07418A32D8DFA36AA7EB7C0C2685A659A6E9",
+        Password : "",
         To : 'mcrawford5376@gmail.com',
         From : 'mcrawford5376@gmail.com',
         Subject : "General Contact Form Submission",
@@ -271,6 +270,10 @@ function sendEmail(){
             formMessage.classList.add('error')
         }
     });
+}
+
+function sendEmailViolinist(){
+
 }
 
 
@@ -302,4 +305,53 @@ for (let i = 0; i < plusIcons.length; i++) {
         
     })
 }
+
+//REVIEWS-----------------------------------------\
+const reviewList = [
+    {stars: 5, date: 'December 12, 2022', name: 'Gabrielle C.', title:'AMAZING!!! 5 STARS', review: 'Michael was prompt and professional from the beginning! He quickly responded to my inquiry and sent over a detailed contract that made us so comfortable in trusting him to be our violinist for our wedding day. The event was a surprise, and Michael did a great job keeping it that way for us! :) He played a range from Frank Sinatra, to a song we requested from a personal favorite video game!!! If you are considering live music for your event, definitely put Michael at the top of your list!!!'},
+    {stars: 5, date: 'August 30, 2022', name: 'Brooke R.', title:'Absolutely delightful!', review: 'Michael did such an amazing job at our wedding and exceeded all expectations. So many guests were talking about the amazing music he played and it really brought our ceremony to the next level. Michael even came outside to play during our “bubble exit” and did such a wonderful job. Very talented!!'},
+    {stars: 5, date: 'November 30, 2021', name: 'Becca H.', title:'Responsive, Talented, and Passionate', review: 'We knew after perusing his YouTube channel and speaking with him briefly via phone that Michael Shingo Crawford was the perfect musician for our wedding. He was responsive, incredibly talented, and clearly passionate about his work. Michael was generous and accommodating, learning new songs at our request for the processional and recessional and playing outdoors in chilly conditions. The violin/cello duo\'s elegant performance left an impression on our guests, heightening the emotions of our day in a beautiful way. We will be forever thankful.'},
+    {stars: 5, date: 'April 15, 2021', name: 'Alison P.', title:'So Much Joy!!', review: 'I hired Michael to come to my parents\' house as a surprise and play their wedding song on their front lawn for their anniversary. I had also asked him to play a few songs that were not on his usual play list and he learned them in a couple of weeks time and was flawless!!! The surprise and the joy and the excitement that he provided for this experience was the best gift I have ever given anyone! Michael was responsive, prompt and flexible with a rain date. Just an overall amazing experience!'},
+    {stars: 5, date: 'November 2, 2020', name: 'Dina N.', title:'Excellent professional, highly recommend', review: 'Michael arrived early with his cellist. They were friendly, polite and the hit of my dinner party. We had classical music lovers in attendance who were especially overjoyed. Michael played pieces that perfectly fit the vibe of my Victorian Halloween party. He even went over the top and took time to prepare a specially requested piece..'}
+];
+const starsList = document.getElementsByClassName('review-star');
+const reviewDate = document.getElementById('review-date');
+const reviewName = document.getElementById('review-name');
+const reviewHeader = document.getElementById('review-header');
+const reviewText = document.getElementById('review-text');
+const reviewProfile = document.getElementById('review-profile');
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
+
+//display first review
+reviewDate.innerText = reviewList[0]['date'];
+reviewName.innerText = reviewList[0]['name'];
+reviewHeader.innerText = reviewList[0]['title'];
+reviewText.innerText = reviewList[0]['review'];
+
+let i = 0;
+rightArrow.addEventListener('click', e => {
+    i++;
+    if (i == 5){
+        i = 0;
+    }
+    reviewDate.innerText = reviewList[i]['date'];
+    reviewName.innerText = reviewList[i]['name'];
+    reviewHeader.innerText = reviewList[i]['title'];
+    reviewText.innerText = reviewList[i]['review'];
+
+})
+leftArrow.addEventListener('click', e => {
+    i--;
+    if (i == -1){
+        i = 4;
+    }
+    reviewDate.innerText = reviewList[i]['date'];
+    reviewName.innerText = reviewList[i]['name'];
+    reviewHeader.innerText = reviewList[i]['title'];
+    reviewText.innerText = reviewList[i]['review'];
+})
+
+//set onclick listeners to change reviews
+
 

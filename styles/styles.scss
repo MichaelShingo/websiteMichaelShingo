@@ -33,6 +33,7 @@
     --color-github: #238636;
     --color-linkedin: #0a66c2;
     --color-facebook: #0a66c2;
+    --color-review-star: yellow;
     --color-red: #c20a0a;
     --br-sm-2: 14px;
     --default-transition: all .4s ease-in-out;
@@ -299,6 +300,11 @@ body{
         margin: 2rem auto;
         width: 700px;
         font-size: 1.5rem;
+    }
+    h4 {
+        margin: 2rem auto;
+        width: 700px;
+        font-size: 1.25rem;
     }
     my-gig-reviews {
         margin: 2rem auto;
@@ -702,6 +708,72 @@ form {
     transform: scaleY(0%);
     transition: var(--default-transition);
 }
+
+//REVIEWS------------------------------------------------
+.reviews-container {
+    margin: 2rem auto;
+    width: 700px;
+    
+    .name-container {
+        display: flex;
+        flex-direction: row;
+        .review-profile {        
+            width: 60px;
+            height: 60px;
+            background-color: var(--color-accent); //random color
+            border-radius: 50%;
+            .review-text-container {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                .profile-text {
+                    color: var(--color-white);
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                    margin: auto;
+                    text-align: center;
+                }
+            }
+            
+            
+        }  
+        .review-name {
+            margin: 1rem  !important;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+    }
+    
+    .review-star {
+        color: var(--color-accent);
+    }
+    .review-date {
+        margin: 1rem auto !important;
+    }
+   
+    .review-header {
+        margin: 1rem auto !important;
+    
+    }
+    .arrow-container {
+        text-align: center;
+        margin-top: 0.5rem;
+        .review-arrow {
+            margin: 0.5rem;
+            color: var(--color-grey-4);
+            &:hover {
+                color: var(--color-light);
+                cursor: pointer;
+            }
+        
+            
+        }
+    }
+    
+}
+
+
 
 
 
