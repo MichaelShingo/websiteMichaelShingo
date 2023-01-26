@@ -1,7 +1,45 @@
 
 class MyGigReviews extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = `Add your top 10 reviews here`
+        this.innerHTML = `
+        <article class="reviews-container">
+                        <span class="review-star" id="star1">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="review-star" id="star2">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="review-star" id="star3">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="review-star" id="star4">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <span class="review-star" id="star5">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+                        <p class="review-date small-p" id="review-date"></p>
+                        <div class="name-container">
+                            <div class="review-profile" id="review-profile">
+                                <div class="review-text-container">
+                                    <p class="profile-text" id="profile-text"></p>
+                                </div>
+
+                            </div>
+                                <p class="review-name" id="review-name"></p>
+                        </div>  
+                        <h4 class="review-header" id="review-header"></h4>
+                        <p class="review-text small-p" id="review-text"></p>
+                        
+                        <div class="arrow-container">
+                            <span class="review-arrow" id="left-arrow">
+                                <i class="fa-regular fa-circle-left fa-2x"></i>
+                            </span>
+                            <span class="review-arrow">
+                                <i class="fa-regular fa-circle-right fa-2x" id="right-arrow"></i>
+                            </span>
+                        </div>
+                    </article>`
     }
 }
 customElements.define('my-gig-reviews', MyGigReviews);
@@ -15,7 +53,6 @@ class MyHeader extends HTMLElement {
                 <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
                 <li class="menu-item"><a href="violinist.html">Violinist</a></li>
                 <li class="menu-item"><a href="lessons.html">Lessons</a></li>
-                <li class="menu-item"><a href="blog.html">Blog</a></li>
                 <li class="menu-item"><a href="contact.html">Contact</a></li>
 
             </ul>
@@ -74,10 +111,10 @@ class MyFooter extends HTMLElement {
                     <p id="copyright"></p>
                 </div>
                 <div class="social-icons">
-                    <a href="" class="fa-brands fa-youtube"></a>
-                    <a href="" class="fa-brands fa-github"></a>
-                    <a href="" class="fa-brands fa-linkedin"></a>
-                    <a href="" class="fa-brands fa-facebook"></a>
+                    <a href="https://www.youtube.com/channel/UCb46nljnneXaQCa5wKYsbWA" class="fa-brands fa-youtube" target="_blank"></a>
+                    <a href="https://github.com/MichaelShingo" class="fa-brands fa-github" target="_blank"></a>
+                    <a href="https://www.linkedin.com/in/michael-shingo-crawford-44577283/" class="fa-brands fa-linkedin" target="_blank"></a>
+                    <a href="https://www.facebook.com/MichaelShingo" class="fa-brands fa-facebook" target="_blank"></a>
                 </div>
             </footer>
         `
@@ -279,13 +316,14 @@ function sendEmailViolinist(){
 
 //COLLAPSIBLE SECTIONS------------------------------------------------------------------------------------
 let plusIcons = document.getElementsByClassName('far');
+let collapsibleTitles = document.getElementsByClassName('collapsible-items');
+console.log(collapsibleTitles)
+
 let collapsibleContent = document.getElementsByClassName('collapsible-content');
 for (let i = 0; i < plusIcons.length; i++) {
     let plusIcon = plusIcons[i];
     let currentContent = collapsibleContent[i];
     plusIcon.addEventListener('click', e => {
-        //hide what's currently open
-
         minusIcons = document.getElementsByClassName('fa-minus-square');
         for (let j = 0; j < plusIcons.length; j++) {
             if (collapsibleContent[j] !== currentContent && !collapsibleContent[j].classList.contains('hide')) {
@@ -294,6 +332,7 @@ for (let i = 0; i < plusIcons.length; i++) {
                 plusIcons[j].classList.toggle('fa-plus-square')
             }
         }
+    
 
         //open the clicked one and change icon
         plusIcon.classList.toggle('fa-plus-square');
@@ -304,6 +343,26 @@ for (let i = 0; i < plusIcons.length; i++) {
         
         
     })
+
+
+    // let collapsibleTitle = collapsibleTitles[i];
+    // collapsibleTitle.addEventListener('click', e => {
+    //     for (let j = 0; j < plusIcons.length; j++) {
+    //         if (collapsibleContent[j] !== currentContent && !collapsibleContent[j].classList.contains('hide')) {
+    //             collapsibleContent[j].classList.add('hide')
+    //             plusIcons[j].classList.toggle('fa-minus-square')
+    //             plusIcons[j].classList.toggle('fa-plus-square')
+    //         }
+    //     }
+
+    //     //open the clicked one and change icon
+    //     plusIcon.classList.toggle('fa-plus-square');
+    //     plusIcon.classList.toggle('fa-minus-square');
+    //     currentContent.classList.toggle('hide');
+    //     plusIcon.parentElement.parentElement.parentElement.parentElement.previousElementSibling.scrollIntoView({behavior: "smooth"});
+        
+
+    // })
 }
 
 //REVIEWS-----------------------------------------\
@@ -322,12 +381,22 @@ const reviewText = document.getElementById('review-text');
 const reviewProfile = document.getElementById('review-profile');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
+const profileText = document.getElementById('profile-text');
+
+let clientName = reviewList[0]['name']
+let initials = ''
+for (let i in clientName){
+    if (clientName[i] === clientName[i].toUpperCase() && clientName[i] !== '.' && clientName[i] !== ' ') {
+        initials += clientName[i]
+    }
+}
 
 //display first review
 reviewDate.innerText = reviewList[0]['date'];
-reviewName.innerText = reviewList[0]['name'];
+reviewName.innerText = clientName;
 reviewHeader.innerText = reviewList[0]['title'];
 reviewText.innerText = reviewList[0]['review'];
+profileText.innerText = initials;
 
 let i = 0;
 rightArrow.addEventListener('click', e => {
@@ -335,10 +404,18 @@ rightArrow.addEventListener('click', e => {
     if (i == 5){
         i = 0;
     }
+    let clientName = reviewList[i]['name']
+    let initials = ''
+    for (let i in clientName){
+        if (clientName[i] === clientName[i].toUpperCase() && clientName[i] !== '.' && clientName[i] !== ' ') {
+            initials += clientName[i]
+        }
+    }
     reviewDate.innerText = reviewList[i]['date'];
     reviewName.innerText = reviewList[i]['name'];
     reviewHeader.innerText = reviewList[i]['title'];
     reviewText.innerText = reviewList[i]['review'];
+    profileText.innerText = initials;
 
 })
 leftArrow.addEventListener('click', e => {
@@ -346,10 +423,18 @@ leftArrow.addEventListener('click', e => {
     if (i == -1){
         i = 4;
     }
+    let clientName = reviewList[i]['name']
+    let initials = ''
+    for (let i in clientName){
+        if (clientName[i] === clientName[i].toUpperCase() && clientName[i] !== '.' && clientName[i] !== ' ') {
+            initials += clientName[i]
+        }
+    }
     reviewDate.innerText = reviewList[i]['date'];
     reviewName.innerText = reviewList[i]['name'];
     reviewHeader.innerText = reviewList[i]['title'];
     reviewText.innerText = reviewList[i]['review'];
+    profileText.innerText = initials;
 })
 
 //set onclick listeners to change reviews

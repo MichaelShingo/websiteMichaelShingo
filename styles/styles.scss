@@ -713,6 +713,9 @@ form {
 .reviews-container {
     margin: 2rem auto;
     width: 700px;
+    .review-text {
+        height: 180px;
+    }
     
     .name-container {
         display: flex;
@@ -774,8 +777,58 @@ form {
 }
 
 
+//PORTFOLIO ------------------------------------------------------------
+
+.portfolio-img {
+    max-width: 50% !important;
+    max-height: 30%;
+    margin: 2rem auto;
+}
+// .portfolio-icons {
+//     background-color: var(--color-grey-1);
+//     padding: 1.5rem;
+//     width: 50%;
+
+// }
 
 
-
-
-
+.collapsible-content {
+    .social-icons{ //container for all icons
+        border: 3px dashed var(--color-grey-1);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin: 0.5rem auto 1rem auto;
+        transition: var(--default-transition);
+ 
+        width: fit-content;
+        a:visited, a:link { 
+            text-decoration: none; 
+            color: var(--color-white);
+        
+        }
+        a:hover{
+            cursor: pointer;
+        }
+      
+    
+        .fa-brands, .fa-solid{ //individual icon containers
+            background-color: var(--color-light);
+            border-radius: 50%;
+            display: inline-flex;
+            width: 3.5rem;
+            height: 3.5rem;
+            align-items: center;
+            justify-content: center;
+            margin: auto 1rem;
+            
+            &:hover{
+                background-color: var(--color-accent);
+                transition: var(--default-transition);
+            }    
+        }
+    }
+    
+}

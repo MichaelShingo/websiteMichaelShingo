@@ -622,6 +622,9 @@ form textarea:focus {
   margin: 2rem auto;
   width: 700px;
 }
+.reviews-container .review-text {
+  height: 180px;
+}
 .reviews-container .name-container {
   display: flex;
   flex-direction: row;
@@ -669,4 +672,45 @@ form textarea:focus {
 .reviews-container .arrow-container .review-arrow:hover {
   color: var(--color-light);
   cursor: pointer;
+}
+
+.portfolio-img {
+  max-width: 50% !important;
+  max-height: 30%;
+  margin: 2rem auto;
+}
+
+.collapsible-content .social-icons {
+  border: 3px dashed var(--color-grey-1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0.5rem auto 1rem auto;
+  transition: var(--default-transition);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.collapsible-content .social-icons a:visited, .collapsible-content .social-icons a:link {
+  text-decoration: none;
+  color: var(--color-white);
+}
+.collapsible-content .social-icons a:hover {
+  cursor: pointer;
+}
+.collapsible-content .social-icons .fa-brands, .collapsible-content .social-icons .fa-solid {
+  background-color: var(--color-light);
+  border-radius: 50%;
+  display: inline-flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: auto 1rem;
+}
+.collapsible-content .social-icons .fa-brands:hover, .collapsible-content .social-icons .fa-solid:hover {
+  background-color: var(--color-accent);
+  transition: var(--default-transition);
 }/*# sourceMappingURL=styles.css.map */
