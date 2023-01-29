@@ -74,23 +74,25 @@ class MyHeader extends HTMLElement {
                         <div class="progress-bar" id="myBar"></div>
                     </div>
 
-                    
-                    <div class="header-logo" id="logo">
-                        <div id="logo-box">
-                            <div class="logo-bracket" id="left-bracket">{</div>
-                            <div id="logo-strings">
-                                <div class="logo-string" id="string-1"></div>
-                                <div class="logo-string" id="string-2"></div>
-                                <div class="logo-string" id="string-3"></div>
-                                <div class="logo-string" id="string-"></div>
+                    <a class="header-link" href="./index.html">
+                        <div class="header-logo" id="logo">
+                            <div id="logo-box">
+                                <div class="logo-bracket" id="left-bracket">{</div>
+                                <div id="logo-strings">
+                                    <div class="logo-string" id="string-1"></div>
+                                    <div class="logo-string" id="string-2"></div>
+                                    <div class="logo-string" id="string-3"></div>
+                                    <div class="logo-string" id="string-"></div>
+                                </div>
+                                <div class="logo-bracket" id="right-bracket">}</div>
                             </div>
-                            <div class="logo-bracket" id="right-bracket">}</div>
                         </div>
-                    </div>
-
-                    <h6 id="logo-name">
-                        Michael<br>Shingo<br>Crawford
-                    </h6>
+                    </a>
+                    <a class="header-link" href="./index.html">
+                        <h6 id="logo-name">
+                            Michael<br>Shingo<br>Crawford
+                        </h6>
+                    </a>
 
 
                 </header>

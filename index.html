@@ -6,49 +6,107 @@
         <meta http-equiv="X-UA_Compatible" content="IE=edge">
         <title>Michael Shingo Crawford</title>
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.css" integrity="sha512-FKlWnaJrtBEqH+gNy8kvp+/61S+8iOKb5tG+EKCQ3Fc3iUYr9MvnywpkZBcuNKrxQxlnZYpNwDgkZ2atX7wVVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <my-styles></my-styles>
         
     </head>
 
-    <body>
-        <div id="page-container">
-            <div id="content-wrap">
+    <body id="landing-page">
+        <nav class="navigation">
+            <ul class="off-screen" id="menu-items">
+                <li class="menu-item"><a href="index.html">Home</a></li>
+                <li class="menu-item"><a href="biography.html">Bio</a></li>
+                <li class="menu-item"><a href="portfolio.html">Portfolio</a></li>
+                <li class="menu-item"><a href="violinist.html">Violinist</a></li>
+                <li class="menu-item"><a href="lessons.html">Lessons</a></li>
+                <li class="menu-item"><a href="contact.html">Contact</a></li>
 
-                <my-header></my-header>
+            </ul>
 
-                
-                <main class="main-content">
-                    <h1>Home</h1>
-                    <!-- <p>Michael Shingo Crawford is a Philadelphia-based violinist and arranger who uses his music to tell stories and paint images that arrange conventional ideas in unconventional ways. His quirky subject matter with a tinge of the supernatural turns daily life on its head. These ideas translate into evocative, unexpected, and sometimes humorous musical landscapes. As an avid performer of new music and his own compositions, Michael possesses a keen awareness of his musicians’ needs and always aims to create works that are well-written for the instrument and that performers and listeners alike can’t help but engage in with excitement.
-                    </p> -->
+            <div class="menuContainer" style="background-color: #88ab76a1;"" id="menuContainer">
 
-                        <p>Michael’s compositions have been presented by performers including the Network for New Music, PRISM Quartet, Sound Energy Trio, Philadelphia Orchestra Musicians, and the Vega String Quartet. His affinity for collaboration has led him to work with librettists, choreographers, and filmmakers as part of projects that fostered creative dialogue between disciplines and served as breeding grounds for new ideas. He has been commissioned by the Network for New Music, Sharon Nakama, David S. Traub, and OWLchestra. Michael holds a Master’s in Music Composition from Temple University, where he studied with Jan Krzywicki, Emiliano Pardo-Tristan, and Adam Vidiksis.
-                        </p>
-                        <p>                        As a violinist, Michael is passionate about recording his compositions and arrangements of anime music, which he shares on his Youtube channel with a quickly growing audience. He merges the worlds of traditional and contemporary classical music with anime music by creating arrangements that utilize the full palette of violin technique. His compositional training inspires unique takes on well-known soundtracks, to which he adds his personal flair.
-                        </p>
-                        <p>                        In addition to his freelancing business, Michael’s engagements include performances with the Philadelphia Virtuosi and a performance in Yerevan, Armenia as a member of the 2019 World Congress for Information Technology Orchestra. He has performed with ENAensemble and Alter Ego Chamber Opera, both opera companies that bring fresh takes on the operatic medium. He has served as concertmaster of Temple Composers Orchestra and the Emory University Symphony Orchestra and was the winner of its 2015-2016 Concerto and Aria Competition with his performance of the Barber Violin Concerto. Over the summers, he has attended the WestBen Performer-Composer Residency, zFestival, Dalí Quartet International Music Festival, Fresh Inc Festival, Eastern Music Festival, and the National Symphony Orchestra Summer Music Institute. He teaches violin, piano, and music theory lessons in his private studio, which has attracted online students from several countries, including Australia and Singapore.
-                        </p>
-
-
-                    
-                </main>
+                <div class="hamburgerContainer" id="hamburgerContainer">
+                    <div class="hamburgerLine" id="line1"></div>
+                    <div class="hamburgerLine" id="line2"></div>
+                    <div class="hamburgerLine" id="line3"></div>
+                    <div class="hamburgerLine" id="line4"></div>  
+                    <div class="hamburgerLine" id="line5"></div> 
+                </div>
             </div>
+        </nav> 
+        <header class="header" style="background-color: rgba(0,0,0,0);">
+                    <div class="header-logo" id="logo">
+                        <div id="logo-box">
+                            <div class="logo-bracket" id="left-bracket">{</div>
+                            <div id="logo-strings">
+                                <div class="logo-string" id="string-1"></div>
+                                <div class="logo-string" id="string-2"></div>
+                                <div class="logo-string" id="string-3"></div>
+                                <div class="logo-string" id="string-"></div>
+                            </div>
+                            <div class="logo-bracket" id="right-bracket">}</div>
+                        </div>
+                    </div>
 
-            
+                    <!-- <h6 id="logo-name">
+                        Michael<br>Shingo<br>Crawford
+                    </h6> -->
 
 
+                </header>
+    
 
-            <my-footer></my-footer>
-            
+
+                <!-- <my-header></my-header> -->
+
+        <video id="background-video" autoplay loop muted poster="/img/alexTranProposal1Landing.jpg">
+            <source src="./img/testVideoWebsite.mp4" type="video/mp4">
+            </video>
+        <div id="fullPage">
+            <div class="section s1">
+                <h1>Michael Shingo Crawford</h1>
+                <h2 style="text-align: center;">Software Developer | Violinist</h2>
+
+            </div>
+            <div class="section s2">
+                <a href="./portfolio.html">
+                    <div class="landing-text-container">
+                        <h1>Building tech that empowers</h1><h1>musicians to excel.</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="section s3">
+                <a href="./biography.html"> 
+                    <button class="landing-button">Learn More</button>
+            </a>
+            </div>
         </div>
 
-
-
-
-        
-        
     </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.js" integrity="sha512-rNf09cQHIWzD8BU37lIb3rInygeWXW2hVqJ7niVtTPXWuVR3aFiph1eFIeDiEQV8J45u0qfp7ng8I3TzJHY4Eg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new fullpage('#fullPage', {
+            autoScrolling: true,
+            navigation: true,
+            navigationPosition: 'left',
+            fadingEffect: true,
+            scrollOverflowMacStyle: true,
+            scrollOverflowReset: false,
+            controlArrows: true,
+            controlArrowsHTML: [
+                '<div class="fp-arrow"></div>', 
+                '<div class="fp-arrow"></div>'
+            ],
+            parallax: true,
+	        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+            waterEffect: false,
+	        waterEffectOptions: { animateContent: true, animateOnMouseMove: true},
+            cards: false,
+	        cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+            credits: { enabled: false, label: 'Web Design by Michael Shingo Crawford', position: 'bottom'}
+        });
+    </script>
     <script src="index.js" type="text/javascript" defer></script>
 
 
