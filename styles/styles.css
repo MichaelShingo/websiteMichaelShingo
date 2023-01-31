@@ -836,14 +836,122 @@ form textarea:focus {
   cursor: pointer;
 }
 
-.portfolio-img {
-  max-width: 50% !important;
-  max-height: 30%;
-  margin: 2rem auto;
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  max-width: 70vw;
+  text-align: center;
+}
+.portfolio-grid .portfolio-container {
+  width: 400px;
+  height: 400px;
+  border: 10px solid var(--color-grey-1);
+  z-index: 0;
+  border-radius: 5%;
+  transition: var(--default-transition);
+}
+.portfolio-grid .portfolio-container:hover {
+  border: 10px solid var(--color-light);
+  transition: var(--default-transition);
+}
+.portfolio-grid .portfolio-container:hover .portfolio-overlay {
+  transform: scale(100%);
+  background-color: var(--color-light);
+  transition: var(--default-transition);
+  width: 380px;
+  height: 380px;
+}
+.portfolio-grid .portfolio-container .portfolio-overlay {
+  transform-origin: center;
+  background-color: var(--color-transparent);
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  transform: scale(0%);
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  transition: var(--default-transition);
+}
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-description {
+  font-size: 1.4rem;
+  color: white;
+  width: auto;
+  height: 60%;
+  padding: 0px 8px;
+  text-align: center;
+}
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons {
+  text-align: center;
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0.5rem auto 1rem auto;
+  transition: var(--default-transition);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons a:visited, .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons a:link {
+  text-decoration: none;
+  color: var(--color-white);
+}
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons a:hover {
+  cursor: pointer;
+}
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-brands, .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-solid {
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  display: inline-flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: auto 1rem;
+}
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-brands:hover, .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-solid:hover {
+  background-color: var(--color-accent);
+  transition: var(--default-transition);
+}
+.portfolio-grid .portfolio-container .portfolio-img {
+  border-radius: 2%;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.portfolio-grid .portfolio-container .portfolio-title-container {
+  background-color: var(--color-light);
+  max-width: 100%;
+  height: 25%;
+  z-index: 35;
+}
+.portfolio-grid .portfolio-container .portfolio-title-container .portfolio-title {
+  color: var(--color-white);
+  font-weight: lighter;
+  z-index: 3;
+  top: 100px;
+  margin: 0;
+  padding: 10px 0px;
+  width: 100%;
+  font-size: 2.2rem;
+  text-align: center;
 }
 
 .collapsible-content .social-icons {
   border: 3px dashed var(--color-grey-1);
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
