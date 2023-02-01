@@ -1,0 +1,24 @@
+@media (max-width: 1300px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 1300px) {
+    .main-grid {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    img {
+        max-width: 90vw !important;
+    }
+}
+
+
+

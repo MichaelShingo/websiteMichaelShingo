@@ -96,9 +96,9 @@ class MyHeader extends HTMLElement {
 
 
                 </header>
-                <div class="heading-image">
+                <!--<div class="header-image">
                     <img src="/img/sheetMusic1cropped.jpg" alt="blank violin sheet music">
-                </div>
+                </div>-->
         `
     }
 }
@@ -215,6 +215,8 @@ class MyStyles extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/stylesMedia.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         `

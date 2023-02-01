@@ -42,7 +42,11 @@
   --fast-transition: all .2s ease-in-out;
   --slow-transition: all 1s ease-in-out;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,0.3);
-  --font: Asap, sans-serif;
+  --font: Nunito, sans-serif;
+}
+
+html {
+  font-size: 13px;
 }
 
 #page-container {
@@ -60,9 +64,10 @@
   top: 0;
   z-index: 1;
   width: 100%;
-  height: 120px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: rgba(255, 255, 255, 0.7);
-  background-image: url(img/sheetMusic1cropped.jpg);
 }
 .header .header-link {
   text-decoration: none;
@@ -99,12 +104,12 @@
   width: 0%;
 }
 
-.heading-image {
+.header-image {
   width: 100%;
   height: 250px;
   overflow: hidden;
 }
-.heading-image img {
+.header-image img {
   overflow: hidden;
   top: 50px;
 }
@@ -112,7 +117,7 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: Asap, sans-serif;
+  font-family: var(--font), sans-serif;
   overflow-x: hidden;
   font-size: 1.5rem;
   align-content: center;
@@ -255,21 +260,44 @@ a {
 }
 
 .main-content {
-  margin: 5rem;
+  max-width: 100vw;
+  margin: 10px auto;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.main-content .main-grid {
+  justify-content: center;
+  margin: 20px auto;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 50vw;
+}
+.main-content .main-grid .image-side-text {
+  text-align: justify;
+  max-width: 40vw !important;
+  min-width: 400px;
 }
 .main-content h1 {
-  margin: 2rem auto;
-  width: 700px;
+  margin: 0;
+  padding: 25px;
+  color: var(--color-white);
+  background-color: var(--color-light-trans);
   text-align: center;
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-transform: uppercase;
 }
 .main-content h2 {
-  margin: 2rem auto;
-  width: 700px;
-  font-size: 2.5rem;
-  padding-bottom: 17px;
-  border-bottom: 3px solid var(--color-grey-2);
+  border-top: 4px solid var(--color-grey-1);
+  border-bottom: 4px solid var(--color-grey-1);
+  background-attachment: fixed;
+  width: 100vw;
+  color: var(--color-black);
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 3rem;
+  padding: 30px 17px;
 }
 .main-content h3 {
   margin: 2rem auto;
@@ -303,7 +331,7 @@ a {
 .main-content img {
   margin: 2rem auto;
   display: block;
-  width: 700px;
+  max-width: 50vw;
   transition: var(--default-transition);
 }
 .main-content .brightness-hover {
@@ -405,7 +433,7 @@ a {
   line-height: 100%;
   font-family: Asap, sans-serif;
   font-weight: bold;
-  font-size: 7rem;
+  font-size: 8rem;
 }
 #logo #logo-box #logo-strings {
   display: grid;
@@ -580,12 +608,14 @@ a {
 }
 
 .s1 h1 {
+  font-family: var(--font);
   text-align: center;
   margin: 1rem auto;
   color: white;
   font-size: 4rem;
 }
 .s1 h2 {
+  font-family: var(--font);
   color: white;
   font-weight: 100;
   font-size: 2rem;
@@ -736,7 +766,7 @@ form textarea:focus {
   transition: var(--default-transition);
 }
 .collapsible-items p {
-  max-width: 100%;
+  max-width: 20vw;
   margin: 10px auto;
   border-top: 1px solid var(--color-grey-2);
   padding-top: 20px;
@@ -836,43 +866,66 @@ form textarea:focus {
   cursor: pointer;
 }
 
+.portfolio-main-content {
+  max-width: 100vw;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .portfolio-grid {
+  align-items: center;
+  justify-content: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin: 20px auto 100px auto;
   grid-gap: 25px;
   max-width: 70vw;
   text-align: center;
 }
 .portfolio-grid .portfolio-container {
+  overflow: hidden;
   width: 400px;
   height: 400px;
-  border: 10px solid var(--color-grey-1);
   z-index: 0;
   border-radius: 5%;
   transition: var(--default-transition);
 }
 .portfolio-grid .portfolio-container:hover {
-  border: 10px solid var(--color-light);
   transition: var(--default-transition);
 }
 .portfolio-grid .portfolio-container:hover .portfolio-overlay {
   transform: scale(100%);
   background-color: var(--color-light);
   transition: var(--default-transition);
-  width: 380px;
-  height: 380px;
+  width: 400;
+  height: 400;
+}
+.portfolio-grid .portfolio-container .portfolio-img {
+  border-radius: 2%;
+  margin: 0;
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 .portfolio-grid .portfolio-container .portfolio-overlay {
   transform-origin: center;
   background-color: var(--color-transparent);
   position: absolute;
-  width: 380px;
-  height: 380px;
+  width: 400px;
+  height: 400px;
   transform: scale(0%);
   margin: 0;
   padding: 0;
   z-index: 1;
   transition: var(--default-transition);
+  border-radius: 5%;
 }
 .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-description {
   font-size: 1.4rem;
@@ -915,21 +968,9 @@ form textarea:focus {
   margin: auto 1rem;
 }
 .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-brands:hover, .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-solid:hover {
-  background-color: var(--color-accent);
+  background-color: var(--color-white);
+  color: var(--color-dark);
   transition: var(--default-transition);
-}
-.portfolio-grid .portfolio-container .portfolio-img {
-  border-radius: 2%;
-  margin: 0;
-  position: relative;
-  z-index: 0;
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 .portfolio-grid .portfolio-container .portfolio-title-container {
   background-color: var(--color-light);
