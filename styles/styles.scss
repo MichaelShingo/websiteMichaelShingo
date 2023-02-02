@@ -8,6 +8,30 @@
     }
 }
 
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    //border: 1px solid red;
+  }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 // a:visited, a:link, a:active{
 //     text-decoration: none;
 // }
@@ -306,20 +330,20 @@ a {
     max-width: 100vw;
     display: flex;
     flex-direction: column;
-
+    .image-side-text {
+        margin: 0;
+        text-align: left;
+        max-width: 40vw;
+        min-width: 400px;
+    }
     .main-grid {
-        justify-content: center;
         margin: 20px auto;
         display: grid;
         gap: 50px;
         grid-template-columns: repeat(2, 1fr);
         //padding: 20px 150px 20px 150px;
         max-width: 50vw;
-        .image-side-text {
-            text-align: justify;
-            max-width: 40vw !important;
-            min-width: 400px;
-        }
+        
     }
     
     h1{
@@ -371,7 +395,9 @@ a {
     }
     my-gig-reviews {
         margin: 2rem auto;
-        width: 700px;
+        display: block;
+        max-width: 50vw;
+        transition: var(--default-transition);
     }
     a {
         color: var(--color-light);
@@ -382,14 +408,11 @@ a {
             color: var(--color-accent);
         }
     }
-    iframe {
-        display: block;
-        margin: 2rem auto;
-        width: 700px;
-        height: 394px;
+
+ 
 
 
-    }
+    
     img{
         margin: 2rem auto;
         display: block;
@@ -939,9 +962,11 @@ form {
 //REVIEWS------------------------------------------------
 .reviews-container {
     margin: 2rem auto;
-    width: 700px;
+    max-width: 700px;
     .review-text {
+        text-align: justify;
         height: 180px;
+        max-width: 100%;
     }
     
     .name-container {
