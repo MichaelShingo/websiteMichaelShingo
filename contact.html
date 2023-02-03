@@ -25,8 +25,12 @@
                         <li>Requesting score and parts.</li>
                         <li>Any other questions or comments you may have.</li>
                     </ul> -->
-                    <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
-                    <form onsubmit="sendEmail(); reset(); return false;" id="general-contact">
+                    <p class="col-1">Contact Michael about coding opportunities, booking for events, music lessons, commissioning a piece, request scores, or
+                        anything else you have on your mind.
+                    </p>
+                    <form class="col-6" onsubmit="sendEmail(); reset(); return false;" id="general-contact">
+                        <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
+
                         <label for="name">Name:<span class="asterisk">*</span></label>
                         <input class="text-input" type="text" id="name" >
                         <label for="email">Email:<span class="asterisk">*</span></label>
@@ -34,8 +38,9 @@
                         <label for="subject">Subject:<span class="asterisk">*</span></label>
                         <input class="text-input" type="text" id="subject" >
                         <label for="message">Message:<span class="asterisk">*</span></label>
-                        <textarea id="message" name="message" rows="10" cols="40" placeholder="Coding opportunities, booking for events, music lessons, commissioning a piece, request scores..."></textarea>
+                        <textarea id="message" name="message" rows="10" cols="40" placeholder=""></textarea>
                         <button class="submit" type="submit">Submit</button>
+                    
                         
                     </form>
                     <p class="form-message"></p>

@@ -133,7 +133,7 @@ class EnsembleOptions extends HTMLElement {
     connectedCallback() {
         this.innerHTML =`
     <!--<div class="filler"></div>-->
-    <section class="collapsible-items">
+                    <section class="collapsible-items">
                         <div class="collapsible-title">
                             <h3>Solo Violin</h3>
                             <div class="icon-container">
@@ -148,7 +148,7 @@ class EnsembleOptions extends HTMLElement {
                                 A versatile instrument that can play soaring melodies as well as harmonies at the same time.
                             </p>
                             <img src="img/churchWeddingSmall.jpg" alt="Violinist performs romantic songs at a wedding cocktail hour and reception in Amsterdam, Netherlands">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OfoqvqPQCaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe class="video" src="https://www.youtube.com/embed/OfoqvqPQCaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </section>
 
@@ -166,7 +166,7 @@ class EnsembleOptions extends HTMLElement {
                             <p>As members of the bowed string instrument family, the violin and cello complement each other perfectly in sound. With the violin taking
                                  the melody and the cello playing the bass line, this expressive and dynamic duo can perform just about any song.
                             </p>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/l3sQeKjCjCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe class="video" src="https://www.youtube.com/embed/l3sQeKjCjCo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </section>
         
@@ -185,7 +185,7 @@ class EnsembleOptions extends HTMLElement {
                                 When combined with the expressive melodic qualities of the violin, the resulting ensemble is irresistible.
                             </p>
                             <img src="img/harp3Small.jpg" alt="harpist and violinist perform at a wedding in Amsterdam, Netherlands">
-                            <iframe src="https://www.youtube.com/embed/dmoNcAsY17U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+                            <iframe class="video" src="https://www.youtube.com/embed/dmoNcAsY17U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
                         </div>
                     </section>
 
@@ -205,7 +205,7 @@ class EnsembleOptions extends HTMLElement {
                                 ability to play multiple parts at the same time, this duo often captures all of the parts of the original song in spectacular fashion.
                             </p>
                             <img src="img/lanceWisemanRecitalSmall.jpg" alt="Violin and piano duo performing classical and romantic music at a recital and concert with reception.">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/smSvZD7BCpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe class="video" src="https://www.youtube.com/embed/smSvZD7BCpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </section>`
     }
