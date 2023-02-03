@@ -8,18 +8,7 @@
     }
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+
 
 [class*="col-"] {
     float: left;
@@ -27,10 +16,38 @@
     //border: 1px solid red;
   }
 
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
 .row::after {
     content: "";
     clear: both;
     display: table;
+}
+
+.row {
+    h2 {
+        border-top: 4px solid var(--color-grey-1);
+        border-bottom: 4px solid var(--color-grey-1);
+        //background-image: url(../img/sheetMusic1.jpg);
+        width: 100% !important;
+        color: var(--color-black);
+        text-align:justify;
+        margin: 2rem 1000px 2rem 0 !important;
+        font-size: 3rem;
+        padding: 30px 17px;
+    }
+
 }
 // a:visited, a:link, a:active{
 //     text-decoration: none;
@@ -156,6 +173,15 @@ a {
     text-decoration: none;
 
 
+}
+
+
+.video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    margin: 60px auto;
+    position: relative;
+    bottom: 0;
 }
 
 
@@ -332,8 +358,8 @@ a {
     flex-direction: column;
     .image-side-text {
         margin: 0;
-        text-align: left;
-        max-width: 40vw;
+        text-align: justify;
+        max-width: 100%;
         min-width: 400px;
     }
     .main-grid {
@@ -359,8 +385,8 @@ a {
     h2 {
         border-top: 4px solid var(--color-grey-1);
         border-bottom: 4px solid var(--color-grey-1);
+        display: block;
         //background-image: url(../img/sheetMusic1.jpg);
-        background-attachment:fixed;
         width: 100vw;
         color: var(--color-black);
         text-align: center;
@@ -380,6 +406,7 @@ a {
         //     transform-origin: bottom left;
         // }
     }
+
     h3 {
 
         
@@ -396,7 +423,7 @@ a {
     my-gig-reviews {
         margin: 2rem auto;
         display: block;
-        max-width: 50vw;
+        width: 100%;
         transition: var(--default-transition);
     }
     a {
@@ -430,9 +457,9 @@ a {
     }
 
   
-    p{
+    p {
         margin: 2rem auto;
-        width: 700px;
+        width: 100%;
     }
     .small-p {
         font-size: 1.35rem;
@@ -825,12 +852,28 @@ form {
     .small-p {
         margin: 0.2em;
     }
+    .form-row {
+        // display: flex;
+        // flex-direction: row;
+        // gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr );
+        gap: -5px;
+        width: 75%;
+
+    }
+    .radio-option-row {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
     .radio-row {
         margin: 0;
         font-size: 1.3rem;
         display: grid;
         grid-template-columns: 1em auto;
         gap: 0.5em;
+        width: fit-content;
         .radio-button { // input[type="radio"]
             -webkit-appearance: none;
             appearance: none;
@@ -874,6 +917,7 @@ form {
     label {
         line-height: 2rem;
         margin: 1.2rem 0 0.3rem 0;
+        width: fit-content;
     }
     textarea {
         font-size: 1.2rem;
@@ -927,6 +971,7 @@ form {
         
         background-color: var(--color-white);
     }
+
     .collapsible-title {
         display: flex;
         flex-direction: row;
@@ -962,11 +1007,10 @@ form {
 //REVIEWS------------------------------------------------
 .reviews-container {
     margin: 2rem auto;
-    max-width: 700px;
+    width: 100%;
     .review-text {
         text-align: justify;
-        height: 180px;
-        max-width: 100%;
+        width: 100%;
     }
     
     .name-container {
@@ -980,6 +1024,7 @@ form {
             .review-text-container {
                 height: 100%;
                 width: 100%;
+                aspect-ratio: 1;
                 display: flex;
                 .profile-text {
                     color: var(--color-white);
@@ -1008,12 +1053,14 @@ form {
     }
    
     .review-header {
-        margin: 1rem auto !important;
+        margin: 1rem 0 !important;
     
     }
     .arrow-container {
         text-align: center;
         margin-top: 0.5rem;
+        position: relative;
+        bottom: 0;
         .review-arrow {
             margin: 0.5rem;
             color: var(--color-grey-4);

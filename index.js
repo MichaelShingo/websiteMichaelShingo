@@ -3,6 +3,14 @@ class MyGigReviews extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <article class="reviews-container">
+                    <div class="arrow-container">
+                    <span class="review-arrow" id="left-arrow">
+                        <i class="fa-regular fa-circle-left fa-2x"></i>
+                    </span>
+                    <span class="review-arrow">
+                        <i class="fa-regular fa-circle-right fa-2x" id="right-arrow"></i>
+                    </span>
+                </div>
                         <span class="review-star" id="star1">
                             <i class="fa-solid fa-star"></i>
                         </span>
@@ -31,14 +39,7 @@ class MyGigReviews extends HTMLElement {
                         <h4 class="review-header" id="review-header"></h4>
                         <p class="review-text small-p" id="review-text"></p>
                         
-                        <div class="arrow-container">
-                            <span class="review-arrow" id="left-arrow">
-                                <i class="fa-regular fa-circle-left fa-2x"></i>
-                            </span>
-                            <span class="review-arrow">
-                                <i class="fa-regular fa-circle-right fa-2x" id="right-arrow"></i>
-                            </span>
-                        </div>
+
                     </article>`
     }
 }

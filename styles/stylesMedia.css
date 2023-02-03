@@ -19,4 +19,13 @@
     max-width: 90vw !important;
     min-width: 100px;
   }
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*=col-] {
+    width: 100%;
+  }
+  h1 {
+    font-size: 3rem !important;
+  }
 }/*# sourceMappingURL=stylesMedia.css.map */
