@@ -44,11 +44,25 @@
     .text-input, textarea{
         max-width: 120% !important;
     }
+    #footer {
+        display: block;
+    }
+    #content-wrap{
+        padding-bottom: 400px !important;
+    }
+    // #footer {
+    //     grid-template-columns: repeat(1, 1fr);
+    //     .social-icons{ //container for all icons
+    //         grid-template-columns: repeat(1, 1fr) !important;
+    //         gap: 5px;
+    // }
+
+
     // p {
     //     font-size: 1.35rem !important;
     // }
     // .small-p {
     //     font-size: 1.2rem !important;
     // }
-  }
+}
   

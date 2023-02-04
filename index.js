@@ -109,20 +109,28 @@ customElements.define('my-header', MyHeader);
 class MyFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <footer id="footer">
-                <div class="copyright">
+        <footer id="footer" class="row">
+                <div class="copyright col-3">
                     <p id="copyright"></p>
                     <!--<p id="footer-sub-text"><b>{</b> Coded from scratch with HTML, CSS, and Javascript <b>}</p>-->
                 </div>
+                
+                <div class="col-5"></div>
+
+                <div class="social-icons col-4">
+                    <div class="row social-icons-row">
+                        <div class="footer-icon-container col-3"><a href="https://www.youtube.com/channel/UCb46nljnneXaQCa5wKYsbWA" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a></div>
+                        <div class="footer-icon-container col-3"><a href="https://github.com/MichaelShingo" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a></div>
+                        <div class="footer-icon-container col-3"><a href="https://www.linkedin.com/in/michael-shingo-crawford-44577283/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" ></i></a></div>
+                        <div class="footer-icon-container col-3"><a href="https://www.facebook.com/MichaelShingo" target="_blank"><i class="fa-brands fa-facebook  fa-lg"></i></a></div>
+                    </div>
+      
+                 </div>
             
-                    
-                </div>
-                <div class="social-icons">
-                    <a href="https://www.youtube.com/channel/UCb46nljnneXaQCa5wKYsbWA" class="fa-brands fa-youtube" target="_blank"></a>
-                    <a href="https://github.com/MichaelShingo" class="fa-brands fa-github" target="_blank"></a>
-                    <a href="https://www.linkedin.com/in/michael-shingo-crawford-44577283/" class="fa-brands fa-linkedin" target="_blank"></a>
-                    <a href="https://www.facebook.com/MichaelShingo" class="fa-brands fa-facebook" target="_blank"></a>
-                </div>
+ 
+                
+                
+   
             </footer>
         `
     }
@@ -285,7 +293,7 @@ hamburgerContainer.addEventListener("click", () => {
 //footer date
 const copyrightText = document.getElementById("copyright");
 let currentYear = new Date().getFullYear();
-copyrightText.innerHTML = `Copyright © ${currentYear}<br>Web design by Michael Shingo Crawford.`;
+copyrightText.innerHTML = `Copyright © ${currentYear}<br>Web design by Michael Shingo Crawford`;
 
 
 //CONTACT----------------------------------

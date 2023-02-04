@@ -38,4 +38,10 @@
   .text-input, textarea {
     max-width: 120% !important;
   }
+  #footer {
+    display: block;
+  }
+  #content-wrap {
+    padding-bottom: 400px !important;
+  }
 }/*# sourceMappingURL=stylesMedia.css.map */
