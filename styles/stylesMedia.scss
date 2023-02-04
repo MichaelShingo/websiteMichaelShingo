@@ -18,6 +18,9 @@
     img {
         max-width: 90vw !important;
     }
+    .rates-container {
+        display: block;
+    }
 
 }
 
@@ -25,6 +28,9 @@
     //for tablets
     form {
         width: 100%;
+    }
+    .rates-container {
+        display: block;
     }
 }
 @media only screen and (max-width: 768px) {
@@ -49,6 +55,10 @@
     }
     #content-wrap{
         padding-bottom: 400px !important;
+    }
+    .rates-container {
+        display: flex;
+        flex-direction: column;
     }
     // #footer {
     //     grid-template-columns: repeat(1, 1fr);

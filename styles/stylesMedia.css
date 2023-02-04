@@ -15,10 +15,16 @@
   img {
     max-width: 90vw !important;
   }
+  .rates-container {
+    display: block;
+  }
 }
 @media only screen and (max-width: 1000px) {
   form {
     width: 100%;
+  }
+  .rates-container {
+    display: block;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -43,5 +49,9 @@
   }
   #content-wrap {
     padding-bottom: 400px !important;
+  }
+  .rates-container {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=stylesMedia.css.map */

@@ -208,16 +208,14 @@ a {
 
 //NAVIGATION 
 .menu-items{ //ul element
+    height: 100%;
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 55%;
     transform: translate(-50%, -50%);
     z-index: 102;
     transition: color .5s ease-out;
 
-
- 
-    
     .menu-item{ //li element
         margin-top: 10%;
         text-align: center;
@@ -232,7 +230,7 @@ a {
             font-family: Asap, sans-serif;
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 4rem;
+            font-size: 8vh;
             &:after{
                 background-color: var(--color-white);
                 display: block;
@@ -602,9 +600,12 @@ a {
 
 //LESSONS-----------------------------------
 .rates-container {
-    margin: 2px auto !important;
-    // display: flex;
-    // flex-direction: row;
+    margin: 2px 0 !important;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     .rates-box {
         aspect-ratio: 1;
@@ -669,6 +670,9 @@ a {
     .social-icons{ //container for all icons
         height: 100%;
         z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .social-icons-row{
             height: 100%;
             .footer-icon-container{ //individual icon containers
@@ -919,6 +923,9 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    #other-source {
+        margin-top: 4px;
+    }
     p {
         
         margin: 1rem 0 !important;
