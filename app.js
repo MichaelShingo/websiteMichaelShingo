@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 // listen for requests
 app.listen(5500);
 
-app.use(express.static('public')); //here's the node-branch
+app.use(express.static('public')); //here's the node-branch, another edit
 
 app.use(morgan('dev'));
 
