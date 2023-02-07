@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
+        <title><%= title %></title>
+        <!--<link rel="stylesheet" href="styles/questions.css">-->
+        <%- include('./partials/styles.ejs') %>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <%- include('./partials/head.ejs') %>
+                <main class="main-content">
+                    <h1>Hire a Violinist in the Netherlands</h1>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="brightness-hover col-6" src="img/alexTranProposal1SmallCropped.jpg" alt="Netherlands violinist performing at a wedding proposal event.">
+
+                        </div>
+                        <div class="col-6">
+                            <p class="image-side-text">I am a Philadelphia-based violinist who performs classical, popular, and anime music in Pennsylvania, New Jersey, and Delaware. 
+                                If you would like to hire a violinist to perform in a wide variety of settings, including weddings, corporate events, holiday celebrations, 
+                                private salon concerts, recitals, look no further! I constantly expand my repertoire to include new selections by continuously composing, 
+                                arranging and recording music for <a href="https://www.youtube.com/channel/UCb46nljnneXaQCa5wKYsbWA">Youtube</a>, 
+                                where I have reached over a million views.<br><br>
+                        
+    
+                                My goal as a violinist is to contribute a tailored musical selection for every event. 
+                                As a performer, composer, and arranger, I am able to meet the needs of a wide range of people. 
+                                I would love to have the opportunity to collaborate with you in making your event a truly unforgettable experience.
+                    
+                                <br><br>
+                                Have a listen to some of my playing and feel free to keep reading to learn more!
+                            </p>
+                            <div class="">
+                                <iframe class="video" src="https://www.youtube.com/embed/LZ6Dei0H1TU" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-6 col-s-6">
+                            
+                            <h2>Reviews</h2>
+                            <%- include('./partials/gigReviews.ejs') %>
+                            <h2>Ensemble Options</h2>
+
+                            <%- include('./partials/ensembleOptions.ejs') %>
+                            <h2>Song Lists</h2>
+                            <p>
+                                Browse my song list <a href="songlist.html">here</a>.
+                            </p>
+
+
+
+                        </div>
+                        <div class="col-6 col-s-6">
+                            <h2>Ready to book?</h2>
+
+                            <p>Send me details about your event and I’ll get back to you with a quote or use the <a href="contact.html">contact form</a> if you have a more general question.</p>
+                            <p>If you would like to hire a violinist for a wedding in Amsterdam, Netherlands, 
+                                or other locations, please visit the <a href="wedding-violinist-for-hire-in-netherlands">dedicated page here.</a></p>
+                            <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
+                            <form class="" onsubmit="sendEmailViolinist(); reset(); return false;" >
+                                
+                                <label for="name">Name:<span class="asterisk">*</span></label>
+                                <input class="text-input" type="text" id="name" >
+                                
+                                <label for="email">Email:<span class="asterisk">*</span></label>
+                                <input class="text-input" type="email" id="email" >
+        
+                                <label for="location">Event Location:<span class="asterisk">*</span></label>
+                                <input class="text-input" type="text" id="location">
+        
+                                <label for="outdoors">Setting:<span class="asterisk">*</span></label>
+                                
+                                <div class="radio-option-row">
+                                    <div class=radio-row>
+                                        <input class="radio-button" name="setting-radio" type="radio" id="outdoors" value="Outdoors">
+                                        <label class="small-p" for="outdoors">Outdoors</label>
+                                    </div>
+                                
+                                    <div class="radio-row">
+                                        <input class="radio-button" name="setting-radio" type="radio" id="indoors" value="Indoors">
+                                        <label class="small-p"  for="indoors">Indoors</label>
+                                    </div>
+                                </div>
+          
+                                
+                          
+                                <label for="date">Date of Event:<span class="asterisk">*</span></label>
+                                <input class="text-input" type="date" id="date">
+                                
+        
+                                <label for="number-musicians">Number of Musicians:<span class="asterisk">*</span></label>
+                                <input class="text-input" type="number" id="number-musicians">
+        
+                                <label for="playing-length">How long would you like me to play? (in minutes):<span class="asterisk">*</span></label>
+                                <input class="text-input" type="number" id="playing-length">
+        
+        
+                                <label for="google">Where did you find me:<span class="asterisk">*</span></label>
+        
+                                <div class="form-row">
+                                    <div class="radio-row">
+                                        <input class="radio-button" name="find-radio" type="radio" id="google" value="Google">
+                                        <label class="small-p" for="google">Google</label>        
+                                    </div>
+            
+                                
+                                    <div class="radio-row">
+                                        <input class="radio-button" name="find-radio" type="radio" id="gigsalad" value="Gigsalad">
+                                        <label class="small-p" for="gigsalad">Gigsalad</label> 
+                                    </div>
+
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="radio-row">
+                                        <input class="radio-button" name="find-radio" type="radio" id="thumbtack" value="Thumbtack">
+                                        <label class="small-p" for="thumbtack">Thumbtack</label>     
+                                    </div>
+            
+            
+                                    <div class="radio-row">
+                                        <input class="radio-button" name="find-radio" type="radio" id="word-of-mouth" value="Word of Mouth">
+                                        <label class="small-p" for="word-of-mouth">Word of Mouth</label>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-row">
+                         
+                                    <div class="radio-row">
+                                        <input class="radio-button" name="find-radio" type="radio" id="zola" value="Zola">
+                                        <label class="small-p" for="zola">Zola</label>
+                                    </div>
+            
+            
+                                    <div class="radio-row">
+                                        <input class="radio-button" name="find-radio" type="radio" id="other" value="Other">
+                                        <label class="small-p" for="other">Other (please specify):</label>
+                                    </div>
+
+                                </div>
+                            
+ 
+        
+        
+   
+        
+        
+       
+                                
+                                <input class="text-input" type="text" id="other-source">
+        
+                                <label for="additional-comments">Message:<span class="asterisk"></span></label>
+                                <textarea id="message" name="message" rows="10" cols="40"></textarea>
+        
+                                <button class="submit" type="submit">Submit</button>
+                                
+                            </form>
+                        </div>
+                        
+                        
+
+
+                    </div>
+                    
+                    
+                    
+
+                   
+
+
+                    
+
+              
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <p class="form-message"></p>
+
+                   
+                </main>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+        </div> 
+    </body>
+    <script src="index.js" type="text/javascript" defer></script>
+</html>

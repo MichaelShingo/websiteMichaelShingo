@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <title><%= title %></title>
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.css" integrity="sha512-FKlWnaJrtBEqH+gNy8kvp+/61S+8iOKb5tG+EKCQ3Fc3iUYr9MvnywpkZBcuNKrxQxlnZYpNwDgkZ2atX7wVVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <%- include('./partials/styles.ejs') %>
+        
+    </head>
+
+    <body id="landing-page">
+        <!-- <nav class="navigation">
+            <ul class="off-screen" id="menu-items">
+                <li class="menu-item"><a href="index">Home</a></li>
+                <li class="menu-item"><a href="biography">Bio</a></li>
+                <li class="menu-item"><a href="portfolio">Portfolio</a></li>
+                <li class="menu-item"><a href="violinist">Violinist</a></li>
+                <li class="menu-item"><a href="lessons">Lessons</a></li>
+                <li class="menu-item"><a href="contact">Contact</a></li>
+
+            </ul>
+
+            <div class="menuContainer" style="background-color: #88ab76a1;"" id="menuContainer">
+
+                <div class="hamburgerContainer" id="hamburgerContainer">
+                    <div class="hamburgerLine" id="line1"></div>
+                    <div class="hamburgerLine" id="line2"></div>
+                    <div class="hamburgerLine" id="line3"></div>
+                    <div class="hamburgerLine" id="line4"></div>  
+                    <div class="hamburgerLine" id="line5"></div> 
+                </div>
+            </div>
+        </nav> 
+        <header class="header" style="background-color: rgba(0,0,0,0);">
+                    <div class="header-logo" id="logo">
+                        <div id="logo-box">
+                            <div class="logo-bracket" id="left-bracket">{</div>
+                            <div id="logo-strings">
+                                <div class="logo-string" id="string-1"></div>
+                                <div class="logo-string" id="string-2"></div>
+                                <div class="logo-string" id="string-3"></div>
+                                <div class="logo-string" id="string-"></div>
+                            </div>
+                            <div class="logo-bracket" id="right-bracket">}</div>
+                        </div>
+                    </div>
+
+        
+
+
+                </header> -->
+    
+
+
+                <!-- <my-header></my-header> -->
+        <%- include('./partials/head.ejs') %>
+        <video id="background-video" autoplay loop muted poster="/img/alexTranProposal1Landing.jpg">
+            <source src="./img/testVideoWebsite.mp4" type="video/mp4">
+            </video>
+        <div id="fullPage">
+            <div class="section s1">
+                <h1>Michael Shingo Crawford</h1>
+                <h2 style="text-align: center;">Software Developer | Violinist</h2>
+
+            </div>
+            <div class="section s2">
+                <a href="./portfolio">
+                    <div class="landing-text-container">
+                        <h1>Building tech that empowers</h1><h1>musicians to excel.</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="section s3">
+                <a href="./biography"> 
+                    <button class="landing-button">Learn More</button>
+            </a>
+            </div>
+        </div>
+
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.15/fullpage.min.js" integrity="sha512-rNf09cQHIWzD8BU37lIb3rInygeWXW2hVqJ7niVtTPXWuVR3aFiph1eFIeDiEQV8J45u0qfp7ng8I3TzJHY4Eg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        new fullpage('#fullPage', {
+            autoScrolling: true,
+            navigation: true,
+            navigationPosition: 'left',
+            fadingEffect: true,
+            scrollOverflowMacStyle: true,
+            scrollOverflowReset: false,
+            controlArrows: true,
+            controlArrowsHTML: [
+                '<div class="fp-arrow"></div>', 
+                '<div class="fp-arrow"></div>'
+            ],
+            parallax: true,
+	        parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+            waterEffect: false,
+	        waterEffectOptions: { animateContent: true, animateOnMouseMove: true},
+            cards: false,
+	        cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+            credits: { enabled: false, label: 'Web Design by Michael Shingo Crawford', position: 'bottom'}
+        });
+    </script>
+    <script src="index.js" type="text/javascript" defer></script>
+
+
+
+
+</html>
