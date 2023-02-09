@@ -5,42 +5,67 @@ const mongoose = require('mongoose');
 const Song = require('./models/song');
 const websiteName = 'Michael Shingo Crawford';
 const contentPageObject =  { title: `Bio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' }
-// express app
+const csv = require('csv-parser');
+const fs = require('fs');
 
+
+// TODO update biography
+// TODO check top bar on index page
+// TODO Encrypt email password and create working forms
+// TODO encrypt mongoDB URI
+// TODO improve footer mobile resposive
+// TODO improve form mobile responsive (add dropdown menu)
+// TODO song list.....
+
+function csvToJSON() { //this is missing 2 entries? 149 documents inserted into MONGO
+    const results = [];
+    fs.createReadStream('allSongExcel.csv')
+        .pipe(csv())
+        .on('data', (data) => results.push(data))
+        .on('end', () => {
+            for (let i = 0; i < results.length - 1; i++) {
+                results[i]['ensemble'] = results[i]['ensemble'].split(' ');
+                if (results[i]['popular'] === 't') {
+                    results[i]['popular'] = true;
+
+                } else { 
+                    results[i]['popular'] = false;
+                }
+
+                const song = new Song(results[i]);
+                song.save()
+                    .then((result) => {
+                        console.log(result);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
+                //console.log(results[i]['ensemble'].split(' '));
+            }
+            console.log(results);
+        });
+}
+
+
+// express app
 const app = express();
 
 //connect to mongoDB
 const dbURI = 'mongodb+srv://michaelShingo:OGiMhz9tlFHOQyut@personalwebsite.b8q1eel.mongodb.net/personalWebsite?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
-    .then((result) => app.listen(5500))
+    .then((result) => {
+        app.listen(5500)
+        //csvToJSON();
+    })
     .catch((err) => console.log(err));
 
-//register view engine
-app.set('view engine', 'ejs');
-
-// listen for requests
-
-
+app.set('view engine', 'ejs'); //register view engine
 app.use(express.static('public')); //defines location of static files , otherwise no links will work 
-
 app.use(morgan('dev'));
 
-// mongoose tests
+// listen for requests
 app.get('/add-song', (req, res) => {
-    const song = new Song({
-        title: 'Perfect',
-        firstName: 'Ed',
-        lastName: 'Sheeran',
-        genre: 'Pop',
-        ensemble: ['v', 'vc', 'vp', 'vh']
-    });
-    song.save()
-        .then((result) => {
-            res.send(result)
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+
 })
 
 app.get('/all-songs', (req, res) => {
@@ -72,46 +97,33 @@ app.get('/index', (req, res) => {
 });
 
 app.get('/biography', (req, res) => {
-    res.render('biography', contentPageObject);
+    res.render('biography', { title: `Bio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
 });
 
 app.get('/portfolio', (req, res) => {
-    res.render('portfolio', contentPageObject);
+    res.render('portfolio', { title: `Portfolio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
 });
 
 app.get('/violinist', (req, res) => {
-    res.render('violinist', contentPageObject);
+    res.render('violinist', { title: `Violinist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
 })
 app.get('/lessons', (req, res) => {
-    res.render('lessons', contentPageObject);
+    res.render('lessons', { title: `Lessons | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact', contentPageObject);
+    res.render('contact', { title: `Contact | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
 })
 
-
-
-
-
-app.get('/song-lists', (req, res) => {
+app.get('/songs', (req, res) => {
+    let allSongs = []
     Song.find()
         .then((result) => {
+            allSongs = result;
+            res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs });
 
         })
-        .catch((err) => {
-            console.log(err);
-        })
-    const blogs = [
-        {title: 'Absolutely phenomenal', text: "Michael did an absolutely phenomenal job. I was completely blown away with his playing ability. I had modest expectations when I used this site, but his skill at playing the violin amazed me. I had asked him to learn two music pieces of music and he played them flawlessly. The pieces were multi-instrumental and he wove in-between the melodies which were usually played by different instruments/vocalists. He also writes and plays his own arrangements that I highly recommend!"},
-        {title: 'Amazing job!', text: 'Michael and the harpist Rebecca did an amazing job! They were such a highlight and so worth every penny. They made our wedding truly special. They covered such a range of music and my guests are still talking about the LOTR cover! I am so excited to see my wedding video to watch them because unfortunately as the bride, I didn’t get to see the entire performance. All of my guests wondered how I landed such world-class talent at my wedding! Definitely book Michael, cut some other budget expense if you need to, bc you won’t regret it! There is nothing as moving as walking down the aisle to a live violin! I wish I could have a second wedding just to watch them play again!'}
-
-    ]
-    res.render('song-lists', {title: 'Song Lists', blogs});
 })
-
-
-
 
 
 

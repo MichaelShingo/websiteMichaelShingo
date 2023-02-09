@@ -9,11 +9,11 @@ const songSchema = new Schema({
     },
     firstName: {
         type: String,
-        required: true
+        required: false
     },
     lastName: {
         type: String,
-        required: false
+        required: true
     },
     genre: {
         type: String,
@@ -21,6 +21,10 @@ const songSchema = new Schema({
     },
     ensemble: {
         type: Array,
+        required: true
+    },
+    popular: {
+        type: Boolean,
         required: true
     }
 });

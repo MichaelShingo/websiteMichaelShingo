@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title><%= title %></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        <title>Song Lists</title>
         <%- include('./partials/styles.ejs') %>
     </head>
     <body>
@@ -13,29 +15,53 @@
             <div id="content-wrap">
                 <%- include('./partials/head.ejs') %>
                 <main class="main-content">
-                    <h1>Song Lists</h1>
-                    <h2>Song Request</h2>
-                    <table id="solo-song-list">
-                        <th>Title</th>
-                        <th>Artist</th>
-                        <th>Genre</th>
-                        <th>Ensemble</th>
+                    <h1>Song List</h1>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <p>Here is a list of songs that I play. Please select the ensemble you are interested in to see the songs for that particular group.</p>
+                            <form>
+                                <select name="ensembles" id="ensembles">
+                                    <option value="v">Solo Violin</option>
+                                    <option value="vc">Violin and Cello Duo</option>
+                                    <option value="vp">Violin and Piano Duo</option>
+                                    <option value="vh">Violin and Harp Duo</option>
+                                </select>
+                            </form>
+                            <table class="content-table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Artist</th>
+                                        <th>Genre</th>
+                                    </tr>
+                          
+                                </thead>
+                                <% allSongs.forEach(function(song) { %>
+                                    <%- include('./songRow.ejs', {song: song}); %>
+                                <% }); %>
+                        
 
-                    </table>
-        
-                    
+                                </div>
 
-            
+                            
+                            </table>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                            
+
                     
-                   
+                    
                 </main>
             </div>
             <%- include('./partials/footer.ejs') %>
-        </div> 
+        </div>
+        
+        <script src="index.js" type="text/javascript" async defer></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            
+        </script>
     </body>
-    <script src="index.js" type="text/javascript" defer></script>
-    <script src="songs.js" type="text/javascript" defer>
-        dataList = database.getAllData;
-        console.log(dataList);
-    </script>
 </html>
