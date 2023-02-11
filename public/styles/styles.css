@@ -135,6 +135,7 @@ html {
   top: 0;
   z-index: 1;
   width: 100%;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: rgba(255, 255, 255, 0.7);
@@ -356,7 +357,7 @@ a {
   margin: 0;
   padding: 25px;
   color: var(--color-white);
-  background-color: var(--color-light-trans);
+  background-color: var(--color-light);
   text-align: center;
   font-size: 4.5rem;
   text-transform: uppercase;
@@ -386,6 +387,7 @@ a {
   margin: 2rem auto;
   display: block;
   width: 100%;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   transition: var(--default-transition);
@@ -439,6 +441,7 @@ a {
   font-size: 1.5rem;
   border-radius: 50px;
   height: 50px;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
@@ -734,6 +737,7 @@ tbody tr:last-of-type {
   background-size: cover;
 }
 .s2 .landing-text-container {
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
@@ -741,6 +745,7 @@ tbody tr:last-of-type {
   right: 30px;
   bottom: 30px;
   border: 5px solid white;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: var(--color-black-trans);
@@ -767,6 +772,41 @@ tbody tr:last-of-type {
 .s3 h1 {
   text-align: center;
   color: white;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  min-width: 250px;
+  height: 50px;
+}
+.select-container .icon-container {
+  pointer-events: none;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.select-container .icon-container i {
+  font-size: 30px;
+  color: var(--color-white);
+}
+
+.select-box {
+  border-radius: 5px;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0 30px 0 15px;
+  width: 100%;
+  color: white;
+  background-color: var(--color-light);
+  font-size: 20px;
 }
 
 .asterisk {
@@ -820,6 +860,7 @@ form .radio-row {
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -861,6 +902,7 @@ form .text-input:focus {
 form label {
   line-height: 2rem;
   margin: 1.2rem 0 0.3rem 0;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1074,6 +1116,7 @@ form textarea:focus {
   padding: 1rem;
   margin: 0.5rem auto 1rem auto;
   transition: var(--default-transition);
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -1127,6 +1170,7 @@ form textarea:focus {
   padding: 1rem;
   margin: 0.5rem auto 1rem auto;
   transition: var(--default-transition);
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
