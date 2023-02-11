@@ -20,14 +20,14 @@
                         <div class="col-2"></div>
                         <div class="col-8">
                             <p>Here is a list of songs that I play. Please select the ensemble you are interested in to see the songs for that particular group.</p>
-                            <form>
-                                <select name="ensembles" id="ensembles">
-                                    <option value="v">Solo Violin</option>
-                                    <option value="vc">Violin and Cello Duo</option>
-                                    <option value="vp">Violin and Piano Duo</option>
-                                    <option value="vh">Violin and Harp Duo</option>
-                                </select>
-                            </form>
+                            <p><%= songCount %> songs available.</p>
+                            <select name="ensembles" id="ensembles" onchange="location=this.value;">
+                                <option id="option-all" value="/songs">All Songs</option>
+                                <option id="option-v" value="/v" >Solo Violin</option>
+                                <option id="option-vc" value="/vc">Violin and Cello Duo</option>
+                                <option id="option-vp" value="/vp">Violin and Piano Duo</option>
+                                <option id="option-vh" value="/vh">Violin and Harp Duo</option>
+                            </select>
                             <table class="content-table">
                                 <thead>
                                     <tr>
@@ -60,6 +60,28 @@
         
         <script src="index.js" type="text/javascript" async defer></script>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            const optionAll = document.getElementById('option-all');
+            const optionV = document.getElementById('option-v');
+            const optionVC = document.getElementById('option-vc');
+            const optionVP = document.getElementById('option-vp');
+            const optionVH = document.getElementById('option-vh');
+            if (document.URL.endsWith('v')) {
+                optionV.setAttribute('selected', 'true');
+            }
+            else if (document.URL.endsWith('vh')) {
+                optionVH.setAttribute('selected', 'true');   
+            }
+            else if (document.URL.endsWith('vp')) {
+                optionVP.setAttribute('selected', 'true');
+            }
+            else if (document.URL.endsWith('vc')) {
+                optionVC.setAttribute('selected', 'true');
+            }
+            else {
+
+            }
+        </script>
         <script>
             
         </script>

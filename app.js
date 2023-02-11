@@ -15,7 +15,7 @@ const fs = require('fs');
 // TODO encrypt mongoDB URI
 // TODO improve footer mobile resposive
 // TODO improve form mobile responsive (add dropdown menu)
-// TODO song list.....
+// TODO song list search, sort, ensemble selection, # of songs display, select songs and populate contact form
 
 function csvToJSON() { //this is missing 2 entries? 149 documents inserted into MONGO
     const results = [];
@@ -116,14 +116,70 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/songs', (req, res) => {
-    let allSongs = []
+    let songQuery = []
     Song.find()
+        .sort('title')
         .then((result) => {
-            allSongs = result;
-            res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs });
-
-        })
+            songQuery = result;
+            songCount = songQuery.length
+            res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount});
+        });
 })
+
+app.get('/v', (req, res) => {
+    let songQuery = []
+    Song.find(
+        { ensemble: 'v'}
+    )
+    .sort('title')
+    .then((result) => {
+        songQuery = result;
+        songCount = songQuery.length
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount });
+    })
+});
+
+app.get('/vc', (req, res) => {
+    let songQuery = []
+    Song.find(
+        { ensemble: 'vc'}
+    )
+    .sort('title')
+    .then((result) => {
+        songQuery = result;
+        songCount = songQuery.length
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount });
+    })
+});
+
+app.get('/vp', (req, res) => {
+    let songQuery = []
+    Song.find(
+        { ensemble: 'vp'}
+    )
+    .sort('title')
+    .then((result) => {
+        songQuery = result;
+        songCount = songQuery.length
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount });
+    })
+});
+
+app.get('/vh', (req, res) => {
+    let songQuery = []
+    Song.find(
+        { ensemble: 'vh'}
+    )
+    .sort('title')
+    .then((result) => {
+        songQuery = result;
+        songCount = songQuery.length
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount });
+    })
+    
+});
+
+
 
 
 
