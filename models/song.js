@@ -29,6 +29,8 @@ const songSchema = new Schema({
     }
 });
 
+songSchema.index({title: 'text', firstName: 'text', lastName: 'text', genre: 'text'})
+
 const Song = mongoose.model('Song', songSchema);
 module.exports = Song;
 

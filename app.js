@@ -7,7 +7,7 @@ const websiteName = 'Michael Shingo Crawford';
 const contentPageObject =  { title: `Bio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' }
 const csv = require('csv-parser');
 const fs = require('fs');
-
+const bodyParser = require('body-parser');
 
 // TODO update biography
 // TODO check top bar on index page
@@ -62,31 +62,10 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
 app.set('view engine', 'ejs'); //register view engine
 app.use(express.static('public')); //defines location of static files , otherwise no links will work 
 app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // listen for requests
-app.get('/add-song', (req, res) => {
-
-})
-
-app.get('/all-songs', (req, res) => {
-    Song.find()
-        .then((result) => {
-            res.send(result);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-})
-
-app.get('/single-song', (req, res) => {
-    Song.findById('63e01996038ad942b29950a8')
-        .then((result) => {
-            res.send(result);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-});
 
 app.get('/', (req, res,) => {
     res.render('index', { title: `Home | ${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8' });
@@ -124,6 +103,22 @@ app.get('/songs', (req, res) => {
             songCount = songQuery.length
             res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount});
         });
+
+})
+
+app.post('/songs', (req, res) => {
+    let songQuery = [];
+    songCount = 0;
+    let searchTerm = req.body['search-song']
+    Song.find({$text: {$search: searchTerm}})
+    .sort('title')
+    .then((result) => {
+        songQuery = result;
+        songCount = songQuery.length;
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount});
+
+    });
+
 })
 
 app.get('/v', (req, res) => {
@@ -178,9 +173,6 @@ app.get('/vh', (req, res) => {
     })
     
 });
-
-
-
 
 
 // 404 page
