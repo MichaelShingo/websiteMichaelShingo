@@ -91,7 +91,7 @@
                         <div class="col-6">
                             <h2>Ready to schedule a lesson?</h2>
                             
-                            <form onsubmit="sendEmailTeacher(); reset(); return false;" id="teaching-contact">
+                            <form onsubmit="sendEmailLessons(); reset(); return false;" id="teaching-contact">
                                 <p>Send me a message using this form and let’s schedule a time!</p>
                                 <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
                                 <label for="name">Name:<span class="asterisk">*</span></label>
@@ -184,9 +184,9 @@
                                 <textarea id="lesson-goals" name="lesson-goals" rows="10" cols="40"></textarea>
         
                                 <button class="submit" type="submit">Submit</button>
-                                
+                                <p class="form-message"></p>
+
                             </form>
-                            <p class="form-message"></p>
                         </div>
                         <div class="col-6">
                             <h2>What do my students say?</h2>
@@ -201,4 +201,6 @@
         </div> 
     </body>
     <script src="index.js" type="text/javascript" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </html>

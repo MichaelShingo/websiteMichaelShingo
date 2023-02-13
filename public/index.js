@@ -71,15 +71,17 @@ function sendEmail(){
     //encryption? https://www.youtube.com/watch?v=sGQSz22U8VM, you need domain first https://smtpjs.com
     let formElement = document.getElementById("general-contact");
     let formMessage = document.getElementsByClassName("form-message")[0];
+    let clientEmail = document.getElementById("email");
     let bodyString = `<b>Name:</b> ${document.getElementById("name").value}\n\n<br><br>
     <b>Email:</b> ${document.getElementById("email").value}\n\n<br><br>
     <b>Subject:</b> ${document.getElementById("subject").value}\n\n<br><br>
     <b>Message:</b><br> <span style="width: 50%;">${document.getElementById("message").value}</span>`;
 
     Email.send({
-        Host : "smtp.elasticemail.com", //port 2525
-        Username : "shingoalert@gmail.com",
-        Password : "07418A32D8DFA36AA7EB7C0C2685A659A6E9",
+        // Host : "smtp.elasticemail.com", //port 2525
+        // Username : "shingoalert@gmail.com",
+        // Password : "07418A32D8DFA36AA7EB7C0C2685A659A6E9",
+        SecureToken: "f1ec68e9-dad5-4214-b53f-0f869c937a3a",
         To : 'mcrawford5376@gmail.com',
         From : 'mcrawford5376@gmail.com',
         Subject : "General Contact Form Submission",
@@ -95,7 +97,117 @@ function sendEmail(){
 }
 
 function sendEmailViolinist(){
+    let formElement = document.getElementById("violinist-form");
+    let formMessage = document.getElementsByClassName("form-message")[0];
+    let clientEmail = document.getElementById("email");
+    let settingRadios = document.getElementsByName('setting-radio');
+    let selectedSetting = 'None';
+    settingRadios.forEach((radio) => {
+        if (radio.checked) {    
+            selectedSetting = radio;
+        }
+    });
 
+    const findRadios = document.getElementsByName('find-radio');
+    let selectedFind = 'None';
+    findRadios.forEach((radio) => {
+        if (radio.checked) {
+            selectedFind = radio.value;
+        }
+    });
+
+    let otherFind = 'N/A'
+    if (selectedFind === 'Other') {
+        otherFind = document.getElementById('other-source').value;
+    }
+
+    let bodyString = `<b>Name:</b> ${document.getElementById("name").value}\n\n<br><br>
+    <b>Email:</b> ${document.getElementById("email").value}\n\n<br><br>
+    <b>Location:</b> ${selectedSetting.value}\n\n<br><br>
+    <b>Event Date:</b> ${document.getElementById("date").value}\n\n<br><br>
+    <b>Number of musicians:</b> ${document.getElementById("number-musicians").value}\n\n<br><br>
+    <b>Playing Length:</b> ${document.getElementById("playing-length").value}\n\n<br><br>
+    <b>Where did you find me?:</b> ${selectedFind.value}\n\n<br><br>
+    <b>Other:</b> ${otherFind}\n\n<br><br>
+    <b>Message:</b><br> <span style="width: 50%;">${document.getElementById("message").value}</span>`;
+
+    console.log('function runs');
+
+    Email.send({
+        SecureToken: "f1ec68e9-dad5-4214-b53f-0f869c937a3a",
+        To : 'mcrawford5376@gmail.com',
+        From : 'mcrawford5376@gmail.com',
+        Subject : "Violinist Contact Form",
+        Body : bodyString
+    }).then(message => {
+        if (message == 'OK'){
+            formMessage.innerText = "Message sent successfully.";
+            console.log('message sent successfully');
+        } else {
+            formMessage.innerText = "Message not sent."
+            formMessage.classList.add('error')
+        }
+    });
+}
+
+
+function sendEmailLessons(){
+    let formMessage = document.getElementsByClassName("form-message")[0];
+    let subjectRadios = document.getElementsByName('subject-radio');
+    let lessonClientName = document.getElementById("name").value;
+    let selectedSubject = 'None';
+    subjectRadios.forEach((radio) => {
+        if (radio.checked) {    
+            selectedSubject = radio.value;
+        }
+    });
+
+    let selectedSkillLevel = 'None';
+    let skillRadios = document.getElementsByName('skill-radio');
+    skillRadios.forEach((radio) => {
+        if (radio.checked) {
+            selectedSkillLevel = radio.value;
+        }
+    });
+
+    const findRadios = document.getElementsByName('find-radio');
+    let selectedFind = 'None';
+    findRadios.forEach((radio) => {
+        if (radio.checked) {
+            selectedFind = radio.value;
+        }
+    });
+
+    let otherFind = 'N/A'
+    if (selectedFind === 'Other') {
+        otherFind = document.getElementById('other-source').value;
+        console.log(otherFind);
+
+    }
+
+    let bodyString = `<b>Name:</b>${lessonClientName}\n\n<br><br>
+    <b>Email:</b> ${document.getElementById("email").value}\n\n<br><br>
+    <b>Subject:</b> ${selectedSubject}\n\n<br><br>
+    <b>Skill level:</b> ${selectedSkillLevel}\n\n<br><br>
+    <b>Where did you find me?:</b> ${selectedFind}\n\n<br><br>
+    <b>Other:</b> ${otherFind}\n\n<br><br>
+    <b>Message:</b><br> <span style="width: 50%;">${document.getElementById("lesson-goals").value}</span>`;
+
+    Email.send({
+        SecureToken: "f1ec68e9-dad5-4214-b53f-0f869c937a3a",
+        To : 'mcrawford5376@gmail.com',
+        From : 'mcrawford5376@gmail.com',
+        Subject : `Lesson Request from ${clientName}`,
+        Body : bodyString
+    }).then(message => {
+        if (message == 'OK'){
+            formMessage.innerText = "Message sent successfully.";
+            console.log('message sent successfully');
+        } else {
+            formMessage.innerText = "Message not sent."
+            formMessage.classList.add('error')
+        }
+    });
 }
 
 
@@ -152,7 +264,6 @@ for (let i = 0; i < plusIcons.length; i++) {
 //REVIEWS-----------------------------------------\
 let path = window.location.pathname;
 let page = path.split('/').pop();
-console.log(page);
 let reviewList = []
 if (page == 'violinist'){
     reviewList = [
@@ -173,8 +284,6 @@ else if (page == 'lessons') {
     ];
     
 }
-
-console.log(reviewList)
 
 const starsList = document.getElementsByClassName('review-star');
 const reviewDate = document.getElementById('review-date');

@@ -22,7 +22,9 @@
 </nav> 
 <header class="header">
                 
-            <div id="progress-container" style="visibility: <%= logoTextVisibility %> !important;">
+            <div id="progress-container" style="display: <%= displayValue %>;">
+            <!-- <div id="progress-container" style="display: none;"> -->
+
                 <div class="progress-bar" id="myBar"></div>
             </div>
 
@@ -40,7 +42,7 @@
                     </div>
                 </div>
             </a>
-            <a class="header-link" href="./index" style="visibility: <%= logoTextVisibility %>;">
+            <a class="header-link" href="./index" style="visibility: <%= logoTextVisibility %> !important;">
                 <h6 id="logo-name" >
                     Michael<br>Shingo<br>Crawford
                 </h6>

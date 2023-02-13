@@ -75,10 +75,10 @@
     --color-grey-5: #2a2e35;
     --color-grey-6: #12181b;
     --color-transparent: rgba(0, 0, 0, 0);
-    --color-youtube: #1b74e4;
-    --color-github: #238636;
+    --color-youtube: #ff0000;
+    --color-github: #2da44e;
     --color-linkedin: #0a66c2;
-    --color-facebook: #0a66c2;
+    --color-facebook: #1877f2;
     --color-review-star: yellow;
     --color-red: #c20a0a;
     --br-sm-2: 14px;
@@ -141,7 +141,7 @@ html {
 .progress-container{
     width: 100%;
     height: 6px;
-    background: #ccc;
+    background: var(--color-grey-5) !important;
 }
 
 .progress-bar{
@@ -696,9 +696,20 @@ a {
                     background-color: var(--color-white);
                     transition: var(--default-transition);
                     .fa-brands {
-                        color: var(--color-light);
                         cursor: pointer;
                         transition: var(--default-transition);
+                    }
+                    #facebook-icon {
+                        color: var(--color-facebook);
+                    }
+                    #youtube-icon {
+                        color: var(--color-youtube);
+                    }
+                    #github-icon {
+                        color: var(--color-github);
+                    }
+                    #linkedin-icon {
+                        color: var(--color-linkedin);
                     }
                 } 
             }
@@ -1037,9 +1048,9 @@ a {
 
 .form-message {
     color: var(--color-light);
-    margin: 0 auto !important;
+    margin: 10px;
     position: relative;
-    top: -35px;
+    top: -25px;
 
 
 }

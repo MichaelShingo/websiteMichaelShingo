@@ -9,13 +9,21 @@ const csv = require('csv-parser');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 
-// TODO update biography
-// TODO check top bar on index page
-// TODO Encrypt email password and create working forms
 // TODO encrypt mongoDB URI
+
+//TODO DESIGN
+//add coding to front page video, rethink the "story" of the page 
+//populate song list completely, figure out misisng characters
+
+
+
 // TODO improve footer mobile resposive
-// TODO improve form mobile responsive (add dropdown menu)
-// TODO song list search, sort, ensemble selection, # of songs display, select songs and populate contact form
+// TODO improve form mobile responsive (radios clash )
+//Forms should check for required fields and show message if not filed out 
+//Add more reviews and limit to a certain number of characters, so it doesn't affect page layout 
+
+
+// TODO later songlist sort, select songs and populate contact form
 
 function csvToJSON() { //this is missing 2 entries? 149 documents inserted into MONGO
     const results = [];
@@ -68,30 +76,30 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // listen for requests
 
 app.get('/', (req, res,) => {
-    res.render('index', { title: `Home | ${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8' });
+    res.render('index', { title: `Home | ${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
 });
 
 app.get('/index', (req, res) => {
-    res.render('index', { title: `Home | ${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8' });
+    res.render('index', { title: `Home | ${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
 });
 
 app.get('/biography', (req, res) => {
-    res.render('biography', { title: `Bio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
+    res.render('biography', { title: `Bio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' , displayValue: 'inline'});
 });
 
 app.get('/portfolio', (req, res) => {
-    res.render('portfolio', { title: `Portfolio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
+    res.render('portfolio', { title: `Portfolio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 });
 
 app.get('/violinist', (req, res) => {
-    res.render('violinist', { title: `Violinist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
+    res.render('violinist', { title: `Violinist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 })
 app.get('/lessons', (req, res) => {
-    res.render('lessons', { title: `Lessons | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
+    res.render('lessons', { title: `Lessons | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact', { title: `Contact | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' });
+    res.render('contact', { title: `Contact | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 })
 
 app.get('/songs', (req, res) => {
@@ -101,7 +109,7 @@ app.get('/songs', (req, res) => {
         .then((result) => {
             songQuery = result;
             songCount = songQuery.length
-            res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount});
+            res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline'});
         });
 
 })
@@ -115,7 +123,7 @@ app.post('/songs', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length;
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount});
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline'});
 
     });
 
@@ -130,7 +138,7 @@ app.get('/v', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount });
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline' });
     })
 });
 
@@ -143,7 +151,7 @@ app.get('/vc', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount });
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline' });
     })
 });
 
@@ -156,7 +164,7 @@ app.get('/vp', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount });
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline' });
     })
 });
 
@@ -169,7 +177,7 @@ app.get('/vh', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount });
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount , displayValue: 'inline'});
     })
     
 });
