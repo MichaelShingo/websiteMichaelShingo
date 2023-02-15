@@ -10,16 +10,17 @@
     "nedb": "^1.8.0"
   },
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./server.js"
   },
+  "gcp-build": "npm run build",
   "name": "websitemichaelshingo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MichaelShingo/websiteMichaelShingo.git"
   },
-  "author": "",
+  "author": "Michael Shingo Crawford",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/MichaelShingo/websiteMichaelShingo/issues"
