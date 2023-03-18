@@ -91,7 +91,7 @@
                         <div class="col-6">
                             <h2>Ready to schedule a lesson?</h2>
                             
-                            <form onsubmit="sendEmailTeacher(); reset(); return false;" id="teaching-contact">
+                            <form onsubmit="sendEmailLessons(); reset(); return false;" id="teaching-contact">
                                 <p>Send me a message using this form and let’s schedule a time!</p>
                                 <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
                                 <label for="name">Name:<span class="asterisk">*</span></label>
@@ -184,15 +184,15 @@
                                 <textarea id="lesson-goals" name="lesson-goals" rows="10" cols="40"></textarea>
         
                                 <button class="submit" type="submit">Submit</button>
-                                
+                                <p class="form-message"></p>
+
                             </form>
-                            <p class="form-message"></p>
                         </div>
                         <div class="col-6">
                             <h2>What do my students say?</h2>
 
                             <%- include('./partials/gigReviews.ejs') %>
-                            <img class="col-10" src="./img/alexTranProposal3.jpg" alt="Violinist and pianist and teacher of violin and piano lessons and classes at school Michael Shingo Crawford.">
+                            <img class="col-10 violinist-image" src="./img/alexTranProposal3.jpg" alt="Violinist and pianist and teacher of violin and piano lessons and classes at school Michael Shingo Crawford.">
                         </div>
                     </div> 
                 </main>
@@ -201,4 +201,6 @@
         </div> 
     </body>
     <script src="index.js" type="text/javascript" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </html>

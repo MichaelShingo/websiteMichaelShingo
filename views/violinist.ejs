@@ -14,11 +14,11 @@
             <div id="content-wrap">
                 <%- include('./partials/head.ejs') %>
                 <main class="main-content">
-                    <h1>Hire a Violinist in the Netherlands</h1>
+                    <h1>Hire a Violinist</h1>
 
                     <div class="row">
-                        <div class="col-6">
-                            <img class="brightness-hover col-6" src="img/alexTranProposal1SmallCropped.jpg" alt="Netherlands violinist performing at a wedding proposal event.">
+                        <div class="col-6 violinist-img-container">
+                            <img class="brightness-hover violinist-image col-6" src="img/alexTranProposal1SmallCropped.jpg" alt="Netherlands violinist performing at a wedding proposal event.">
 
                         </div>
                         <div class="col-6">
@@ -67,11 +67,11 @@
                         <div class="col-6 col-s-6">
                             <h2>Ready to book?</h2>
 
-                            <p>Send me details about your event and I’ll get back to you with a quote or use the <a href="contact.html">contact form</a> if you have a more general question.</p>
-                            <p>If you would like to hire a violinist for a wedding in Amsterdam, Netherlands, 
-                                or other locations, please visit the <a href="wedding-violinist-for-hire-in-netherlands">dedicated page here.</a></p>
+                            <p>Send me details about your event and I’ll get back to you with a quote or use the <a href="/contact">contact form</a> if you have a more general question.</p>
+                            <!-- <p>If you would like to hire a violinist for a wedding in Amsterdam, Netherlands,  -->
+                                <!-- or other locations, please visit the <a href="wedding-violinist-for-hire-in-netherlands">dedicated page here.</a></p> -->
                             <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
-                            <form class="" onsubmit="sendEmailViolinist(); reset(); return false;" >
+                            <form id="violinist-form" onsubmit="sendEmailViolinist(); reset(); return false;">
                                 
                                 <label for="name">Name:<span class="asterisk">*</span></label>
                                 <input class="text-input" type="text" id="name" >
@@ -108,7 +108,7 @@
                                 <label for="playing-length">How long would you like me to play? (in minutes):<span class="asterisk">*</span></label>
                                 <input class="text-input" type="number" id="playing-length">
         
-        
+                                
                                 <label for="google">Where did you find me:<span class="asterisk">*</span></label>
         
                                 <div class="form-row">
@@ -153,47 +153,24 @@
                                     </div>
 
                                 </div>
-                            
- 
-        
-        
-   
-        
-        
-       
-                                
+
                                 <input class="text-input" type="text" id="other-source">
         
                                 <label for="additional-comments">Message:<span class="asterisk"></span></label>
                                 <textarea id="message" name="message" rows="10" cols="40"></textarea>
         
                                 <button class="submit" type="submit">Submit</button>
-                                
+                                <p class="form-message"></p>
+
                             </form>
+
                         </div>
                         
                         
 
 
                     </div>
-                    
-                    
-                    
 
-                   
-
-
-                    
-
-              
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <p class="form-message"></p>
 
                    
                 </main>
@@ -202,4 +179,6 @@
         </div> 
     </body>
     <script src="index.js" type="text/javascript" defer></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 </html>

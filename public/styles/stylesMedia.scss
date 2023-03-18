@@ -60,19 +60,156 @@
         display: flex;
         flex-direction: column;
     }
-    // #footer {
-    //     grid-template-columns: repeat(1, 1fr);
-    //     .social-icons{ //container for all icons
-    //         grid-template-columns: repeat(1, 1fr) !important;
-    //         gap: 5px;
-    // }
-
-
-    // p {
-    //     font-size: 1.35rem !important;
-    // }
-    // .small-p {
-    //     font-size: 1.2rem !important;
-    // }
+    .footer-icon-container {
+        margin: 12px !important;
+    }
+    .footer-divider {
+        display: none;
+    }
+    .social-icons {
+        padding-top: 0px !important;
+        padding-right: 0px !important;
+    }
+    #copyright {
+        padding-bottom: 0px !important;
+    }
+    .s1 {
+        h2 {
+            font-size: 1.8rem !important;
+        }
+    }
 }
-  
+
+@media only screen and (max-width: 536px) {
+
+    p {
+        text-align: left;
+        font-size: 1.2rem !important;
+    }
+
+    .fp-overflow {
+        h1 {
+            font-size: 2rem !important;
+        }
+        h2 {
+            font-size: 1.5rem !important;
+        }
+    }
+
+
+    #fp-nav {
+        li {
+            span {
+                display: none !important;
+    
+        }
+        }
+    }
+
+    .s2 {
+        display: flex !important;
+        align-items: center  !important;
+        justify-content: center !important;
+        .landing-text-container {
+            width: fit-content;
+            height: fit-content;
+            font-size: 1rem !important;
+            margin: 0px 10px;
+            padding: 5px 10px !important;
+            border-width: 3px !important;
+        }
+    }
+    .landing-button {
+        border-width: 3px !important;
+        font-size: 1.5rem !important;
+
+    }
+
+
+    .search-submit {
+        margin: 10px 0px !important;
+    }
+    .form-row {
+        width: 100% !important;
+    }
+    .footer-icon-container {
+        margin: 12px !important;
+    }
+    .footer-divider {
+        display: none;
+    }
+    .social-icons {
+        padding-top: 0px !important;
+    }
+    #copyright {
+        padding-bottom: 0px !important;
+    }
+
+    .logo-and-text {
+        transform: scale(70%) !important;
+        transform-origin: left;
+    }
+
+    .violinist-image {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    #menuContainer {
+        width: 180px;
+        height: 180px;
+    }
+    .menuOpen{
+        width: 1000px !important;
+        height: 1000px !important;
+    }
+    .hamburgerContainer {
+        transform: scale(70%) !important;
+        transform-origin: top right;
+
+   
+    }
+
+ 
+    // .header {
+    //     height: 10px !important;
+    // } 
+    #content-wrap {
+        padding-top: 90px;
+        padding-bottom: 250px !important;
+    }
+    .arrow-container {
+        margin-bottom: 10px;
+        text-align: left !important;
+    }
+    .collapsible-items {
+        width: 100% !important;
+    }
+    .content-table {
+        font-size: .8em;
+    }
+
+    .portfolio-container {
+        .portfolio-description {
+            text-align: center !important;
+            color: red;
+        }
+
+
+        width: 325px !important;
+        height: 325px !important;
+ 
+        &:hover {
+            .portfolio-overlay {
+     
+                width: 325px !important;
+                height: 325px !important;
+
+
+            }
+    
+        }
+    }
+    
+
+}

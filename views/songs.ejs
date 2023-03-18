@@ -20,21 +20,35 @@
                         <div class="col-2"></div>
                         <div class="col-8">
                             <p>Here is a list of songs that I play. Please select the ensemble you are interested in to see the songs for that particular group.</p>
-                            <div class="select-container">
-                                <select class="select-box" name="ensembles" id="ensembles" onchange="location=this.value;">
-                                    <option id="option-all" value="/songs">All Songs</option>
-                                    <option id="option-v" value="/v" >Solo Violin</option>
-                                    <option id="option-vc" value="/vc">Violin and Cello Duo</option>
-                                    <option id="option-vp" value="/vp">Violin and Piano Duo</option>
-                                    <option id="option-vh" value="/vh">Violin and Harp Duo</option>
-                                </select>
-                                <div class="icon-container">
-                                    <i class="fa-solid fa-caret-down"></i>
+
+
+                           <div class="row">
+                                <div class="select-container col-4">
+                                    <select class="select-box" name="ensembles" id="ensembles" onchange="location=this.value;">
+                                        <option id="option-all" value="/songs">All Songs</option>
+                                        <option id="option-v" value="/v" >Solo Violin</option>
+                                        <option id="option-vc" value="/vc">Violin and Cello Duo</option>
+                                        <option id="option-vp" value="/vp">Violin and Piano Duo</option>
+                                        <option id="option-vh" value="/vh">Violin and Harp Duo</option>
+                                    </select>
+                                    <div class="icon-container">
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </div>
+
+                            
                                 </div>
+                                <form class="song-search col-8" method="post" action="/songs">
+                                    <div class="row">
+                                        <input class="search-input text-input col-7" type="text" name="search-song" id="search-song" placeholder="">
+                                        <input class="submit search-submit col-5" type="submit" value="Search">
+                                    </div>
+                         
+                                </form>
                             </div>
+                            
+                   
                             <p><%= songCount %> songs available.</p>
 
-               
                             <table class="content-table">
                                 <thead>
                                     <tr>
@@ -47,19 +61,12 @@
                                 <% allSongs.forEach(function(song) { %>
                                     <%- include('./songRow.ejs', {song: song}); %>
                                 <% }); %>
-                        
-
-                                </div>
-
-                            
                             </table>
+
+
                         </div>
                         <div class="col-2"></div>
                     </div>
-                            
-
-                    
-                    
                 </main>
             </div>
             <%- include('./partials/footer.ejs') %>
