@@ -8,6 +8,7 @@ const contentPageObject =  { title: `Bio | ${websiteName}`, logoTextVisibility: 
 const csv = require('csv-parser');
 const fs = require('fs');
 const bodyParser = require('body-parser');
+const csv2 = require('csvtojson');
 
 // TODO encrypt mongoDB URI
 
@@ -28,13 +29,43 @@ const bodyParser = require('body-parser');
 
 // TODO later songlist sort, select songs and populate contact form
 
+function csvToJSON2() {
+    const results = [];
+    csv2()
+    .fromFile('allSongExcel.csv')
+    .then(function(results){
+        //console.log(jsonArrayObj)
+        for (let i = 0; i < results.length; i++) {
+            results[i]['ensemble'] = results[i]['ensemble'].split(' ');
+            if (results[i]['popular'] === 't') {
+                results[i]['popular'] = true;
+            } else { 
+                results[i]['popular'] = false;
+            }
+            console.log(results[i])
+            const song = new Song(results[i]);
+            song.save()
+                .then((result) => {
+                    //console.log(result);
+                })
+                .catch((err) => {
+                    //console.log(err);
+                });
+            //console.log(results[i]['ensemble'].split(' '));
+        }
+
+    })
+}
 function csvToJSON() { //this is missing 2 entries? 149 documents inserted into MONGO
     const results = [];
     fs.createReadStream('allSongExcel.csv')
         .pipe(csv())
-        .on('data', (data) => results.push(data))
+        .on('data', (data) => {
+            results.push(data);
+           // console.log(data);
+        })
         .on('end', () => {
-            for (let i = 0; i < results.length - 1; i++) {
+            for (let i = 0; i < results.length; i++) {
                 results[i]['ensemble'] = results[i]['ensemble'].split(' ');
                 if (results[i]['popular'] === 't') {
                     results[i]['popular'] = true;
@@ -42,18 +73,18 @@ function csvToJSON() { //this is missing 2 entries? 149 documents inserted into 
                 } else { 
                     results[i]['popular'] = false;
                 }
-
+                //console.log(results[i])
                 const song = new Song(results[i]);
                 song.save()
                     .then((result) => {
-                        console.log(result);
+                        //console.log(result);
                     })
                     .catch((err) => {
-                        console.log(err);
+                        //console.log(err);
                     });
                 //console.log(results[i]['ensemble'].split(' '));
             }
-            console.log(results);
+            //console.log(results);
         });
 }
 
@@ -68,11 +99,12 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
     .then((result) => {
         app.set('trust proxy', true);
         // app.listen(PORT, '10.0.0.79');
-        app.listen(PORT, '0.0.0.0');
-        //csvToJSON();
+        //csvToJSON2();
+
     })
     .catch((err) => console.log(err));
 
+app.listen(PORT, '0.0.0.0');
 app.set('view engine', 'ejs'); //register view engine
 app.use(express.static('public')); //defines location of static files , otherwise no links will work 
 app.use(morgan('dev'));
