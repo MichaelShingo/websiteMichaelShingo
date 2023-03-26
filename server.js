@@ -9,6 +9,8 @@ const csv = require('csv-parser');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const csv2 = require('csvtojson');
+const moment = require('moment');
+const js2xmlparser = require('js2xmlparser');
 
 // TODO encrypt mongoDB URI
 
@@ -34,7 +36,6 @@ function csvToJSON2() {
     csv2()
     .fromFile('allSongExcel.csv')
     .then(function(results){
-        //console.log(jsonArrayObj)
         for (let i = 0; i < results.length; i++) {
             results[i]['ensemble'] = results[i]['ensemble'].split(' ');
             if (results[i]['popular'] === 't') {
@@ -46,17 +47,15 @@ function csvToJSON2() {
             const song = new Song(results[i]);
             song.save()
                 .then((result) => {
-                    //console.log(result);
+                    console.log(result);
                 })
                 .catch((err) => {
-                    //console.log(err);
+                    console.log(err);
                 });
-            //console.log(results[i]['ensemble'].split(' '));
         }
-
     })
 }
-function csvToJSON() { //this is missing 2 entries? 149 documents inserted into MONGO
+function csvToJSON() {
     const results = [];
     fs.createReadStream('allSongExcel.csv')
         .pipe(csv())
@@ -114,12 +113,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // listen for requests
 
 app.get('/', (req, res,) => {
-    res.render('index', { title: `Home | ${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
+    res.render('index', { title: `${websiteName} | Software Developer and Violinist`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
 });
 
 app.get('/index', (req, res) => {
-    res.render('index', { title: `Home | ${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
+    res.render('index', { title: `${websiteName} | Software Developer and Violinist`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
 });
+
 
 app.get('/biography', (req, res) => {
     res.render('biography', { title: `Bio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' , displayValue: 'inline'});
@@ -220,6 +220,14 @@ app.get('/vh', (req, res) => {
     
 });
 
+
+app.get('/sitemap.xml', (req, res) => {
+    res.sendFile(path.join(__dirname + '/sitemap.xml'))
+})
+
+app.get('/1dd82e78f03846c78191108ef835a4a6.txt', (req, res) => {
+    res.sendFile(path.join(__dirname + '/1dd82e78f03846c78191108ef835a4a6.txt'))
+})
 
 // 404 page
 app.use((req, res) => {

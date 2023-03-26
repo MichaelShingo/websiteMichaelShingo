@@ -117,6 +117,8 @@ html, body {
 
 .header {
     //background-image: url(../img/teruSheetMusic.jpg);
+    // backdrop-filter: blur(2px);
+
     background-size: cover;
     position: fixed;
     top: 0;
@@ -144,7 +146,7 @@ html, body {
         position: absolute;
         left: 165px;
         top: 14px;
-        transition: var(--default-transition);
+        transition: var(--default-transition), ;
     }
     .hide-logo-name{
         left: 500px;
@@ -560,10 +562,10 @@ a {
     
         left: 0px;
         transition: var(--default-transition);
+        //transition: position 2s ease-in-out;
     }
     #right-bracket{
         right: 0px;
-        transition: var(--default-transition);
     }
     &:hover{
         #left-bracket{
