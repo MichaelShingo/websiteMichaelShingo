@@ -8,44 +8,44 @@
 
 
 <url>
-  <loc>http://michaelshingo.com/</loc>
+  <loc>https://michaelshingo.com/</loc>
   <lastmod>2023-03-19T17:13:47+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://michaelshingo.com/index</loc>
+  <loc>https://michaelshingo.com/index</loc>
+  <lastmod>2023-03-19T17:13:47+00:00</lastmod>
+  <priority>0.10</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/biography</loc>
+  <lastmod>2023-03-19T17:13:47+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/portfolio</loc>
+  <lastmod>2023-03-19T17:13:47+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/violinist</loc>
   <lastmod>2023-03-19T17:13:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://michaelshingo.com/biography</loc>
+  <loc>https://michaelshingo.com/lessons</loc>
   <lastmod>2023-03-19T17:13:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://michaelshingo.com/portfolio</loc>
+  <loc>https://michaelshingo.com/contact</loc>
   <lastmod>2023-03-19T17:13:47+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.50</priority>
 </url>
 <url>
-  <loc>http://michaelshingo.com/violinist</loc>
+  <loc>https://michaelshingo.com/songs</loc>
   <lastmod>2023-03-19T17:13:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://michaelshingo.com/lessons</loc>
-  <lastmod>2023-03-19T17:13:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://michaelshingo.com/contact</loc>
-  <lastmod>2023-03-19T17:13:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://michaelshingo.com/songs</loc>
-  <lastmod>2023-03-19T17:13:47+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>0.65</priority>
 </url>
 
 

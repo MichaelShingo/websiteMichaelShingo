@@ -566,6 +566,8 @@ a {
     }
     #right-bracket{
         right: 0px;
+        transition: var(--default-transition);
+
     }
     &:hover{
         #left-bracket{

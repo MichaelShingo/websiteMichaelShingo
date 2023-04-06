@@ -494,6 +494,7 @@ a {
 }
 #logo #right-bracket {
   right: 0px;
+  transition: var(--default-transition);
 }
 #logo:hover #left-bracket {
   left: -7px;
