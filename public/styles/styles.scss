@@ -1411,6 +1411,7 @@ form {
             margin: 0;
             padding: 0;
         }
+    
         .portfolio-overlay {
             transform-origin: center;;
             background-color: var(--color-transparent);
@@ -1499,6 +1500,27 @@ form {
     
     }
     
+}
+
+// PORTFOLIO PROJECT PAGE
+.project-page-social {
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0px auto !important;
+    display: grid;
+    width: 50% !important;
+    grid-template-columns: repeat(3, 1fr);
+    a {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 50px !important;
+        margin: 0px 15px !important;
+       
+
+    }
 }
 
 

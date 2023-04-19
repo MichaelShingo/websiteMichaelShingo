@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta name="description" content="Read more about violinist Michael Shingo Crawford performing weddings, concerts, events, and teaching lessons in the Netherlands.">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <title><%= title %></title>
+        <%- include('./partials/styles.ejs') %>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <%- include('./partials/head.ejs') %>
+                <main class="main-content">
+                    <h1>For the Lost Creative Database</h1>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <div class="">
+                                <iframe class="video" src="https://www.youtube.com/embed/LZ6Dei0H1TU" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                            <div class="project-page-social">
+                                <a href="https://www.forthelostcreative.com" class="fa-solid fa-suitcase fa-lg" target="_blank"></a>
+                                <div></div>
+                                <a href="https://github.com/MichaelShingo/opportunityScraper" class="fa-brands fa-github fa-lg" target="_blank"></a>
+                            </div>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Implementation</h2>
+                            <p>For the Lost Creative is coded using Velo by Wix and Javascript. The basic features of the database, including the design, filtering, and searching were setup
+                                by the original members of the team. I was brought on later on to add a major new feature to the database: the ability for logged in users to save opportunities.
+                                I implemented this feature by creating a new table in Wix's backend that maps user IDs to an array of opportunities IDs. When the database loads, the frontend
+                                first checks if the user is logged in. If they are, the app pulls data from the entry for the user, if it exists, and updates the interface to show which 
+                                opportunities have already been saved. Next to any saved opportunties, there appears an link that transports the user to the saved opportunities page, which
+                                lists all of the opportunities that the user has favorited. From this page, the user can delete opportunities. Because the delete operation takes some time,
+                                the interface displays a loading icon while this process is pending.
+                            </p>  
+                            <p>
+                                Web scraping to populate opportunities in the database was another important feature that I brought to the project. Because Wix does not support web scraping
+                                libraries, I coded this separately using Python. For each website that is scraped, there is a corresponding Python script. The scripts work through all of the opportunities listed on the website, navigating through paginated tables and accesses the individual entries
+                                and their details. The script also analyses the each opportunity's description to extract keywords and location data, which are often not explicitly listed.
+                                This is accomplished by maintaining a list of keywords and locations as part of the code and searching for these terms within extracted text. The script generates a CSV
+                                file, which can be uploaded into the Wix database. Because the database is a curated list that requires review and approval from the team, the data population
+                                process is not completely automated.
+                            </p>
+                            <p>The code for the database resides on Wix and is not publically accessible, however the Github icon above links to the Python code for web scraping.</p>
+
+                           
+                        </div>
+                        <div class="col-6">
+                            <h2>Features</h2>
+                            <p>"For the Lost Creative" by the Creative Baggage Podcast is a curated database of opportunities for musicians and artists. Inspired by a desire
+                                to find practical solutions to improve the lives of the creative community, it provides a listing of jobs, internships, competitions, grants, and more
+                                for creative professionals. The database found its beginnings after the team won a grant from EnCORE Accelerando in Budapest, Hungary. The database
+                                provides filtering and searching options as well as the ability for logged in users to save opportunities.
+                            </p>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    
+                </main>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+        </div> 
+    </body>
+    <script src="index.js" type="text/javascript" defer></script>
+</html>

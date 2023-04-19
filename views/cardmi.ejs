@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta name="description" content="Read more about violinist Michael Shingo Crawford performing weddings, concerts, events, and teaching lessons in the Netherlands.">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <title><%= title %></title>
+        <%- include('./partials/styles.ejs') %>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <%- include('./partials/head.ejs') %>
+                <main class="main-content">
+                    <h1>CardMi</h1>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <div class="">
+                                <iframe class="video" src="https://www.youtube.com/embed/LZ6Dei0H1TU" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                            <div class="project-page-social">
+                                <a href="https://play.google.com/store/apps/details?id=com.michaelshingo.flashcards&hl=en_US&gl=US" class="fa-brands fa-google-play fa-lg" target="_blank"></a>
+                                <div></div>
+                                <a href="https://github.com/MichaelShingo/CardMi" class="fa-brands fa-github fa-lg" target="_blank"></a>
+                            </div>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Implementation</h2>
+                            <p>CardMi is coded in Java using Android Studio. The structure of the app consists of the Flashcard and Flashcard Set, both of which are implemented as objects in Java.
+                                Flashcard Set objects are named collections of Flashcard objects. Users can create Flashcard Sets and their component Flashcards, which are then serialized into
+                                a string and stored on the user's device in an SQLite database. Flashcard Sets have separate lists of Flashcards that distinguish between terms that
+                                have been marked as studied or deleted.
+                            </p>  
+                            <p>CardMi is available for download on the Google Play Store.</p>
+                        </div>
+                        <div class="col-6">
+                            <h2>Features</h2>
+                            <p>CardMi provides a simple platform for users to create sets of flashcards for study. Flashcards can be marked as studied, recycled, sorted, or randomly shuffled 
+                                to aid in the study process. The app supports two views of the flashcard set: the main view which displays cards one-by-one and allows the user to swipe between cards,
+                                and a list view that provides an overview of all of the flashcards in the set.
+                            </p>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    
+                </main>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+        </div> 
+    </body>
+    <script src="index.js" type="text/javascript" defer></script>
+</html>

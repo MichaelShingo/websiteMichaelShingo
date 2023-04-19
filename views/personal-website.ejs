@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta name="description" content="Read more about violinist Michael Shingo Crawford performing weddings, concerts, events, and teaching lessons in the Netherlands.">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <title><%= title %></title>
+        <%- include('./partials/styles.ejs') %>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <%- include('./partials/head.ejs') %>
+                <main class="main-content">
+                    <h1>Personal Website</h1>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <div class="">
+                                <iframe class="video" src="https://www.youtube.com/embed/LZ6Dei0H1TU" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                            <div class="project-page-social">
+                                <a href="https://michaelshingo.com" class="fa-solid fa-globe fa-lg" target="_blank"></a>
+                                <div></div>
+                                <a href="https://github.com/MichaelShingo/websiteMichaelShingo" class="fa-brands fa-github fa-lg" target="_blank"></a>
+                            </div>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Implementation</h2>
+                            <p>This website is built using HTML, SCSS, Javascript, Node.js, and MongoDB. While the vast majority of the website could be created using plain HTML, CSS, and Javascript,
+                                the additional of the Song List table linked to MongoDB required Node. Node also provided a much easier method of templating compared what plain Javascript 
+                                and HTML support. Each page is an EJS file that consists of reusable components, such as the header, footer, and navigation menu, combined with specific content
+                                for that page. The ability to send emails through contact forms is accomplished using the SmtpJS CDN. The "Song List" page makes API calls to the Node backend,
+                                which retrieves, filters, and sorts data from MongoDB accordingly to the request.
+                            </p>  
+                            <p>
+                                For search engine optimization, the "Violinist" and "Lessons" pages target keywords that potential clients would search. These keywords are distributed throughout the page
+                                and included in alt text for images. The site map for the website is registered on the major search engines.
+                            </p>
+                            <p>The website is hosted on Google App Engine.</p>
+
+                           
+                        </div>
+                        <div class="col-6">
+                            <h2>Features</h2>
+                            <p>The website you are viewing is a project in of itself. The main purpose of the website is to serve as a portfolio for my work in coding and music as well as
+                                to server as a platform for potential clients to find and book my services. The pages display work samples, reviews from past clients, as well as contact forms
+                                tailored to each context. Information is organized in a way that allows the user to easily gain an overview of each page and view additional information only 
+                                upon request. This prevents the need for excessive scrolling and makes the viewing experience much more compact. The song list page, accessible through the
+                                violinist page, lists all available songs for events and supports searching and filtering based on ensemble type. The website is search engine optimized to
+                                appear for relevant queries on various search engines.
+                            </p>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    
+                </main>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+        </div> 
+    </body>
+    <script src="index.js" type="text/javascript" defer></script>
+</html>

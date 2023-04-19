@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta name="description" content="Read more about violinist Michael Shingo Crawford performing weddings, concerts, events, and teaching lessons in the Netherlands.">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <title><%= title %></title>
+        <%- include('./partials/styles.ejs') %>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <%- include('./partials/head.ejs') %>
+                <main class="main-content">
+                    <h1>VDML App</h1>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <div class="">
+                                <iframe class="video" src="https://www.youtube.com/embed/LZ6Dei0H1TU" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                            <div class="project-page-social">
+                                <a href="https://play.google.com/store/apps/details?id=com.michaelshingo.flashcards&hl=en_US&gl=US" class="fa-brands fa-google-play fa-lg" target="_blank"></a>
+                                <a href="https://github.com/MichaelShingo/CardMi" class="fa-brands fa-github fa-lg" target="_blank"></a>
+
+                            </div>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Implementation</h2>
+                            <p>The app is coded in Python using Flask as a web framework. </p>
+                            <p>The frontend is developed using the Jinja templating engine, which receives data from the backend and displays it on pages that are largely like plain HTML files. 
+                                SCSS is used for styling. Javascript is used for some of the interactivity on the frontend, such as displaying dialogue boxes and populating fields in cases where
+                                an API call is not required. The Booking Analysis page uses Chart.js.
+                            </p>   
+                            <p>The project is hosted on pythonanywhere.com which pulls code from the main branch of the Github repository upon request.</p>
+                        </div>
+                        <div class="col-6">
+                            <h2>Features</h2>
+                            <p>The Vitale Digital Media Lab (VDML) at the University of Pennsylvania is an equipment lending library that makes professional-grade video and audio equipment available to
+                                university students, faculty, and staff. During my employment there are a lab consultant, I found that there were many repetitive tasks that could be automated
+                                and streamlined. To this end, I developed an app that makes some of the most common tasks performed by lab consultants more efficient.
+                            </p>
+
+                            <p>Because the app contains somewhat sensitive information about library patrons, it is not publically accessible. For a demo, please watch the video above.
+                            The main feature of the app is a data processing</p>        
+                            <p>
+                                The main feature of the app is a late fine processing toolkit that receives plain text data from the lab's booking management software, parses it,
+                                and adds the relevant data into a table. From here, various actions can be performed including searching and sorting through registered late fines,
+                                as well as generating emails that need to be sent to each user and library circulation. The toolkit can also generate a CSV file of all or a subset
+                                of the data. Data can also be populated by uploading a CSV file.
+                            </p>
+                            <p>
+                                The Booking Analysis tab receives a CSV by upload and analyses the information for certain data points. A CSV file generated by the lab's booking software and 
+                                contains all of the equipment bookings for a specified date range. Based on this, the app calculates information such as the number of times each piece of equipment was booked,
+                                the number of times each user was late returning equipment and the most frequent lab users.
+                            </p>        
+                            <p>A minor feature is the Late Equipment Email Generator, which takes plain text input from the lab's booking software and generates an email that notifies the user that
+                                their booking is overdue.
+                            </p>
+                            
+
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    
+                </main>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+        </div> 
+    </body>
+    <script src="index.js" type="text/javascript" defer></script>
+</html>

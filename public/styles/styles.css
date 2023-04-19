@@ -1244,6 +1244,24 @@ form textarea:focus {
   text-align: center;
 }
 
+.project-page-social {
+  font-size: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0px auto !important;
+  display: grid;
+  width: 50% !important;
+  grid-template-columns: repeat(3, 1fr);
+}
+.project-page-social a {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 50px !important;
+  margin: 0px 15px !important;
+}
+
 .collapsible-content .social-icons {
   border: 3px dashed var(--color-grey-1);
   border-radius: 10px;

@@ -129,6 +129,26 @@ app.get('/portfolio', (req, res) => {
     res.render('portfolio', { title: `Portfolio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 });
 
+app.get('/VDML', (req, res) => {
+    res.render('VDML', { title: `VDML | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+})
+
+app.get('/cardmi', (req, res) => {
+    res.render('cardmi', { title: `CardMi | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+})
+
+app.get('/creative-baggage', (req, res) => {
+    res.render('creative-baggage', { title: `Creative Baggage | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+})
+
+app.get('/personal-website', (req, res) => {
+    res.render('personal-website', { title: `Personal Website | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+})
+
+app.get('/bookmi', (req, res) => {
+    res.render('bookmi', { title: `BookMi | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+})
+
 app.get('/violinist', (req, res) => {
     res.render('violinist', { title: `Violinist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 })
