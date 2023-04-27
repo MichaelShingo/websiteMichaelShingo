@@ -42,22 +42,23 @@
                         <div class="col-6">
                             <h2>Implementation</h2>
                             <p>For the Lost Creative is coded using Velo by Wix and Javascript. The basic features of the database, including the design, filtering, and searching were setup
-                                by the original members of the team. I was brought on later on to add a major new feature to the database: the ability for logged in users to save opportunities.
+                                by the original members of the team. The team brought me on later to add a major new feature to the database: the ability for logged in users to save opportunities.
                                 I implemented this feature by creating a new table in Wix's backend that maps user IDs to an array of opportunities IDs. When the database loads, the frontend
                                 first checks if the user is logged in. If they are, the app pulls data from the entry for the user, if it exists, and updates the interface to show which 
-                                opportunities have already been saved. Next to any saved opportunties, there appears an link that transports the user to the saved opportunities page, which
+                                opportunities have already been saved. A link appears next to any saved opportunities, transporting the user to the saved opportunities page, which
                                 lists all of the opportunities that the user has favorited. From this page, the user can delete opportunities. Because the delete operation takes some time,
                                 the interface displays a loading icon while this process is pending.
                             </p>  
                             <p>
                                 Web scraping to populate opportunities in the database was another important feature that I brought to the project. Because Wix does not support web scraping
-                                libraries, I coded this separately using Python. For each website that is scraped, there is a corresponding Python script. The scripts work through all of the opportunities listed on the website, navigating through paginated tables and accesses the individual entries
-                                and their details. The script also analyses the each opportunity's description to extract keywords and location data, which are often not explicitly listed.
-                                This is accomplished by maintaining a list of keywords and locations as part of the code and searching for these terms within extracted text. The script generates a CSV
+                                libraries, I coded this separately using Python. For each website that is scraped, there is a corresponding Python script. The script works through all of the 
+                                opportunities listed on the website, navigates through paginated tables, and accesses the individual entry's details. It also analyzes the each opportunity's 
+                                description to extract keywords and location data, which are often not explicitly listed.
+                                I accomplished this by maintaining a list of keywords and locations as part of the code and searching for these terms within extracted text. The script generates a CSV
                                 file, which can be uploaded into the Wix database. Because the database is a curated list that requires review and approval from the team, the data population
                                 process is not completely automated.
                             </p>
-                            <p>The code for the database resides on Wix and is not publically accessible, however the Github icon above links to the Python code for web scraping.</p>
+                            <p>The code for the database resides on Wix and is not publicly accessible, however, the Github icon above links to the Python code for web scraping.</p>
 
                            
                         </div>
