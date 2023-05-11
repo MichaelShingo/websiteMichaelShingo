@@ -98,13 +98,19 @@ function sendEmail(){
 
 function sendEmailViolinist(){
     let formElement = document.getElementById("violinist-form");
+    let clientName = document.getElementById("name").value;
+    let playingLength = document.getElementById("playing-length").value;
     let formMessage = document.getElementsByClassName("form-message")[0];
-    let clientEmail = document.getElementById("email");
+    let clientEmail = document.getElementById("email").value;
     let settingRadios = document.getElementsByName('setting-radio');
+    let location = document.getElementById('location').value;
+    let eventDate = document.getElementById("date").value;
     let selectedSetting = 'None';
+    let message = document.getElementById("message").value;
+    let numMusicians = document.getElementById("number-musicians").value
     settingRadios.forEach((radio) => {
         if (radio.checked) {    
-            selectedSetting = radio;
+            selectedSetting = radio.value;
         }
     });
 
@@ -112,6 +118,7 @@ function sendEmailViolinist(){
     let selectedFind = 'None';
     findRadios.forEach((radio) => {
         if (radio.checked) {
+            console.log(radio.value)
             selectedFind = radio.value;
         }
     });
@@ -121,15 +128,16 @@ function sendEmailViolinist(){
         otherFind = document.getElementById('other-source').value;
     }
 
-    let bodyString = `<b>Name:</b> ${document.getElementById("name").value}\n\n<br><br>
-    <b>Email:</b> ${document.getElementById("email").value}\n\n<br><br>
-    <b>Location:</b> ${selectedSetting.value}\n\n<br><br>
-    <b>Event Date:</b> ${document.getElementById("date").value}\n\n<br><br>
-    <b>Number of musicians:</b> ${document.getElementById("number-musicians").value}\n\n<br><br>
-    <b>Playing Length:</b> ${document.getElementById("playing-length").value}\n\n<br><br>
-    <b>Where did you find me?:</b> ${selectedFind.value}\n\n<br><br>
+    let bodyString = `<b>Name:</b> ${clientName}\n\n<br><br>
+    <b>Email:</b> ${clientEmail}\n\n<br><br>
+    <b>Location:</b> ${location}\n\n<br><br>
+    <b>Setting:</b> ${selectedSetting}\n\n<br><br>
+    <b>Event Date:</b> ${eventDate}\n\n<br><br>
+    <b>Number of musicians:</b> ${numMusicians}\n\n<br><br>
+    <b>Playing Length:</b> ${playingLength}\n\n<br><br>
+    <b>Where did you find me?:</b> ${selectedFind}\n\n<br><br>
     <b>Other:</b> ${otherFind}\n\n<br><br>
-    <b>Message:</b><br> <span style="width: 50%;">${document.getElementById("message").value}</span>`;
+    <b>Message:</b><br> <span style="width: 50%;">${message}</span>`;
 
     console.log('function runs');
 
@@ -140,6 +148,11 @@ function sendEmailViolinist(){
         Subject : "Violinist Contact Form",
         Body : bodyString
     }).then(message => {
+        // if (clientName === '' || location === '' || clientEmail === '' || selectedSetting == "None" || eventDate === '' || numMusicians === '' || playingLength === '' || 
+        //     selectedFind === 'None') {
+        //     formMessage.innerText = "Please fill out all required fields."
+        //     formMessage.classList.add('error')
+        // }
         if (message == 'OK'){
             formMessage.innerText = "Message sent successfully.";
             console.log('message sent successfully');
