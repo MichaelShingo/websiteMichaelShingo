@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA_Compatible" content="IE=edge">
+        <meta name="description" content="Read more about violinist Michael Shingo Crawford performing weddings, concerts, events, and teaching lessons in the Netherlands.">
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+        <title><%= title %></title>
+        <%- include('./partials/styles.ejs') %>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <%- include('./partials/head.ejs') %>
+                <main class="main-content">
+                    <h1>Creative Baggage AI Data Processor</h1>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-8">
+                            <!-- <div class="">
+                                <iframe class="video" src="https://www.youtube.com/embed/aX13onIluhU" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                            </div> -->
+                            <img class="portfolio-detail-img" src="./img/cbaiscraper.jpg" alt="Django Rest Framework API that integrates with OpenAI."/>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                        </div>
+                        <div class="col-4">
+                            <div class="project-page-social">
+                                <a href="https://www.forthelostcreative.com" class="fa-solid fa-suitcase fa-lg" target="_blank"></a>
+                                <div></div>
+                                <a href="https://github.com/MichaelShingo/cbAIScraper" class="fa-brands fa-github fa-lg" target="_blank"></a>
+                            </div>
+                        </div>
+                        <div class="col-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <h2>Implementation</h2>
+                            <p>The Creative Baggage AI Data Processor is an API coded with Django Rest Framework. The API exposes a number of private endpoints that the backend of Creative Baggage's Wix Site 
+                                calls on a recurring schedule. Wix calls the first set of endpoints, which collects data about artist opportunities from several websites. The API sends 
+                                the data to the OpenAI API with a customized prompt to extract location information, standardize the description's format, and filter out opportunities that are
+                                not up to quality standards. Django then parses OpenAI's JSON response and saves the data to a PostgreSQL database. The API collects data about successes and failures of 
+                                each process in order to prepare a report that it emails to the relevant parties. Reports are saved to a separate table in the same database. Once the 
+                                data collection is complete, Wix calls another API endpoint that migrates the recently populated data from the external database to its internal collection, which is 
+                                automatically displayed on the frontend.
+                            </p>  
+                            <p>
+                                This API was a necessary addition to the existing code on Wix, which does not support web scraping libraries, streamlined integration with external databases,
+                                or direct integration with Wix collections via an API endpoint. This new infrastructure allows for a completely hands-off approach to populating the database with
+                                new opportunities.
+                            </p>
+                            <p></p>
+
+                           
+                        </div>
+                        <div class="col-6">
+                            <h2>Features</h2>
+                            <p>This API is a completely automated web scraping solution for the Creative Baggage opportunities database. It
+                                 pulls data from multiple websites, uses the OpenAI API for analysis and quality control, and allows Wix to fetch data on a recurring basis. 
+                                 Previously, maintaining the database was a more manual process that involved looking through
+                                 each opportunity, formatting the description consistently, and ensuring that there were no application fees. With the help of AI, the API
+                                 eliminates the need for this repetitive work and human eyes, enabling the process to be more scalable.
+                            </p>
+                        </div>
+                        <div class="col-3"></div>
+                    </div>
+                    
+                </main>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+        </div> 
+    </body>
+    <script src="index.js" type="text/javascript" defer></script>
+</html>

@@ -149,6 +149,10 @@ app.get('/bookmi', (req, res) => {
     res.render('bookmi', { title: `BookMi | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
 })
 
+app.get('/cbaiscraper', (req, res) => {
+    res.render('cbaiscraper', { title: `CB AI Data Processor | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+})
+
 app.get('/violinist', (req, res) => {
     res.render('violinist', { title: `Violinist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 })
