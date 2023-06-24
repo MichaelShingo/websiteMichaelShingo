@@ -15,35 +15,30 @@
             <div id="content-wrap">
                 <%- include('./partials/head.ejs') %>
                 <main class="main-content">
-                    <h1>Hire a Violinist</h1>
+                    <h1>Huur een violist</h1>
                     <div class="col-12">
-                        <a href="/violinistNL"><img class="change-language brightness-hover" src="img/nlFlag.jpg" alt="Netherlands and Rotterdam violinist performing at a wedding proposal event."></a>
+                        <a href="/violinist"><img class="change-language brightness-hover" src="img/ukFlag.jpg" alt="Netherlands and Rotterdam violinist performing at a wedding proposal event."></a>
                     </div>
+
                     <div class="row">
                         <div class="col-6 violinist-img-container">
-                                <img class="brightness-hover violinist-image col-6" src="img/alexTranProposal1SmallCropped.jpg" alt="Netherlands and Rotterdam violinist performing at a wedding proposal event.">
-                                <h2>Wedding Information</h2>
-                                 <p>Are you interested in booking me for a wedding, and would like to learn more about the process? Click <a href="/wedding-violinist-in-the-netherlands">
-                                here</a> for wedding FAQs and more information.</p>
-
+                            <img class="brightness-hover violinist-image col-6" src="img/alexTranProposal1SmallCropped.jpg" alt="Netherlands and Rotterdam violinist performing at a wedding proposal event.">
 
                         </div>
-                        
                         <div class="col-6">
-                            
-                            <p class="image-side-text">I am a Rotterdam-based violinist who performs classical, popular, and anime music in the Netherlands and the surrounding area. 
-                                If you would like to hire a violinist to perform in a wide variety of settings, including weddings, corporate events, holiday celebrations, 
-                                private salon concerts, recitals, look no further! I constantly expand my repertoire to include new selections by continuously composing, 
-                                arranging and recording music for <a href="https://www.youtube.com/channel/UCb46nljnneXaQCa5wKYsbWA">Youtube</a>, 
-                                where I have reached over a million views.<br><br>
+                            <p class="image-side-text">Ik ben een Rotterdamse violiste die klassieke, populaire en anime-muziek uitvoert in Nederland en omgeving.
+                                Als u een violist wilt inhuren om op te treden in een breed scala aan omgevingen, waaronder bruiloften, bedrijfsevenementen, vakantievieringen,
+                                privé salonconcerten, recitals, zoek niet verder! Ik breid mijn repertoire voortdurend uit met nieuwe selecties door voortdurend te componeren,
+                                arrangeren en opnemen van muziek voor <a href="https://www.youtube.com/channel/UCb46nljnneXaQCa5wKYsbWA">Youtube</a>, 
+                                waar ik meer dan een miljoen views heb bereikt.<br><br>
                         
     
-                                My goal as a violinist is to contribute a tailored musical selection for every event. 
-                                As a performer, composer, and arranger, I am able to meet the needs of a wide range of people holding events in areas including Amsterdam, The Hague, Rotterdam, Utrecht, Delft, and beyond.
-                                I would love to have the opportunity to collaborate with you in making your event a truly unforgettable experience.
+                                Mijn doel als violist is om voor elk evenement een op maat gemaakte muzikale selectie bij te dragen.
+                                Als uitvoerder, componist en arrangeur ben ik in staat om te voldoen aan de behoeften van een breed scala aan mensen die evenementen organiseren in onder meer Amsterdam, Den Haag, Rotterdam, Utrecht, Delft en daarbuiten.
+                                Ik zou graag de kans krijgen om met u samen te werken om van uw evenement een onvergetelijke ervaring te maken.
                     
                                 <br><br>
-                                Have a listen to some of my playing and feel free to keep reading to learn more!
+                                Luister naar wat van mijn spel en lees gerust verder om meer te leren!
                             </p>
                             <div class="">
                                 <iframe class="video" src="https://www.youtube.com/embed/LZ6Dei0H1TU" title="YouTube video player" 
@@ -60,65 +55,67 @@
 
                         <div class="col-6 col-s-6">
                             
-                            <h2>Reviews</h2>
+                            <h2>Recensies</h2>
                             <%- include('./partials/gigReviews.ejs') %>
-                            <h2>Ensemble Options</h2>
+                            <h2>Ensemble-opties</h2>
 
-                            <%- include('./partials/ensembleOptions.ejs') %>
-                            <h2>Song Lists</h2>
+                            <%- include('./partials/ensembleOptionsDutch.ejs') %>
+                            <h2>Muzieklijst</h2>
                             <p>
-                                Browse my song list <a href="/songs">here</a>.
+                                Blader <a href="/songs">hier</a> door mijn lijst met nummers.
                             </p>
 
 
 
                         </div>
                         <div class="col-6 col-s-6">
-                            <h2>Ready to book?</h2>
+                            <h2>Klaar om te boeken?</h2>
 
-                            <p>Send me details about your event and I’ll get back to you with a quote or use the <a href="/contact">contact form</a> if you have a more general question.</p>
+                            <p>Stuur me details over je evenement en ik neem contact met je op met een offerte of gebruik de <a href="/contact">contactformulier 
+                            </a> als u een meer algemene vraag heeft.</p>
                             <!-- <p>If you would like to hire a violinist for a wedding in Amsterdam, Netherlands,  -->
                                 <!-- or other locations, please visit the <a href="wedding-violinist-for-hire-in-netherlands">dedicated page here.</a></p> -->
-                            <p class="small-p">Fields marked with <span class="asterisk">*</span> are required.</p>
+                            <p class="small-p">Velden gemarkeerd met <span class="asterisk">*</span> zijn verplicht.</p>
                             <form id="violinist-form" onsubmit="sendEmailViolinist(); reset(); return false;">
                                 
-                                <label for="name">Name:<span class="asterisk">*</span></label>
+                                <label for="name">Naam:<span class="asterisk">*</span></label>
                                 <input class="text-input" type="text" id="name" >
                                 
-                                <label for="email">Email:<span class="asterisk">*</span></label>
+                                <label for="email">E-mailen:<span class="asterisk">*</span></label>
                                 <input class="text-input" type="email" id="email" >
         
-                                <label for="location">Event Location:<span class="asterisk">*</span></label>
+                                <label for="location">Evenement Locatie:<span class="asterisk">*</span></label>
                                 <input class="text-input" type="text" id="location">
         
-                                <label for="outdoors">Setting:<span class="asterisk">*</span></label>
+                                <label for="outdoors">Instelling:<span class="asterisk">*</span></label>
                                 
                                 <div class="radio-option-row">
                                     <div class=radio-row>
                                         <input class="radio-button" name="setting-radio" type="radio" id="outdoors" value="Outdoors">
-                                        <label class="small-p" for="outdoors">Outdoors</label>
+                                        <label class="small-p" for="outdoors">Buitenshuis</label>
                                     </div>
                                 
                                     <div class="radio-row">
                                         <input class="radio-button" name="setting-radio" type="radio" id="indoors" value="Indoors">
-                                        <label class="small-p"  for="indoors">Indoors</label>
+                                        <label class="small-p"  for="indoors">Binnenshuis</label>
                                     </div>
                                 </div>
           
                                 
                           
-                                <label for="date">Date of Event:<span class="asterisk">*</span></label>
+                                <label for="date">Datum Evenement:<span class="asterisk">*</span></label>
                                 <input class="text-input" type="date" id="date">
                                 
         
-                                <label for="number-musicians">Number of Musicians:<span class="asterisk">*</span></label>
+                                <label for="number-musicians">Aantal Muzikanten:<span class="asterisk">*</span></label>
                                 <input class="text-input" type="number" id="number-musicians">
         
-                                <label for="playing-length">How long would you like me to play? (in minutes):<span class="asterisk">*</span></label>
+                                <label for="playing-length">
+                                    Hoe lang wil je dat ik speel? (in minuten):<span class="asterisk">*</span></label>
                                 <input class="text-input" type="number" id="playing-length">
         
                                 
-                                <label for="google">Where did you find me:<span class="asterisk">*</span></label>
+                                <label for="google">Waar heb je me gevonden:<span class="asterisk">*</span></label>
         
                                 <div class="form-row">
                                     <div class="radio-row">
@@ -143,7 +140,7 @@
             
                                     <div class="radio-row">
                                         <input class="radio-button" name="find-radio" type="radio" id="word-of-mouth" value="Word of Mouth">
-                                        <label class="small-p" for="word-of-mouth">Word of Mouth</label>
+                                        <label class="small-p" for="word-of-mouth">Mond op Mond</label>
                                     </div>
 
                                 </div>
@@ -158,17 +155,17 @@
             
                                     <div class="radio-row">
                                         <input class="radio-button" name="find-radio" type="radio" id="other" value="Other">
-                                        <label class="small-p" for="other">Other (please specify):</label>
+                                        <label class="small-p" for="other">Anders (gelieve te specificeren):</label>
                                     </div>
 
                                 </div>
 
                                 <input class="text-input" type="text" id="other-source">
         
-                                <label for="additional-comments">Message:<span class="asterisk"></span></label>
+                                <label for="additional-comments">Bericht:<span class="asterisk"></span></label>
                                 <textarea id="message" name="message" rows="10" cols="40"></textarea>
         
-                                <button class="submit" type="submit">Submit</button>
+                                <button class="submit" type="submit">Indienen</button>
                                 <p class="form-message"></p>
 
                             </form>
@@ -179,6 +176,9 @@
 
 
                     </div>
+
+
+                   
                 </main>
             </div>
             <%- include('./partials/footer.ejs') %>

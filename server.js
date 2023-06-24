@@ -113,11 +113,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // listen for requests
 
 app.get('/', (req, res,) => {
-    res.render('index', { title: `${websiteName} | Software Developer and Violinist`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
+    res.render('index', { title: `${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
 });
 
 app.get('/index', (req, res) => {
-    res.render('index', { title: `${websiteName} | Software Developer and Violinist`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
+    res.render('index', { title: `${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
 });
 
 
@@ -156,6 +156,19 @@ app.get('/cbaiscraper', (req, res) => {
 app.get('/violinist', (req, res) => {
     res.render('violinist', { title: `Violinist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 })
+
+app.get('/hire-a-violinist-in-netherlands', (req, res) => {
+    res.render('violinistSEO', { title: `Hire a Violinist in Netherlands | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+})
+
+app.get('/violinistNL', (req, res) => {
+    res.render('violinistDutch', { title: `Violist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+})
+
+app.get('/wedding-violinist-in-the-netherlands', (req, res) => {
+    res.render('weddingViolinist', { title: `Violist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+})
+
 app.get('/lessons', (req, res) => {
     res.render('lessons', { title: `Lessons | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
 })
