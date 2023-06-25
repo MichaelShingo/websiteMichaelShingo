@@ -48,5 +48,46 @@
   <priority>0.65</priority>
 </url>
 
+<url>
+  <loc>https://michaelshingo.com/cbaiscraper</loc>
+  <lastmod>2023-06-25T06:41:12+00:00</lastmod>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/VDML</loc>
+  <lastmod>2023-06-25T06:41:12+00:00</lastmod>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/cardmi</loc>
+  <lastmod>2023-06-25T06:41:12+00:00</lastmod>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/creative-baggage</loc>
+  <lastmod>2023-06-25T06:41:12+00:00</lastmod>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/personal-website</loc>
+  <lastmod>2023-06-25T06:41:12+00:00</lastmod>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/violinistNL</loc>
+  <lastmod>2023-06-25T06:41:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/wedding-violinist-in-the-netherlands</loc>
+  <lastmod>2023-06-25T06:41:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://michaelshingo.com/hire-a-violinist-in-netherlands</loc>
+  <lastmod>2023-06-25T06:41:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
 
 </urlset>
