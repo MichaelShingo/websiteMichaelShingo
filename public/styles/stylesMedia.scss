@@ -171,9 +171,9 @@
     }
 
  
-    // .header {
-    //     height: 10px !important;
-    // } 
+    .header {
+        height: 90px !important;
+    } 
     #content-wrap {
         padding-top: 90px;
         padding-bottom: 250px !important;
@@ -186,7 +186,8 @@
         width: 100% !important;
     }
     .content-table {
-        font-size: .8em;
+        font-size: .65em;
+        min-width: 200px !important;
     }
 
     .portfolio-container {

@@ -113,68 +113,68 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // listen for requests
 
 app.get('/', (req, res,) => {
-    res.render('index', { title: `${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
+    res.render('index', { title: `${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none', headerBackColor: 'rgba(255,255,255,0',  });
 });
 
 app.get('/index', (req, res) => {
-    res.render('index', { title: `${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none' });
+    res.render('index', { title: `${websiteName}`, logoTextVisibility: 'hidden', navColor: '#88ab76d8', displayValue: 'none', headerBackColor: 'rgba(255,255,255,0', });
 });
 
 
 app.get('/biography', (req, res) => {
-    res.render('biography', { title: `Bio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' , displayValue: 'inline'});
+    res.render('biography', { title: `Bio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76' , displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'});
 });
 
 app.get('/portfolio', (req, res) => {
-    res.render('portfolio', { title: `Portfolio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+    res.render('portfolio', { title: `Portfolio | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
 });
 
 app.get('/VDML', (req, res) => {
-    res.render('VDML', { title: `VDML | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+    res.render('VDML', { title: `VDML | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'})
 })
 
 app.get('/cardmi', (req, res) => {
-    res.render('cardmi', { title: `CardMi | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+    res.render('cardmi', { title: `CardMi | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'})
 })
 
 app.get('/creative-baggage', (req, res) => {
-    res.render('creative-baggage', { title: `Creative Baggage | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+    res.render('creative-baggage', { title: `Creative Baggage | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'})
 })
 
 app.get('/personal-website', (req, res) => {
-    res.render('personal-website', { title: `Personal Website | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+    res.render('personal-website', { title: `Personal Website | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'})
 })
 
 app.get('/bookmi', (req, res) => {
-    res.render('bookmi', { title: `BookMi | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+    res.render('bookmi', { title: `BookMi | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'})
 })
 
 app.get('/cbaiscraper', (req, res) => {
-    res.render('cbaiscraper', { title: `CB AI Data Processor | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline'})
+    res.render('cbaiscraper', { title: `CB AI Data Processor | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'})
 })
 
 app.get('/violinist', (req, res) => {
-    res.render('violinist', { title: `Violinist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+    res.render('violinist', { title: `Violinist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
 })
 
 app.get('/hire-a-violinist-in-netherlands', (req, res) => {
-    res.render('violinistSEO', { title: `Hire a Violinist in Netherlands | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+    res.render('violinistSEO', { title: `Hire a Violinist in Netherlands | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
 })
 
 app.get('/violinistNL', (req, res) => {
-    res.render('violinistDutch', { title: `Violist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+    res.render('violinistDutch', { title: `Violist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
 })
 
 app.get('/wedding-violinist-in-the-netherlands', (req, res) => {
-    res.render('weddingViolinist', { title: `Violist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+    res.render('weddingViolinist', { title: `Violist | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
 })
 
 app.get('/lessons', (req, res) => {
-    res.render('lessons', { title: `Lessons | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+    res.render('lessons', { title: `Lessons | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
 })
 
 app.get('/contact', (req, res) => {
-    res.render('contact', { title: `Contact | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline' });
+    res.render('contact', { title: `Contact | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
 })
 
 app.get('/songs', (req, res) => {
@@ -184,7 +184,7 @@ app.get('/songs', (req, res) => {
         .then((result) => {
             songQuery = result;
             songCount = songQuery.length
-            res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline'});
+            res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'});
         });
 
 })
@@ -198,7 +198,7 @@ app.post('/songs', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length;
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline'});
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'});
 
     });
 
@@ -213,7 +213,7 @@ app.get('/v', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline' });
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
     })
 });
 
@@ -226,7 +226,7 @@ app.get('/vc', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline' });
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' });
     })
 });
 
@@ -239,7 +239,7 @@ app.get('/vp', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline' });
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount, displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)' } );
     })
 });
 
@@ -252,7 +252,7 @@ app.get('/vh', (req, res) => {
     .then((result) => {
         songQuery = result;
         songCount = songQuery.length
-        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount , displayValue: 'inline'});
+        res.render('songs', { title: `Song List | ${websiteName}`, logoTextVisibility: 'visible', navColor: '#88AB76', allSongs: songQuery, songCount , displayValue: 'inline', headerBackColor: 'rgba(255, 255, 255, .5)'});
     })
     
 });
