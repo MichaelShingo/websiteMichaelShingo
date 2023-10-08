@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Read more about violinist Michael Shingo Crawford performing weddings, concerts, events, and teaching lessons in the Netherlands."
+    />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title><%= title %></title>
+    <%- include('./partials/styles.ejs') %>
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <%- include('./partials/head.ejs') %>
+        <main class="main-content">
+          <h1>Violintice</h1>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <!-- <div class="">
+                                <iframe class="video" src="https://www.youtube.com/embed/aX13onIluhU" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                            </div> -->
+              <img
+                class="portfolio-detail-img-full"
+                src="./img/violintice-overview.jpg"
+                alt="Django Rest Framework API that integrates with OpenAI."
+              />
+            </div>
+            <div class="col-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <div class="project-page-social">
+                <a
+                  href="https://practiceappfrontend.uk.r.appspot.com/practice"
+                  class="fa-solid fa-music fa-lg"
+                  target="_blank"
+                ></a>
+                <div></div>
+                <a
+                  href="https://github.com/MichaelShingo/practiceApp"
+                  class="fa-brands fa-github fa-lg"
+                  target="_blank"
+                ></a>
+              </div>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h2>Implementation</h2>
+              <p>Violintice is built with React.js, Django, and PostgreSQL.</p>
+              <p></p>
+            </div>
+            <div class="col-6">
+              <h2>Features</h2>
+              <p>
+                This applications offers violinists a database of standard
+                etudes that allows them to track their progress. Based on
+                user-inputted data, the app provides data-insights that may
+                guide the musician's practice.
+              </p>
+            </div>
+            <div class="col-3"></div>
+          </div>
+        </main>
+      </div>
+      <%- include('./partials/footer.ejs') %>
+    </div>
+  </body>
+  <script src="index.js" type="text/javascript" defer></script>
+</html>

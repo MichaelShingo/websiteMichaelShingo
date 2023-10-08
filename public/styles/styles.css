@@ -84,10 +84,10 @@
 
 :root {
   --color-transparent: rgba(0, 0, 0, 0);
-  --color-black-trans: rgba(0,0,0,0.3);
+  --color-black-trans: rgba(0, 0, 0, 0.3);
   --color-white-trans: rgba(255, 255, 255, 0.3);
   --color-highlight: #bbe4bf;
-  --color-light: #88AB76;
+  --color-light: #88ab76;
   --color-light-trans: #88ab76d8;
   --color-secondary: #367b92;
   --color-saturated: #005c07;
@@ -95,8 +95,8 @@
   --color-accent: #f3cb04;
   --color-important: #d34e36;
   --color-accent-light: #fff3b6;
-  --color-white: #FFFFFF;
-  --color-trans-white: rgba(255,255,255,0);
+  --color-white: #ffffff;
+  --color-trans-white: rgba(255, 255, 255, 0);
   --color-black: #000000;
   --color-grey-0: #f8f8f8;
   --color-grey-1: #dbe1e8;
@@ -113,16 +113,17 @@
   --color-review-star: yellow;
   --color-red: #c20a0a;
   --br-sm-2: 14px;
-  --default-transition: all .4s ease-in-out;
-  --fast-transition: all .2s ease-in-out;
+  --default-transition: all 0.4s ease-in-out;
+  --fast-transition: all 0.2s ease-in-out;
   --slow-transition: all 1s ease-in-out;
-  --box-shadow-1: 0 3px 15px rgba(0,0,0,0.3);
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
   --font: Oswald, sans-serif;
   --font-paragraph: Noto Sans;
   font-size: 12px;
 }
 
-html, body {
+html,
+body {
   font-size: 12px;
   max-width: 100% !important;
   overflow-x: hidden !important;
@@ -769,7 +770,8 @@ a {
   align-items: center;
   justify-content: center;
 }
-#footer .social-icons .social-icons-row .footer-icon-container a:visited, #footer .social-icons .social-icons-row .footer-icon-container a:link {
+#footer .social-icons .social-icons-row .footer-icon-container a:visited,
+#footer .social-icons .social-icons-row .footer-icon-container a:link {
   text-decoration: none;
   color: var(--color-grey-3);
 }
@@ -813,7 +815,8 @@ thead {
   font-weight: bold;
 }
 
-td, th {
+td,
+th {
   padding: 12px 15px;
 }
 
@@ -1171,7 +1174,8 @@ form textarea:focus {
   justify-content: center;
   align-items: center;
 }
-.collapsible-items .collapsible-title .icon-container .plus-icon, .collapsible-items .collapsible-title .icon-container .minus-icon {
+.collapsible-items .collapsible-title .icon-container .plus-icon,
+.collapsible-items .collapsible-title .icon-container .minus-icon {
   color: var(--color-light);
   background-color: none;
   justify-content: center;
@@ -1180,7 +1184,8 @@ form textarea:focus {
   background-color: none;
   transition: var(--default-transition);
 }
-.collapsible-items .collapsible-title .icon-container .plus-icon:hover, .collapsible-items .collapsible-title .icon-container .minus-icon:hover {
+.collapsible-items .collapsible-title .icon-container .plus-icon:hover,
+.collapsible-items .collapsible-title .icon-container .minus-icon:hover {
   transform: rotate(90deg);
   transition: var(--default-transition);
   cursor: pointer;
@@ -1254,7 +1259,11 @@ form textarea:focus {
 }
 
 .portfolio-detail-img {
-  max-width: 25vw;
+  max-width: 30vw;
+}
+
+.portfolio-detail-img-full {
+  max-width: 100vw;
 }
 
 .portfolio-main-content {
@@ -1342,14 +1351,16 @@ form textarea:focus {
   width: -moz-fit-content;
   width: fit-content;
 }
-.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons a:visited, .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons a:link {
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons a:visited,
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons a:link {
   text-decoration: none;
   color: var(--color-white);
 }
 .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons a:hover {
   cursor: pointer;
 }
-.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-brands, .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-solid {
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-brands,
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-solid {
   background-color: var(--color-white);
   border-radius: 50%;
   display: inline-flex;
@@ -1360,7 +1371,8 @@ form textarea:focus {
   justify-content: center;
   margin: auto 1rem;
 }
-.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-brands:hover, .portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-solid:hover {
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-brands:hover,
+.portfolio-grid .portfolio-container .portfolio-overlay .portfolio-social-icons .fa-solid:hover {
   background-color: var(--color-dark) !important;
   color: var(--color-white) !important;
   transition: var(--default-transition);
@@ -1414,14 +1426,16 @@ form textarea:focus {
   width: -moz-fit-content;
   width: fit-content;
 }
-.collapsible-content .social-icons a:visited, .collapsible-content .social-icons a:link {
+.collapsible-content .social-icons a:visited,
+.collapsible-content .social-icons a:link {
   text-decoration: none;
   color: var(--color-white);
 }
 .collapsible-content .social-icons a:hover {
   cursor: pointer;
 }
-.collapsible-content .social-icons .fa-brands, .collapsible-content .social-icons .fa-solid {
+.collapsible-content .social-icons .fa-brands,
+.collapsible-content .social-icons .fa-solid {
   background-color: var(--color-light);
   border-radius: 50%;
   display: inline-flex;
@@ -1431,7 +1445,8 @@ form textarea:focus {
   justify-content: center;
   margin: auto 1rem;
 }
-.collapsible-content .social-icons .fa-brands:hover, .collapsible-content .social-icons .fa-solid:hover {
+.collapsible-content .social-icons .fa-brands:hover,
+.collapsible-content .social-icons .fa-solid:hover {
   background-color: var(--color-accent);
   transition: var(--default-transition);
 }/*# sourceMappingURL=styles.css.map */

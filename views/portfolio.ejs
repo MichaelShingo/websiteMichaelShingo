@@ -1,99 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA_Compatible" content="IE=edge">
-        <meta name="description" content="Web developer portfolio - Rotterdam, Netherlands.">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        <title><%= title %>
-        </title>
-        <%- include('./partials/styles.ejs') %>
-    </head>
-    <body>
-        <div id="page-container">
-            <div id="content-wrap">
-                <%- include('./partials/head.ejs') %>
-                <main class="main-content portfolio-main-content">
-                    <h1>Portfolio</h1>
-                    <h2>Apps</h2>
-                    
-                    <div class="portfolio-grid">
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">The Creative Baggage AI Data Processor is an API built using Django Rest Framework that completely automates data collection and processing for the Creative Baggage database.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://github.com/MichaelShingo/cbaiscraper" class="fa-brands fa-github fa-lg" target="_blank"></a>
-                                    <a href="/cbaiscraper" class="fa-solid fa-circle-info fa-lg"></a>
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/cbaiscraper.jpg" alt="Django Rest Framework API that integrates with OpenAI."/>
-                        </div>
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">A web app used at University of Pennsylvania's Vitale Digital Media Lab
-                                    to automate repetitive workflows and store, analyze, and visualize data. Built with Python/Flask and SQLite.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://www.library.upenn.edu/detail/libraryspaces/vitale-digital-media-lab" class="fa-solid fa-database fa-lg" target="_blank"></a>
-                                    <a href="https://github.com/MichaelShingo/VDML" class="fa-brands fa-github fa-lg" target="_blank"></a>
-                                    <a href="/VDML" class="fa-solid fa-circle-info fa-lg"></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Web developer portfolio - Rotterdam, Netherlands."
+    />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title><%= title %></title>
+    <%- include('./partials/styles.ejs') %>
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <%- include('./partials/head.ejs') %>
+        <main class="main-content portfolio-main-content">
+          <h1>Portfolio</h1>
+          <h2>Apps</h2>
 
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/vdmlLogo.jpg" alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."/>
-                        </div>
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">CardMi is a flashcard app that provides all the basic features necessary for effective study,
-                                    including a minimalist environment for focus, the option to mark terms as studied, and sort and shuffle your deck to mix up your routine.
-                                    Coded in Java with Android Studio.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://play.google.com/store/apps/details?id=com.michaelshingo.flashcards&hl=en_US&gl=US" class="fa-brands fa-google-play fa-lg" target="_blank"></a>
-                                    <a href="https://github.com/MichaelShingo/CardMi" class="fa-brands fa-github fa-lg" target="_blank"></a>
-                                    <a href="/cardmi" class="fa-solid fa-circle-info fa-lg"></a>
+          <div class="portfolio-grid">
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  Violintice is a React/Django application that helps violinists
+                  track their progress and gives them insights into their
+                  practice.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://practiceappfrontend.uk.r.appspot.com/login"
+                    class="fa-solid fa-music fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="https://github.com/MichaelShingo/practiceApp"
+                    class="fa-brands fa-github fa-lg"
+                    target="_blank"
+                  ></a>
 
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/cardmiLogo.jpg" alt="Flashcard app coded in Java logo, Android Studio."/>
-                        </div>
+                  <a
+                    href="/violintice"
+                    class="fa-solid fa-circle-info fa-lg"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/violintice-logo.jpg"
+                alt="Django Rest Framework API that integrates with OpenAI."
+              />
+            </div>
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  An internal admin application for Panethnic Pourovers, a
+                  non-profit cafe and library in Boston, MA that serves the
+                  local community.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://panethnicpourovers.org"
+                    class="fa-solid fa-mug-hot fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="https://github.com/Panethnic-Pourovers/admin"
+                    class="fa-brands fa-github fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="/panethnic"
+                    class="fa-solid fa-circle-info fa-lg"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/pepo-logo.jpg"
+                alt="Django Rest Framework API that integrates with OpenAI."
+              />
+            </div>
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  The Creative Baggage AI Data Processor is an API built using
+                  Django Rest Framework that completely automates data
+                  collection and processing for the Creative Baggage database.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://github.com/MichaelShingo/cbaiscraper"
+                    class="fa-brands fa-github fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="/cbaiscraper"
+                    class="fa-solid fa-circle-info fa-lg"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/cbaiscraper.jpg"
+                alt="Django Rest Framework API that integrates with OpenAI."
+              />
+            </div>
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  A web app used at University of Pennsylvania's Vitale Digital
+                  Media Lab to automate repetitive workflows and store, analyze,
+                  and visualize data. Built with Python/Flask and SQLite.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://www.library.upenn.edu/detail/libraryspaces/vitale-digital-media-lab"
+                    class="fa-solid fa-database fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="https://github.com/MichaelShingo/VDML"
+                    class="fa-brands fa-github fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a href="/VDML" class="fa-solid fa-circle-info fa-lg"></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/vdmlLogo.jpg"
+                alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."
+              />
+            </div>
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  CardMi is a flashcard app that provides all the basic features
+                  necessary for effective study, including a minimalist
+                  environment for focus, the option to mark terms as studied,
+                  and sort and shuffle your deck to mix up your routine. Coded
+                  in Java with Android Studio.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.michaelshingo.flashcards&hl=en_US&gl=US"
+                    class="fa-brands fa-google-play fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="https://github.com/MichaelShingo/CardMi"
+                    class="fa-brands fa-github fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a href="/cardmi" class="fa-solid fa-circle-info fa-lg"></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/cardmiLogo.jpg"
+                alt="Flashcard app coded in Java logo, Android Studio."
+              />
+            </div>
 
-                        
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">Inspired by a desire to find practical solutions to improve the lives of the creative community,
-                                    "For the Lost Creative" by Creative Baggage is a curated database of free opportunities for musicians and artists. 
-                                    Coded with Javascript and Velo by Wix. Opportunities populated using Python web scraping scripts.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://www.forthelostcreative.com" class="fa-solid fa-suitcase fa-lg" target="_blank"></a>
-                                    <a href="https://github.com/MichaelShingo/opportunityScraper" class="fa-brands fa-github fa-lg" target="_blank"></a>
-                                    <a href="/creative-baggage" class="fa-solid fa-circle-info fa-lg"></a>
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  Inspired by a desire to find practical solutions to improve
+                  the lives of the creative community, "For the Lost Creative"
+                  by Creative Baggage is a curated database of free
+                  opportunities for musicians and artists. Coded with Javascript
+                  and Velo by Wix. Opportunities populated using Python web
+                  scraping scripts.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://www.forthelostcreative.com"
+                    class="fa-solid fa-suitcase fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="https://github.com/MichaelShingo/opportunityScraper"
+                    class="fa-brands fa-github fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="/creative-baggage"
+                    class="fa-solid fa-circle-info fa-lg"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/creativeBaggageLogo.jpg"
+                alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."
+              />
+            </div>
 
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/creativeBaggageLogo.jpg" alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."/>
-                        </div>
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  This website is built with HTML, SCSS, Javascript, and
+                  Node.js. It applies SEO principles to rank in search results
+                  and generates organic traffic and leads for my freelance work.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://michaelshingo.com"
+                    class="fa-solid fa-globe fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="https://github.com/MichaelShingo/websiteMichaelShingo"
+                    class="fa-brands fa-github fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="/personal-website"
+                    class="fa-solid fa-circle-info fa-lg"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img website-logo"
+                src="./img/michaelShingoLogoPortfolio.jpg"
+                alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."
+              />
+            </div>
 
-                        
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">This website is built with HTML, SCSS, Javascript, and Node.js. It applies SEO principles to rank in search results
-                                    and generates organic traffic and leads for my freelance work.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://michaelshingo.com" class="fa-solid fa-globe fa-lg" target="_blank"></a>
-                                    <a href="https://github.com/MichaelShingo/websiteMichaelShingo" class="fa-brands fa-github fa-lg" target="_blank"></a>
-                                    <a href="/personal-website" class="fa-solid fa-circle-info fa-lg"></a>
-
-                                </div>
-                            </div>
-                            <img class="portfolio-img website-logo" src="./img/michaelShingoLogoPortfolio.jpg" alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."/>
-                        </div>
-                        
-                        <!-- <div class="portfolio-container">
+            <!-- <div class="portfolio-container">
                             
                             <div class="portfolio-overlay">
                                 <p class="portfolio-description">BookMi is a MERN application that streamlines communication between musicians and their clients who book them for events (In Progress).
@@ -105,105 +241,179 @@
                             </div>
                             <img class="portfolio-img" src="./img/bookMiTempLogo.jpg" alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."/>
                         </div> -->
-                    </div>
+          </div>
 
-                    
-
-                    <h2>Performance</h2>
-                    <div class="portfolio-grid">
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">Contemporary-classical-inspired orchestral anime soundtrack transcribed entirely by ear and
-                                    arranged two violins, viola, and piano.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://drive.google.com/file/d/1_BBqExfh5QbzZ9_Svsm9luQGXVzXPgZx/view?usp=sharing" class="fa-solid fa-music fa-lg" target="_blank"></a>
-                                    <a href="https://www.youtube.com/watch?v=8MNTf5JAaSI" class="fa-brands fa-youtube fa-lg" target="_blank"></a>
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/hegemonyPortfolio.jpg" alt="Contemporary-classical-inspired orchestral anime soundtrack transcribed entirely by ear and
-                                arranged two violins, viola, and piano."/>
-                        </div>
-
-                        
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">A transcription of the opening song from Clannad that utilizes the full palette of violin technique to bring
-                                    out the harmonies and textures of the original version.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://drive.google.com/file/d/11Gnc4NNgmRAgd0bTXD3ysWikCxLDRXLy/view?usp=sharing" class="fa-solid fa-music fa-lg" target="_blank"></a>
-                                    
-                                    <a href="https://www.youtube.com/watch?v=75XUaPmKdX0" class="fa-brands fa-youtube fa-lg" target="_blank"></a>
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/clannadPortfolio.jpg" alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."/>
-                        </div>
-
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">Partita No. 1 in B Minor - Allemande - by Johann Sebastian Bach
-                                </p>
-                                <div class="portfolio-social-icons">                                    
-                                    <a href="https://www.youtube.com/watch?v=FR6tKvGvZOc" class="fa-brands fa-youtube fa-lg" target="_blank"></a>
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/bachPortfolio.jpg" alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."/>
-                        </div>
-                    </div>
-
-
-
-                    <h2>Composition</h2>
-                    <div class="portfolio-grid">
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description">
-                                    <em>Clouds Rising</em>, solo piano composition in the style of Joe Hisaishi.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://drive.google.com/file/d/1ikB7WPCpMJE4OKRuL2lFrfXBwnDkabg-/view?usp=sharing" class="fa-solid fa-music fa-lg" target="_blank"></a>
-                                    <a href="https://www.youtube.com/watch?v=gc2NwdV0rJ4" class="fa-brands fa-youtube fa-lg" target="_blank"></a>
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/cloudsRisingPortfolio.jpg" alt="Joe Hisaishi inspired solo piano piece thumbnail."/>
-                        </div>
-
-                        
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description"><em>shinrin-yoku</em> for violin and piano - shinrin-yoku, or “forest bathing,” is a Japanese word referring to the activity of spending time in natural surroundings.
-                                    The music takes the listener through this journey of shinrin-yoku, from the point of entering the forest and taking in its beauty to finding peace in a gentle meditative state.
-                                </p>
-                                <div class="portfolio-social-icons">
-                                    <a href="https://drive.google.com/file/d/1XkF5kJQs9I7sMtyEB4BuZneeTN1aw-0s/view?usp=sharing" class="fa-solid fa-music fa-lg" target="_blank"></a>
-                                    
-                                    <a href="https://www.youtube.com/watch?v=MfpEscKzhZQ" class="fa-brands fa-youtube fa-lg" target="_blank"></a>
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/shinrinYokuPortfolio.jpg" alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."/>
-                        </div>
-
-                        <div class="portfolio-container">
-                            <div class="portfolio-overlay">
-                                <p class="portfolio-description"><em>Deluge</em> is an experimental piece for chamber orchestra that imagines the movement of flood waters.
-                                </p>
-                                <div class="portfolio-social-icons">  
-                                    <a href="https://drive.google.com/file/d/16JiTtKZw02WmUnnVkUX6qIe5iBqZR_1n/view?usp=sharing" class="fa-solid fa-music fa-lg" target="_blank"></a>
-                                  
-                                    <a href="https://www.youtube.com/watch?v=iESljf3AgtM" class="fa-brands fa-youtube fa-lg" target="_blank"></a>
-                                </div>
-                            </div>
-                            <img class="portfolio-img" src="./img/delugePortfolio.jpg" alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."/>
-                        </div>
-                    </div>
-
-
-                </main>
+          <h2>Performance</h2>
+          <div class="portfolio-grid">
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  Contemporary-classical-inspired orchestral anime soundtrack
+                  transcribed entirely by ear and arranged two violins, viola,
+                  and piano.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://drive.google.com/file/d/1_BBqExfh5QbzZ9_Svsm9luQGXVzXPgZx/view?usp=sharing"
+                    class="fa-solid fa-music fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/watch?v=8MNTf5JAaSI"
+                    class="fa-brands fa-youtube fa-lg"
+                    target="_blank"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/hegemonyPortfolio.jpg"
+                alt="Contemporary-classical-inspired orchestral anime soundtrack transcribed entirely by ear and
+                                arranged two violins, viola, and piano."
+              />
             </div>
 
-            <%- include('./partials/footer.ejs') %>
-        </div> 
-    </body>
-    <script src="index.js" type="text/javascript" defer></script>
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  A transcription of the opening song from Clannad that utilizes
+                  the full palette of violin technique to bring out the
+                  harmonies and textures of the original version.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://drive.google.com/file/d/11Gnc4NNgmRAgd0bTXD3ysWikCxLDRXLy/view?usp=sharing"
+                    class="fa-solid fa-music fa-lg"
+                    target="_blank"
+                  ></a>
+
+                  <a
+                    href="https://www.youtube.com/watch?v=75XUaPmKdX0"
+                    class="fa-brands fa-youtube fa-lg"
+                    target="_blank"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/clannadPortfolio.jpg"
+                alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."
+              />
+            </div>
+
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  Partita No. 1 in B Minor - Allemande - by Johann Sebastian
+                  Bach
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://www.youtube.com/watch?v=FR6tKvGvZOc"
+                    class="fa-brands fa-youtube fa-lg"
+                    target="_blank"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/bachPortfolio.jpg"
+                alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."
+              />
+            </div>
+          </div>
+
+          <h2>Composition</h2>
+          <div class="portfolio-grid">
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  <em>Clouds Rising</em>, solo piano composition in the style of
+                  Joe Hisaishi.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://drive.google.com/file/d/1ikB7WPCpMJE4OKRuL2lFrfXBwnDkabg-/view?usp=sharing"
+                    class="fa-solid fa-music fa-lg"
+                    target="_blank"
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/watch?v=gc2NwdV0rJ4"
+                    class="fa-brands fa-youtube fa-lg"
+                    target="_blank"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/cloudsRisingPortfolio.jpg"
+                alt="Joe Hisaishi inspired solo piano piece thumbnail."
+              />
+            </div>
+
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  <em>shinrin-yoku</em> for violin and piano - shinrin-yoku, or
+                  “forest bathing,” is a Japanese word referring to the activity
+                  of spending time in natural surroundings. The music takes the
+                  listener through this journey of shinrin-yoku, from the point
+                  of entering the forest and taking in its beauty to finding
+                  peace in a gentle meditative state.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://drive.google.com/file/d/1XkF5kJQs9I7sMtyEB4BuZneeTN1aw-0s/view?usp=sharing"
+                    class="fa-solid fa-music fa-lg"
+                    target="_blank"
+                  ></a>
+
+                  <a
+                    href="https://www.youtube.com/watch?v=MfpEscKzhZQ"
+                    class="fa-brands fa-youtube fa-lg"
+                    target="_blank"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/shinrinYokuPortfolio.jpg"
+                alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."
+              />
+            </div>
+
+            <div class="portfolio-container">
+              <div class="portfolio-overlay">
+                <p class="portfolio-description">
+                  <em>Deluge</em> is an experimental piece for chamber orchestra
+                  that imagines the movement of flood waters.
+                </p>
+                <div class="portfolio-social-icons">
+                  <a
+                    href="https://drive.google.com/file/d/16JiTtKZw02WmUnnVkUX6qIe5iBqZR_1n/view?usp=sharing"
+                    class="fa-solid fa-music fa-lg"
+                    target="_blank"
+                  ></a>
+
+                  <a
+                    href="https://www.youtube.com/watch?v=iESljf3AgtM"
+                    class="fa-brands fa-youtube fa-lg"
+                    target="_blank"
+                  ></a>
+                </div>
+              </div>
+              <img
+                class="portfolio-img"
+                src="./img/delugePortfolio.jpg"
+                alt="Database of opportunities for classical musicians in Javascript and Velo by Wix."
+              />
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <%- include('./partials/footer.ejs') %>
+    </div>
+  </body>
+  <script src="index.js" type="text/javascript" defer></script>
 </html>
