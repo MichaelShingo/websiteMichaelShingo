@@ -235,6 +235,16 @@ app.get('/panethnic', (req, res) => {
   });
 });
 
+app.get('/miitronome', (req, res) => {
+  res.render('miitronome', {
+    title: `Miitronome | ${websiteName}`,
+    logoTextVisibility: 'visible',
+    navColor: '#88AB76',
+    displayValue: 'inline',
+    headerBackColor: 'rgba(255, 255, 255, .5)',
+  });
+});
+
 app.get('/violinist', (req, res) => {
   res.render('violinist', {
     title: `Violinist | ${websiteName}`,

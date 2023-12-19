@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA_Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Read more about violinist Michael Shingo Crawford performing weddings, concerts, events, and teaching lessons in the Netherlands."
+    />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <title><%= title %></title>
+    <%- include('./partials/styles.ejs') %>
+  </head>
+  <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <%- include('./partials/head.ejs') %>
+        <main class="main-content">
+          <h1>Miitronome</h1>
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+              <!-- <div class="">
+                                <iframe class="video" src="https://www.youtube.com/embed/aX13onIluhU" title="YouTube video player" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen></iframe>
+                            </div> -->
+              <img
+                class="portfolio-detail-img"
+                src="./img/miitronomeLogo.jpg"
+                alt="Django Rest Framework API that integrates with OpenAI."
+              />
+            </div>
+            <div class="col-2"></div>
+          </div>
+          <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+              <div class="project-page-social">
+                <a
+                  href="https://panethnicpourovers.org"
+                  class="fa-solid fa-music fa-lg"
+                  target="_blank"
+                ></a>
+                <div></div> 
+                <a
+                  href="https://github.com/michaelshingo/metronome/"
+                  class="fa-brands fa-github fa-lg"
+                  target="_blank"
+                ></a>
+              </div>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <h2>Implementation</h2>
+              <p></p>
+              <p>
+                This application is built with Next.js, React.js, Typescript,
+                 Material UI, and Tone.js.
+              </p>
+              <p></p>
+            </div>
+            <div class="col-6">
+              <h2>Features</h2>
+              <p>
+                Miitronome is a progressive web application which can be used online or installed on iOS or Android. The metronome has robust features, including 
+                support for polyrhythms, subdivisions, and sound customization.
+              </p>
+           
+            </div>
+            <div class="col-3"></div>
+          </div>
+        </main>
+      </div>
+      <%- include('./partials/footer.ejs') %>
+    </div>
+  </body>
+  <script src="index.js" type="text/javascript" defer></script>
+</html>

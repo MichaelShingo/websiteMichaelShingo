@@ -29,5 +29,15 @@
     "url": "https://github.com/MichaelShingo/websiteMichaelShingo/issues"
   },
   "homepage": "https://github.com/MichaelShingo/websiteMichaelShingo#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.22.0",
+    "@html-eslint/parser": "^0.22.0",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-promise": "^6.1.1"
+  }
 }
