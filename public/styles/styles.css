@@ -342,11 +342,13 @@ a {
   transform: rotate(330deg);
   animation-delay: 0s;
   background: #555555;
+  position: fixed;
 }
 
 .loadingio-spinner-spinner-4bnxbz9ltfj {
   width: 150px;
   height: 150px;
+  position: fixed;
   margin: auto !important;
   margin-top: 25vh;
   text-align: center;
@@ -525,6 +527,10 @@ a {
   letter-spacing: 2px;
   font-family: var(--font);
   padding: 30px 17px;
+}
+.main-content h3.centered-portfolio-text {
+  text-align: center;
+  width: 100vw;
 }
 .main-content h3 {
   margin: 2rem auto;

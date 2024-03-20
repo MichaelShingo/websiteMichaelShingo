@@ -78,9 +78,6 @@ function sendEmail(){
     <b>Message:</b><br> <span style="width: 50%;">${document.getElementById("message").value}</span>`;
 
     Email.send({
-        // Host : "smtp.elasticemail.com", //port 2525
-        // Username : "shingoalert@gmail.com",
-        // Password : "07418A32D8DFA36AA7EB7C0C2685A659A6E9",
         SecureToken: "f1ec68e9-dad5-4214-b53f-0f869c937a3a",
         To : 'mcrawford5376@gmail.com',
         From : 'mcrawford5376@gmail.com',
